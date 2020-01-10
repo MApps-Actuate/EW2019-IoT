@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="author">MAPCITE</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <text-property name="title">MAPCITE</text-property>
+    <property name="units">in</property>
+    <property name="theme">SampleApplication.Demo 2015</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+        <structure>
+            <property name="fileName">Resources/Report Libraries/SampleApplication.rptlibrary</property>
+            <property name="namespace">SampleApplication</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="Data Source" id="1652">
+            <property name="datamartURL">Report Designs/Mobile ussage</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+        <data-mart-data-source name="Data Source1" id="1658">
+            <property name="datamartURL">Data Objects/MOD_Act_2</property>
+            <property name="accessType">transient</property>
+        </data-mart-data-source>
+    </data-sources>
+    <data-sets>
+        <data-mart-data-set name="Data Set" id="1653">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">pc</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">pc</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Longitude</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Longitude</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Latitude</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Latitude</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Image</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Image</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Type</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Usage date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Usage date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Time</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Data</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Customer URN</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Customer URN</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Date Time</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">pc</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Longitude</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Latitude</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Image</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Usage date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Time</property>
+                        <property name="dataType">time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Data</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Customer URN</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Date Time</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Data Set</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">pc</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Longitude</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Latitude</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Image</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Type</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Usage date</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Time</property>
+                    <property name="dataType">time</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Data</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Customer URN</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Date Time</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="Data Model" id="1654">
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Data Model</property>
+        </data-mart-linked-data-model>
+        <data-mart-linked-data-model name="Container Data Model" id="1659">
+            <property name="dataSource">Data Source1</property>
+            <property name="dataObject">Container Data Model</property>
+        </data-mart-linked-data-model>
+    </property>
+    <styles>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <property name="rightMargin">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="1537">
+            <property name="height">3.8020833333333335in</property>
+            <property name="width">12.458333333333334in</property>
+            <column id="1538"/>
+            <row id="1541">
+                <property name="height">3.84375in</property>
+                <cell id="1542">
+                    <extended-item extensionName="HTMLControl" id="1635">
+                        <property name="html">&lt;!--  
+// &lt;copyright company="MAPCITE">
+// Copyright (c) 2017 All Rights Reserved
+// &lt;/copyright>
+// &lt;author>MAPCITE&lt;/author>
+// &lt;date>09/06/2017 00:00:00&lt;/date>
+// &lt;summary>Unless otherwise stated, the software is provided "as-is," without any express or implied warranty. In no event shall MAPCITE be held liable for any damages arising from the use of the software.&lt;/summary>
+-->
+
+&lt;div id="map">
+Mapcite Custom Viz Template
+&lt;/div></property>
+                        <property name="css">/*
+// &lt;copyright company="MAPCITE">
+// Copyright (c) 2017 All Rights Reserved
+// &lt;/copyright>
+// &lt;author>MAPCITE&lt;/author>
+// &lt;date>09/06/2017 00:00:00&lt;/date>
+// &lt;summary>Unless otherwise stated, the software is provided "as-is," without any express or implied warranty. In no event shall MAPCITE be held liable for any damages arising from the use of the software.&lt;/summary>
+*/
+
+#map:focus,div.olPopupContent{text-decoration:none}#container___BIRT_ROOT{outline:0}#map{height:100%;width:100%;position:relative;cursor:pointer}#drawingTooltip{color:#000;background:rgba(255,255,255,.8);border:1px solid #fff;border-radius:4px;margin:auto;position:absolute;top:105px;left:8px;height:16px;z-index:1004;padding:5px 5px 5px 35px}.intersectsDiv,.intersectsSubDiv{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}.intersectsDiv{z-index:201;background:rgba(0,0,0,.4)}.intersectsSubDiv{background:rgba(255,255,255,1);width:50%;height:50%;padding:10px;border-radius:4px;overflow:auto}.intersectsDiv table{width:100%;margin-top:10px;border:1px solid #ddd;border-radius:4px;border-spacing:0;border-collapse:collapse}div.drawButtonItemInactive,div.drawButtonItemactive,div.resetViewButtonItemInactive,div.resetViewButtonItemactive{width:22px;height:22px}.intersectsHeader{padding:10px;border:1px solid #ddd;background-color:#fff}.intersectsCount{padding-right:15px;font-size:14px}.intersectsDiv tr:nth-child(even){background-color:#f2f2f2}.intersectsDiv td,.intersectsDiv th{border-bottom:1px solid #ddd;padding:5px;text-align:center}.closeLink,.downloadLink{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid #0195e4;border-radius:4px;color:#fff;background-color:#0195e4;margin-right:10px;text-decoration:none}div.olControlLayerSwitcher,div.olPopupContent{font-family:Arial;font-weight:500}.dataLayersDiv label{text-transform:uppercase}div.olPopupContent{background-color:#fff;border:1px solid #fff;border-radius:4px;color:#000}div.olPopup[style]{background:0 0!important}div.controlPanel_0[style]{top:105px;left:8px;background:#0195e4;border-radius:4px;padding:3px}div.controlPanel_0[style]:hover{background:#fff}div.controlPanel_1[style]{top:65px;left:8px;background:#0195e4;border-radius:4px;padding:3px}div.controlPanel_1[style]:hover{background:#fff}div.olButton:hover[style],div.olButton[style] a{background:0 0}div.olControlTextButtonPanel[style],div.olControlTextButtonPanel[style] .olButton{background:#0195e4}div.olControlTextButtonPanel[style] .olButton:focus,div.olControlTextButtonPanel[style] .olButton:hover{background:#fff}div.controlPanel_0[style] .olButton:first-child,div.controlPanel_0[style] .olButton:first-child:hover{background:url(https://opentext.mapcite.com/images/ui/ic_edit_black_24dp_1x.png);border-radius:4px;padding:0}div.controlPanel_1[style] .olButton:first-child,div.controlPanel_1[style] .olButton:first-child:hover{background:url(https://opentext.mapcite.com/images/ui/ic_refresh_black_24dp_1x.png);border-radius:4px;padding:0}div.olControlTextButtonPan[style],div.olControlZoom[style],div.olControlZoom[style] a,div.olControlZoom[style] a:hover{background:#0195e4}div.olControlLayerSwitcher{font-size:14px;top:137px;left:5px}div.olControlLayerSwitcher input{margin-bottom:20px 0}div.olControlLayerSwitcher .layersDiv{background:#fff;color:#000;border-radius:4px;padding:10px}.olControlLayerSwitcher .layersDiv .dataLayersDiv,div.olControlLayerSwitcher .layersDiv .baseLayersDiv{padding:10px}div.olControlLayerSwitcher div.maximizeDiv img,div.olControlLayerSwitcher div.minimizeDiv img{display:none}div.olControlLayerSwitcher div.maximizeDiv{left:0;top:0;border-radius:4px;cursor:pointer;height:28px;width:28px;padding:0;background:url(https://opentext.mapcite.com/images/ui/ic_layers_black_24dp_1x.png) center no-repeat #0195e4}div.olControlLayerSwitcher div.maximizeDiv:hover,div.olControlLayerSwitcher div.minimizeDiv,div.olControlLayerSwitcher div.minimizeDiv:hover{left:0;top:0;border-radius:4px;cursor:pointer;height:28px;width:28px;padding:0;background:url(https://opentext.mapcite.com/images/ui/ic_layers_black_24dp_1x.png) center no-repeat #fff}div.olControlAttribution[style]{border-radius:4px;padding:5px;background:#fff;bottom:15px;right:5px}div.olControlMousePosition[style]{color:#000;border-radius:4px;padding:5px;background:#fff;bottom:15px;left:5px;max-width:100px}div.olPopup[style]{border:1px solid #ddd}</property>
+                        <method name="clientOnCreate"><![CDATA[// © MAPCITE 2017
+// <copyright company="MAPCITE">
+// Copyright (c) 2017 All Rights Reserved
+// </copyright>
+// <author>MAPCITE</author>
+// <date>09/06/2017 00:00:00</date>
+// <summary>Unless otherwise stated, the software is provided "as-is," without any express or implied warranty. In no event shall MAPCITE be held liable for any damages arising from the use of the software.</summary>
+
+var config = {
+    markerLabelColumn: "Aggregation", //Description
+	/* specify the default image url field for the map markers */
+    markerImageColumn: "Container icon", //"http://image path"
+    /* specify the height and width for map marker image */
+    markerImageHeight: 25,
+	markerImageWidth: 25,
+    /* specify the default center coornidates for the map */   
+    mapCenter: {
+        /* the latitude for the center */
+        lat: 51.4603277, 
+        /* the longitude for the center */
+        lng: -0.9313802 
+    },
+    /* specifiy a default map zoom level*/
+    mapZoomLevel: 15,
+    /* specify the default cluster distance for the map features */   
+    mapClusterDistance: 17,
+	/* specify the default cluster threshold for the map features */   
+	mapClusterThreshold: 5
+};
+
+function getMarkerData(){var e=customViz.getData();if(!e||!e.rows||!e.columns)return[];for(var t=[],a=0;a<e.rows.length;a++){e.rows[a];for(var n={},r=0;r<e.columns.length;r++){var o=e.columns[r],i=e.rows[a][r];n[o]=i}t.push(n)}return t}function initialise(){$(document).ready(function(){$("[title]").removeAttr("title");var e=$("#map").parent().height();$("#map").css("height",e);var t=$("#map").parent().width();$("#map").css("width",t)}),createMap()}function createMap(){map=new OpenLayers.Map({div:"map",allOverlays:!0});var e=new OpenLayers.Control.TextButtonPanel({vertical:!0,additionalClass:"controlPanel_0"}),t=new OpenLayers.Control.Button({trigger:function(){toggleControl("polygon")},displayClass:"drawButton"});e.addControls(t);var a=new OpenLayers.Control.TextButtonPanel({vertical:!0,additionalClass:"controlPanel_1"}),n=new OpenLayers.Control.Button({trigger:function(){resetMapView()},displayClass:"resetViewButton"});a.addControls(n),map.addControl(e),map.addControl(a);var r=new OpenLayers.Layer.OSM,o=new OpenLayers.Layer.Stamen("toner-lite"),s=new OpenLayers.Layer.Stamen("terrain-labels");map.addLayers([r,o,s]),r.setVisibility(!0),s.setVisibility(!1),o.setVisibility(!1),heatLayer=new Heatmap.Layer("heatmap"),map.addLayer(heatLayer);var l={featureclick:function(e){},nofeatureclick:function(){},featureover:function(e){},featureout:function(e){},featureadded:function(e){getFeaturesFromPoylgon(e.feature.geometry)}},u=new OpenLayers.Layer.Vector("drawn-layer",{eventListeners:OpenLayers.Util.extend({scope:u},l)});map.addLayers([u]),drawControls={polygon:new OpenLayers.Control.DrawFeature(u,OpenLayers.Handler.Polygon)};for(var c in drawControls)map.addControl(drawControls[c]);drawControls.polygon.handler.callbacks.point=function(e){u.features.length>0&amp;&amp;(u.removeAllFeatures(),withinPolygon=[],$("#intersectResults").remove())};var p=new OpenLayers.Style({pointRadius:"${radius}",externalGraphic:"${thumbnail}",graphicWidth:config.markerImageWidth,graphicHeight:config.markerImageHeight,fillColor:"#0195e4",fillOpacity:"${opacity}",strokeColor:"#ffffff",strokeWidth:5,strokeOpacity:.5,cursor:"pointer",label:"${getLabel}",fontSize:"18px",fontColor:"#fff",fontFamily:"Arial",fontWeight:"500",labelOutlineColor:"#0084e4",labelOutlineWidth:3},{context:{thumbnail:function(e){var t=e.attributes[config.markerImageColumn];return e.cluster?t="":t||(t="https://opentext.mapcite.com/images/features/Blue.png"),t},opacity:function(e){return e.cluster,1},radius:function(e){var t=5;return e.cluster&amp;&amp;(t=3*Math.min(e.attributes.count,7)),t},getLabel:function(e){return e.cluster&amp;&amp;e.cluster.length>1?e.cluster.length:""}}});strategy=new OpenLayers.Strategy.Cluster({distance:config.mapClusterDistance,threshold:config.mapClusterThreshold});var d=new OpenLayers.StyleMap({default:p,select:{}}),m={featureclick:function(e){var t=e.feature;if(t.cluster){var a=new OpenLayers.Bounds;for(i=0;i<t.cluster.length;i++)a.extend(t.cluster[i].geometry.getBounds());map.zoomToExtent(a,!0)}},nofeatureclick:function(e){},featureover:function(e){var t=config.markerLabelColumn,a=e.feature;a.cluster||(popup=new OpenLayers.Popup.Anchored("",e.feature.geometry.getBounds().getCenterLonLat(),new OpenLayers.Size("auto","auto"),"<div class='featurePopup'>"+e.feature.attributes[t]+"</div>","",null,!1),popup.calculateNewPx=function(e){return{x:e.x+10,y:e.y+-60}},a.popup=popup,map.addPopup(popup))},featureout:function(e){e.feature.cluster||(map.removePopup(e.feature.popup),e.feature.popup.destroy(),e.feature.popup=null)},featureadded:function(e){}};featureLayer=new OpenLayers.Layer.Vector("features",{eventListeners:OpenLayers.Util.extend({scope:featureLayer},m),renderers:["Canvas","SVG"],strategies:[new OpenLayers.Strategy.AnimatedCluster({distance:config.mapClusterDistance,threshold:config.mapClusterThreshold,animationMethod:OpenLayers.Easing.Expo.easeOut,animationDuration:10})],styleMap:d}),map.addLayer(featureLayer),map.addControl(new OpenLayers.Control.LayerSwitcher),map.addControl(new OpenLayers.Control.MousePosition({displayProjection:"EPSG:4326"})),map.setCenter(new OpenLayers.LonLat(config.mapCenter.lng,config.mapCenter.lat).transform("EPSG:4326","EPSG:3857"),config.mapZoomLevel),setDataLayers(),customViz.setDelegate(map),window.setTimeout(function(){customViz.setPrintReady()},3e3),window.onresize=function(){map.updateSize()}}function resetMapView(){map.setCenter(new OpenLayers.LonLat(config.mapCenter.lng,config.mapCenter.lat).transform("EPSG:4326","EPSG:3857"),config.mapZoomLevel)}function toggleControl(e){var t=drawControls[e];if(t.active){t.deactivate(),$("div.controlPanel_0[style]").css("background","");for(var a=map.layers,n=0;n<a.length;n++)"drawn-layer"===a[n].name&amp;&amp;a[n].removeAllFeatures();withinPolygon=[],$("#drawingTooltip").remove(),$("#intersectResults").remove()}else{t.activate(),$("div.controlPanel_0[style]").css("background","#fff");var r=document.createElement("div");r.innerHTML="<span>Hold shift while drawing to draw freehand</span>",r.id="drawingTooltip",$("#map").append(r)}}function getFeaturesFromPoylgon(e){var t=document.createElement("div");t.id="intersectResults",t.className="intersectsDiv";var a=document.createElement("div");a.className="intersectsSubDiv";var n=document.createElement("table"),r=document.createElement("tbody");n.appendChild(r);for(var o=featureLayer.features,i=0;i<o.length;i++)if(queryPoint=o[i],intersect=queryPoint.geometry.intersects(e),intersect){var s=queryPoint;if(s.cluster)for(var l=s.cluster,u=0;u<l.length;u++)withinPolygon.push(l[u]);else withinPolygon.push(s)}if(withinPolygon.length>0){csvData=[];var c=document.createElement("tr");c.className="intersectsTableHeaderRow";var p=withinPolygon[0];for(key in p.attributes)if(p.attributes.hasOwnProperty(key)){var d=document.createElement("th");d.innerHTML=key,c.appendChild(d)}r.appendChild(c);for(i=0;i<withinPolygon.length;i++){var m=document.createElement("tr");m.className="intersectsTableRow";var f=withinPolygon[i];for(key in f.attributes)if(f.attributes.hasOwnProperty(key)){var y=document.createElement("td");y.innerHTML=f.attributes[key],m.appendChild(y)}r.appendChild(m),csvItem=f.attributes,csvData.push(csvItem)}var h="data:text/csv;charset=utf-8,",g=customViz.getData();h+=objectToCSVRow(g.columns),csvData.forEach(function(e){h+=objectToCSVRow(e)});var v=document.createElement("div");v.className="intersectsHeader";var L=document.createElement("span");L.className="intersectsCount",L.innerHTML="Result: "+withinPolygon.length,v.appendChild(L);var w=encodeURI(h),C=document.createElement("a");C.className="downloadLink",C.innerHTML="Download .CSV",C.setAttribute("href",w),C.setAttribute("download","mapcite_report.csv"),v.appendChild(C);var P=document.createElement("a");P.className="closeLink",P.id="closeLink",P.innerHTML="Close",P.setAttribute("href","#"),v.appendChild(P),a.appendChild(v),a.appendChild(n),t.appendChild(a),document.body.appendChild(t)}}function setDataLayers(){var e=getMarkerData();if(e&amp;&amp;0!=e.length){for(var t=0;t<e.length;t++)if(e[t].Longitude||e[t].Latitude){var a=new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Point(e[t].Longitude,e[t].Latitude).transform("EPSG:4326","EPSG:3857"),{x:e[t].Longitude,y:e[t].Latitude}),n={};for(key in e[t]){var r=e[t][key];n[key]=r,a.attributes=n}features.push(a);var o=new Heatmap.Source(new OpenLayers.LonLat(e[t].Longitude,e[t].Latitude).transform("EPSG:4326","EPSG:3857"));heatLayer.addSource(o)}featureLayer.addFeatures(features),heatLayer.setVisibility(!1),heatLayer.defaultIntensity=.05,heatLayer.setOpacity(.33)}}var id=this.getId(),map=null,lastInfowindow=null,customViz=this;customViz.setPrintTimeOut(5e3);var data=this.getData(),drawControls,features=[],labels=[],withinPolygon=[],heatLayer,featureLayer;$(document).on("click","#intersectResults, #closeLink",function(){for(var e=map.layers,t=0;t<e.length;t++)"drawn-layer"===e[t].name&amp;&amp;e[t].removeAllFeatures();withinPolygon=[],$("#intersectResults").remove()});var objectToCSVRow=function(e){var t=[];for(var a in e){var n=(null===e[a]?"":e[a].toString()).replace(/"/g,'""');n='"'+n+'"',t.push(n)}return t.join(" ")+"\r\n"};head.load("https://opentext.mapcite.com/scripts/OpenLayers.js","https://opentext.mapcite.com/scripts/tile.stamen.js?v1.1.2","https://opentext.mapcite.com/scripts/heatmapLayer_001.js","https://opentext.mapcite.com/scripts/AnimatedCluster.js",initialise);
+]]></method>
+                        <property name="display">block</property>
+                        <property name="height">5.479166666666667in</property>
+                        <property name="width">13.84375in</property>
+                        <expression name="bookmark" type="javascript">"Mapcite"</expression>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Date Time</property>
+                                <text-property name="displayName">Date Time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Date Time"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Date</property>
+                                <text-property name="displayName">Date</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Date"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Time</property>
+                                <text-property name="displayName">Time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Time"]</expression>
+                                <property name="dataType">time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Container ID</property>
+                                <text-property name="displayName">Container ID</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Container ID"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Container Type</property>
+                                <text-property name="displayName">Container Type</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Container Type"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Temp Sensitive</property>
+                                <text-property name="displayName">Temp Sensitive</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Temp Sensitive"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Temp Range</property>
+                                <text-property name="displayName">Temp Range</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Temp Range"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Zone expected</property>
+                                <text-property name="displayName">Zone expected</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Zone expected"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Zone Actual</property>
+                                <text-property name="displayName">Zone Actual</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Zone Actual"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Sub Location</property>
+                                <text-property name="displayName">Sub Location</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Sub Location"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Location</property>
+                                <text-property name="displayName">Location</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Location"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Latitude</property>
+                                <text-property name="displayName">Latitude</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Latitude"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Longitude</property>
+                                <text-property name="displayName">Longitude</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Longitude"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Temp icon</property>
+                                <text-property name="displayName">Temp icon</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Temp icon"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Container icon</property>
+                                <text-property name="displayName">Container icon</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Container icon"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Count</property>
+                                <text-property name="displayName">Count</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Count"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Aggregation</property>
+                                <property name="dataType">float</property>
+                                <property name="aggregateFunction">SUM</property>
+                                <list-property name="arguments">
+                                    <structure>
+                                        <property name="name">Expression</property>
+                                        <expression name="value" type="javascript">row["Count"]</expression>
+                                    </structure>
+                                </list-property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="linkedDataModel">Container Data Model</property>
+                    </extended-item>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

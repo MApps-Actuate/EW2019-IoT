@@ -1,0 +1,14 @@
+Capacity,Current Tally,Sub Location,Location,Latitude,
+
+Capacity,Current Tally,Sub Location,Location,Latitude,Longitude
+Float,Float,String,String,DOUBLE,DOUBLE
+50,50,10000,Thames valley park,51.46076,-0.93095
+30,29,10001,Thames valley park,51.46051,-0.93133
+12,12,10003,Thames valley park,51.46046,-0.93078
+150,150,10004,Thames valley park,51.46022,-0.93123
+230,220,10005,Thames valley park,51.46034,-0.93192
+100,100,10006,Thames valley park,51.46059,-0.93184
+25,21,10007,Thames valley park,51.46088,-0.93171
+300,300,20001,4 Victoria Square,51.7491555,-0.32824
+210,210,30001,Cannon Street,51.5130653,-0.0975138
+50,41,10000,Thames valley park,51.46,-0.93

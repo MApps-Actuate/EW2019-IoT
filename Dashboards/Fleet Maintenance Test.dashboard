@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="NewDataMartDataSource" id="35">
+            <property name="datamartURL">Data Objects/SampleFleet</property>
+            <property name="datamartVersion">-1</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+    </data-sources>
+    <property name="dashboardView">
+        <dashboard id="2">
+            <property name="activeTab">180a3b33-87c3-4efd-af27-ac689d7b111c</property>
+            <property name="tabs">
+                <tab-element name="180a3b33-87c3-4efd-af27-ac689d7b111c" id="3">
+                    <property name="title">Fleet Maintenance</property>
+                    <property name="backgroundColor">auto</property>
+                    <property name="sections">
+                        <section id="272">
+                            <property name="width">73.87254901960785%</property>
+                            <property name="gadgets">
+                                <gadget name="Gadget_4c9eebf0-e346-4a77-a6e4-36e410a51b32" id="9">
+                                    <property name="title">Report - Fleet Maintenance</property>
+                                    <property name="externalGadgetURI">^/Report Designs/Fleet Maintenance.rptdesign</property>
+                                    <property name="showTitle">true</property>
+                                    <property name="showBorder">true</property>
+                                    <property name="zIndex">2</property>
+                                    <property name="showScrollBar">false</property>
+                                    <property name="height">945px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="10">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"Lato"</property>
+                                            <property name="fontSize">18pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="color">#353535</property>
+                                            <property name="textUnderline">none</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <data-view id="11">
+                                            <list-property name="userProperties">
+                                                <structure>
+                                                    <property name="name">showViewerToolbar</property>
+                                                    <property name="type">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <property name="showViewerToolbar">false</property>
+                                            <property name="gadgetType">viewer</property>
+                                            <property name="externalContentRef">
+                                                <external-element-ref>
+                                                    <property name="sourceFile">/Applications/MOD/Report Designs/MOD Act 2.rptdesign</property>
+                                                </external-element-ref>
+                                            </property>
+                                            <property name="paramSettings">
+                                                <param-setting>
+                                                    <property name="paramName">LocationP</property>
+                                                    <property name="displayText">null</property>
+                                                    <expression name="value">IN([Location],"Thames valley park")</expression>
+                                                    <property name="isHidden">true</property>
+                                                    <expression name="defaultValue" type="javascript">IN([Location],"Thames valley park")</expression>
+                                                </param-setting>
+                                            </property>
+                                        </data-view>
+                                    </property>
+                                </gadget>
+                            </property>
+                        </section>
+                        <section id="273">
+                            <property name="width">26.127450980392158%</property>
+                            <property name="gadgets">
+                                <gadget name="f7d977a8-310c-4541-8aae-8cccb96c6fa8" id="6">
+                                    <property name="zIndex">1</property>
+                                    <property name="isVisible">false</property>
+                                    <property name="height">150px</property>
+                                    <property name="caption">
+                                        <gadget-caption id="8">
+                                            <property name="showCaption">true</property>
+                                            <property name="horizontalAlignment">left</property>
+                                            <property name="fontFamily">"tahoma", "arial", "verdana", sans-serif</property>
+                                            <property name="fontSize">8pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="color">#000000</property>
+                                        </gadget-caption>
+                                    </property>
+                                    <property name="content">
+                                        <current-selections id="7"/>
+                                    </property>
+                                </gadget>
+                            </property>
+                        </section>
+                    </property>
+                </tab-element>
+            </property>
+        </dashboard>
+    </property>
+</report>

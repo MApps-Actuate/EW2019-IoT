@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.actuate.istudio.analysis.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.actuate.istudio.analysis.model="http:///com.actuate.istudio.analysis.model.ecore" name="IoT Demo">
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="CEM Salesforce.dashboard" path="/IoT Demo/Dashboards/CEM Salesforce.dashboard">
+    <dataMap key="//@files.16" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="SampleApplication.rptlibrary" path="/IoT Demo/Report Libraries/SampleApplication.rptlibrary" reports="//@files.33 //@files.34 //@files.35 //@files.38 //@files.39">
+    <dataMap key="//@files.8" value="1"/>
+    <dataMap key="//@files.25" value="1"/>
+    <dataMap key="//@files.24" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Toronto-bike-realtime.data" path="/IoT Demo/Data Objects/Toronto-bike-realtime.data">
+    <targetReportsMap key="//@files.28" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="Classic Models.datadesign" path="/IoT Demo/Data Objects/Classic Models.datadesign">
+    <dataSets name="Customers">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CONTACTLASTNAME"/>
+      <columns name="CONTACTFIRSTNAME"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="CITY"/>
+      <columns name="STATE"/>
+      <columns name="POSTALCODE"/>
+      <columns name="COUNTRY"/>
+      <columns name="SALESREPEMPLOYEENUMBER"/>
+      <columns name="CREDITLIMIT"/>
+      <columns name="Region" expression="if(row[&quot;COUNTRY&quot;] == 'USA' || row[&quot;COUNTRY&quot;] == 'Canada') 'North America'&#xD;&#xA;else if(row[&quot;COUNTRY&quot;] == 'Japan' ||  row[&quot;COUNTRY&quot;] == 'Singapore' || row[&quot;COUNTRY&quot;] == 'Philippines' || row[&quot;COUNTRY&quot;] == 'Hong Kong') 'Asia'&#xD;&#xA;else if (row[&quot;COUNTRY&quot;] == 'Australia' || row[&quot;COUNTRY&quot;] == 'New Zealand') 'Oceania'&#xD;&#xA;else 'Europe'"/>
+    </dataSets>
+    <dataSets name="Orders">
+      <columns name="ORDERNUMBER"/>
+      <columns name="ORDERDATE"/>
+      <columns name="REQUIREDDATE"/>
+      <columns name="SHIPPEDDATE"/>
+      <columns name="STATUS"/>
+      <columns name="COMMENTS"/>
+      <columns name="CUSTOMERNUMBER"/>
+    </dataSets>
+    <dataSets name="Order Details">
+      <columns name="ORDERNUMBER"/>
+      <columns name="PRODUCTCODE"/>
+      <columns name="QUANTITYORDERED"/>
+      <columns name="PRICEEACH"/>
+      <columns name="ORDERLINENUMBER"/>
+    </dataSets>
+    <dataSets name="Employees">
+      <columns name="EMPLOYEENUMBER"/>
+      <columns name="LASTNAME"/>
+      <columns name="FIRSTNAME"/>
+      <columns name="EXTENSION"/>
+      <columns name="EMAIL"/>
+      <columns name="OFFICECODE"/>
+      <columns name="REPORTSTO"/>
+      <columns name="JOBTITLE"/>
+    </dataSets>
+    <dataSets name="Offices">
+      <columns name="OFFICECODE"/>
+      <columns name="CITY"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="STATE"/>
+      <columns name="COUNTRY"/>
+      <columns name="POSTALCODE"/>
+      <columns name="TERRITORY"/>
+    </dataSets>
+    <dataSets name="Product Line">
+      <columns name="PRODUCTLINE"/>
+      <columns name="TEXTDESCRIPTION"/>
+      <columns name="HTMLDESCRIPTION"/>
+      <columns name="IMAGE"/>
+    </dataSets>
+    <dataSets name="Products">
+      <columns name="PRODUCTCODE"/>
+      <columns name="PRODUCTNAME"/>
+      <columns name="PRODUCTLINE"/>
+      <columns name="PRODUCTSCALE"/>
+      <columns name="PRODUCTVENDOR"/>
+      <columns name="PRODUCTDESCRIPTION"/>
+      <columns name="QUANTITYINSTOCK"/>
+      <columns name="BUYPRICE"/>
+      <columns name="MSRP"/>
+    </dataSets>
+    <dataSets name="Payments">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CHECKNUMBER"/>
+      <columns name="PAYMENTDATE"/>
+      <columns name="AMOUNT"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="CEM Salesforce_fr.dashboard" path="/IoT Demo/Dashboards/CEM Salesforce_fr.dashboard">
+    <dataMap key="//@files.16" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="myCT.rptdesign" path="/IoT Demo/Home/myCT.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="KPI.datadesign" path="/IoT Demo/Data Objects/KPI.datadesign">
+    <dataSets name="KPI">
+      <columns name="COUNTRY"/>
+      <columns name="YEAR"/>
+      <columns name="NB OF ORDER"/>
+      <columns name="NB OF ORDER CANCELLED"/>
+      <columns name="NB OF ORDER SHIPPED"/>
+      <columns name="TURNOVER TARGET"/>
+      <columns name="CUSTOMER SATISFACTION"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="Classic Models DE.datadesign" path="/IoT Demo/Data Objects/Classic Models DE.datadesign">
+    <dataSets name="Customers">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CONTACTLASTNAME"/>
+      <columns name="CONTACTFIRSTNAME"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="CITY"/>
+      <columns name="STATE"/>
+      <columns name="POSTALCODE"/>
+      <columns name="COUNTRY"/>
+      <columns name="SALESREPEMPLOYEENUMBER"/>
+      <columns name="CREDITLIMIT"/>
+      <columns name="Region" expression="if(row[&quot;COUNTRY&quot;] == 'USA' || row[&quot;COUNTRY&quot;] == 'Canada') 'North America'&#xD;&#xA;else if(row[&quot;COUNTRY&quot;] == 'Japan' ||  row[&quot;COUNTRY&quot;] == 'Singapore' || row[&quot;COUNTRY&quot;] == 'Philippines' || row[&quot;COUNTRY&quot;] == 'Hong Kong') 'Asia'&#xD;&#xA;else if (row[&quot;COUNTRY&quot;] == 'Australia' || row[&quot;COUNTRY&quot;] == 'New Zealand') 'Oceania'&#xD;&#xA;else 'Europe'"/>
+    </dataSets>
+    <dataSets name="Orders">
+      <columns name="ORDERNUMBER"/>
+      <columns name="ORDERDATE"/>
+      <columns name="REQUIREDDATE"/>
+      <columns name="SHIPPEDDATE"/>
+      <columns name="STATUS"/>
+      <columns name="COMMENTS"/>
+      <columns name="CUSTOMERNUMBER"/>
+    </dataSets>
+    <dataSets name="Order Details">
+      <columns name="ORDERNUMBER"/>
+      <columns name="PRODUCTCODE"/>
+      <columns name="QUANTITYORDERED"/>
+      <columns name="PRICEEACH"/>
+      <columns name="ORDERLINENUMBER"/>
+    </dataSets>
+    <dataSets name="Employees">
+      <columns name="EMPLOYEENUMBER"/>
+      <columns name="LASTNAME"/>
+      <columns name="FIRSTNAME"/>
+      <columns name="EXTENSION"/>
+      <columns name="EMAIL"/>
+      <columns name="OFFICECODE"/>
+      <columns name="REPORTSTO"/>
+      <columns name="JOBTITLE"/>
+    </dataSets>
+    <dataSets name="Offices">
+      <columns name="OFFICECODE"/>
+      <columns name="CITY"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="STATE"/>
+      <columns name="COUNTRY"/>
+      <columns name="POSTALCODE"/>
+      <columns name="TERRITORY"/>
+    </dataSets>
+    <dataSets name="Product Line">
+      <columns name="PRODUCTLINE"/>
+      <columns name="TEXTDESCRIPTION"/>
+      <columns name="HTMLDESCRIPTION"/>
+      <columns name="IMAGE"/>
+    </dataSets>
+    <dataSets name="Products">
+      <columns name="PRODUCTCODE"/>
+      <columns name="PRODUCTNAME"/>
+      <columns name="PRODUCTLINE"/>
+      <columns name="PRODUCTSCALE"/>
+      <columns name="PRODUCTVENDOR"/>
+      <columns name="PRODUCTDESCRIPTION"/>
+      <columns name="QUANTITYINSTOCK"/>
+      <columns name="BUYPRICE"/>
+      <columns name="MSRP"/>
+    </dataSets>
+    <dataSets name="Payments">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CHECKNUMBER"/>
+      <columns name="PAYMENTDATE"/>
+      <columns name="AMOUNT"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Classic Models FR.data" path="/IoT Demo/Data Objects/Classic Models FR.data">
+    <targetDashboardsMap key="//@files.12" value="1"/>
+    <targetDashboardsMap key="//@files.20" value="1"/>
+    <targetLibrariesMap key="//@files.1" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Customer Profile.rptdesign" path="/IoT Demo/Report Designs/Customer Profile.rptdesign">
+    <dataSets name="profile">
+      <columns name="Value"/>
+      <columns name="Column"/>
+      <columns name="In group"/>
+      <columns name="Remainder"/>
+      <columns name="Index"/>
+      <columns name="ZScore"/>
+      <columns name="Significant"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Forecast Toronto.data" path="/IoT Demo/Data Objects/Forecast Toronto.data">
+    <targetReportsMap key="//@files.27" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="getUserName.rptdesign" path="/IoT Demo/Report Designs/getUserName.rptdesign"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Analytics_fr.dashboard" path="/IoT Demo/Dashboards/Analytics_fr.dashboard">
+    <dataMap key="//@files.25" value="1"/>
+    <dataMap key="//@files.24" value="1"/>
+    <dataMap key="//@files.8" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="myDashboard.dashboard" path="/IoT Demo/Home/myDashboard.dashboard">
+    <dataMap key="//@files.25" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="Toronto Trip Data.datadesign" path="/IoT Demo/Data Objects/Toronto Trip Data.datadesign">
+    <dataSets name="Toronto Data Set">
+      <columns name="TransactionID"/>
+      <columns name="City"/>
+      <columns name="TripDate"/>
+      <columns name="StartTime"/>
+      <columns name="EndTime"/>
+      <columns name="CustomerName"/>
+      <columns name="CustomerType"/>
+      <columns name="CarType"/>
+      <columns name="VehicleID"/>
+      <columns name="DriverID"/>
+      <columns name="StartLocationLat"/>
+      <columns name="StartLocationLong"/>
+      <columns name="EndLocationLat"/>
+      <columns name="EndLocationLong"/>
+      <columns name="Distance"/>
+      <columns name="Status"/>
+      <columns name="UnitPrice"/>
+      <columns name="Extras"/>
+      <columns name="Satisfaction"/>
+      <columns name="CommentID"/>
+      <columns name="RandomNumber"/>
+    </dataSets>
+    <dataSets name="Vehicle Data Set">
+      <columns name="VehicleID"/>
+      <columns name="VehicleMake"/>
+    </dataSets>
+    <dataSets name="Comments Data Set">
+      <columns name="CommentID"/>
+      <columns name="Comment"/>
+    </dataSets>
+    <dataSets name="Driver Data Set">
+      <columns name="DriverID"/>
+      <columns name="DriverName"/>
+      <columns name="DriverCat"/>
+    </dataSets>
+    <dataSets name="Vehicle Prediction">
+      <columns name="key"/>
+      <columns name="VehicleID"/>
+      <columns name="TrialID"/>
+      <columns name="ObsNum"/>
+      <columns name="P1"/>
+      <columns name="P2"/>
+      <columns name="P3"/>
+      <columns name="P5"/>
+      <columns name="P6"/>
+      <columns name="P7"/>
+      <columns name="E1"/>
+      <columns name="E3"/>
+      <columns name="E4"/>
+      <columns name="E5"/>
+      <columns name="E6"/>
+      <columns name="E7"/>
+      <columns name="E8"/>
+      <columns name="E10"/>
+      <columns name="E11"/>
+      <columns name="V1"/>
+      <columns name="V2"/>
+      <columns name="V3"/>
+      <columns name="V4"/>
+      <columns name="V5"/>
+      <columns name="V8"/>
+      <columns name="V11"/>
+      <columns name="pred_Failure"/>
+    </dataSets>
+    <dataSets name="Realtime Toronto Trips">
+      <columns name="TransactionID"/>
+      <columns name="City"/>
+      <columns name="TripDate"/>
+      <columns name="StartTime"/>
+      <columns name="EndTime"/>
+      <columns name="CustomerName"/>
+      <columns name="CustomerType"/>
+      <columns name="CarType"/>
+      <columns name="VehicleID"/>
+      <columns name="DriverID"/>
+      <columns name="StartLocationLat"/>
+      <columns name="StartLocationLong"/>
+      <columns name="EndLocationLat"/>
+      <columns name="EndLocationLong"/>
+      <columns name="Distance"/>
+      <columns name="Status"/>
+      <columns name="UnitPrice"/>
+      <columns name="Extras"/>
+      <columns name="Satisfaction"/>
+      <columns name="CommentID"/>
+      <columns name="RandomNumber"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="demo 2018.rptlibrary" path="/IoT Demo/Report Libraries/demo 2018.rptlibrary" reports="//@files.26 //@files.27 //@files.28"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="INNOVATE Sales Analysis.data" path="/IoT Demo/Data Objects/INNOVATE Sales Analysis.data">
+    <targetDashboardsMap key="//@files.4" value="1"/>
+    <targetDashboardsMap key="//@files.0" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="Classic Models FR.datadesign" path="/IoT Demo/Data Objects/Classic Models FR.datadesign">
+    <dataSets name="Customers">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CONTACTLASTNAME"/>
+      <columns name="CONTACTFIRSTNAME"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="CITY"/>
+      <columns name="STATE"/>
+      <columns name="POSTALCODE"/>
+      <columns name="COUNTRY"/>
+      <columns name="SALESREPEMPLOYEENUMBER"/>
+      <columns name="CREDITLIMIT"/>
+      <columns name="Region" expression="if(row[&quot;COUNTRY&quot;] == 'USA' || row[&quot;COUNTRY&quot;] == 'Canada') 'Amérique du Nord'&#xD;&#xA;else if(row[&quot;COUNTRY&quot;] == 'Japan' ||  row[&quot;COUNTRY&quot;] == 'Singapore' || row[&quot;COUNTRY&quot;] == 'Philippines' || row[&quot;COUNTRY&quot;] == 'Hong Kong') 'Asie'&#xD;&#xA;else if (row[&quot;COUNTRY&quot;] == 'Australia' || row[&quot;COUNTRY&quot;] == 'New Zealand') 'Océanie'&#xD;&#xA;else 'Europe'"/>
+    </dataSets>
+    <dataSets name="Orders">
+      <columns name="ORDERNUMBER"/>
+      <columns name="ORDERDATE"/>
+      <columns name="REQUIREDDATE"/>
+      <columns name="SHIPPEDDATE"/>
+      <columns name="STATUS"/>
+      <columns name="COMMENTS"/>
+      <columns name="CUSTOMERNUMBER"/>
+    </dataSets>
+    <dataSets name="Order Details">
+      <columns name="ORDERNUMBER"/>
+      <columns name="PRODUCTCODE"/>
+      <columns name="QUANTITYORDERED"/>
+      <columns name="PRICEEACH"/>
+      <columns name="ORDERLINENUMBER"/>
+    </dataSets>
+    <dataSets name="Employees">
+      <columns name="EMPLOYEENUMBER"/>
+      <columns name="LASTNAME"/>
+      <columns name="FIRSTNAME"/>
+      <columns name="EXTENSION"/>
+      <columns name="EMAIL"/>
+      <columns name="OFFICECODE"/>
+      <columns name="REPORTSTO"/>
+      <columns name="JOBTITLE"/>
+    </dataSets>
+    <dataSets name="Offices">
+      <columns name="OFFICECODE"/>
+      <columns name="CITY"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="STATE"/>
+      <columns name="COUNTRY"/>
+      <columns name="POSTALCODE"/>
+      <columns name="TERRITORY"/>
+    </dataSets>
+    <dataSets name="Product Line">
+      <columns name="PRODUCTLINE"/>
+      <columns name="TEXTDESCRIPTION"/>
+      <columns name="HTMLDESCRIPTION"/>
+      <columns name="IMAGE"/>
+    </dataSets>
+    <dataSets name="Products">
+      <columns name="PRODUCTCODE"/>
+      <columns name="PRODUCTNAME"/>
+      <columns name="PRODUCTLINE"/>
+      <columns name="PRODUCTSCALE"/>
+      <columns name="PRODUCTVENDOR"/>
+      <columns name="PRODUCTDESCRIPTION"/>
+      <columns name="QUANTITYINSTOCK"/>
+      <columns name="BUYPRICE"/>
+      <columns name="MSRP"/>
+    </dataSets>
+    <dataSets name="Payments">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CHECKNUMBER"/>
+      <columns name="PAYMENTDATE"/>
+      <columns name="AMOUNT"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Customer Profile.dashboard" path="/IoT Demo/Dashboards/Customer Profile.dashboard"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Classic Models DE.data" path="/IoT Demo/Data Objects/Classic Models DE.data"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Analytics.dashboard" path="/IoT Demo/Dashboards/Analytics.dashboard">
+    <dataMap key="//@files.25" value="1"/>
+    <dataMap key="//@files.24" value="1"/>
+    <dataMap key="//@files.8" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Toronto Trip Data.data" path="/IoT Demo/Data Objects/Toronto Trip Data.data">
+    <targetReportsMap key="//@files.26" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="Forecast Toronto.datadesign" path="/IoT Demo/Data Objects/Forecast Toronto.datadesign">
+    <dataSets name="Stations">
+      <columns name="Station ID"/>
+      <columns name="Station Name"/>
+      <columns name="lat"/>
+      <columns name="lon"/>
+    </dataSets>
+    <dataSets name="Forecast Data">
+      <columns name="Station ID"/>
+      <columns name="Weekday"/>
+      <columns name="Usage Date"/>
+      <columns name="Demand"/>
+      <columns name="Type"/>
+    </dataSets>
+    <dataSets name="Forecast Weather">
+      <columns name="Usage Date"/>
+      <columns name="Demand"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ThemesReportItems3.rptlibrary" path="/IoT Demo/ThemesReportItems3.rptlibrary" reports="//@files.29 //@files.30 //@files.31 //@files.32 //@files.33 //@files.34 //@files.35 //@files.36 //@files.37 //@files.38 //@files.39"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="KPI.data" path="/IoT Demo/Data Objects/KPI.data">
+    <targetDashboardsMap key="//@files.12" value="1"/>
+    <targetDashboardsMap key="//@files.20" value="1"/>
+    <targetLibrariesMap key="//@files.1" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="Classic Models.data" path="/IoT Demo/Data Objects/Classic Models.data">
+    <targetReportsMap key="//@files.29" value="1"/>
+    <targetReportsMap key="//@files.30" value="1"/>
+    <targetReportsMap key="//@files.32" value="1"/>
+    <targetReportsMap key="//@files.36" value="1"/>
+    <targetReportsMap key="//@files.39" value="1"/>
+    <targetDashboardsMap key="//@files.12" value="1"/>
+    <targetDashboardsMap key="//@files.13" value="1"/>
+    <targetDashboardsMap key="//@files.20" value="1"/>
+    <targetLibrariesMap key="//@files.1" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="mashboard3.rptdesign" path="/IoT Demo/Report Designs/mashboard3.rptdesign" libraries="//@files.15">
+    <dataMap key="//@files.21" value="1"/>
+    <dataSets name="Gauge">
+      <columns name="ID"/>
+      <columns name="VALUE"/>
+      <columns name="MAX"/>
+      <columns name="COLOR"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="mashboard2.rptdesign" path="/IoT Demo/Report Designs/mashboard2.rptdesign" libraries="//@files.15">
+    <dataMap key="//@files.10" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="mashboard1.rptdesign" path="/IoT Demo/Report Designs/mashboard1.rptdesign" libraries="//@files.15">
+    <dataMap key="//@files.2" value="1"/>
+    <dataSets name="chart1">
+      <columns name="X"/>
+      <columns name="Y"/>
+      <columns name="Y-1"/>
+    </dataSets>
+    <dataSets name="Table Data Set">
+      <columns name="Cat"/>
+      <columns name="Value"/>
+    </dataSets>
+    <dataSets name="chart2">
+      <columns name="X"/>
+      <columns name="Value"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="myReport.rptdesign" path="/IoT Demo/Home/myReport.rptdesign" libraries="//@files.23">
+    <dataMap key="//@files.25" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="chartExample1.rptdesign" path="/IoT Demo/Report Designs/chartExample1.rptdesign" libraries="//@files.23">
+    <dataMap key="//@files.25" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="chartExample4.rptdesign" path="/IoT Demo/Report Designs/chartExample4.rptdesign" libraries="//@files.23">
+    <dataSets name="Customers">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CONTACTLASTNAME"/>
+      <columns name="CONTACTFIRSTNAME"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="CITY"/>
+      <columns name="STATE"/>
+      <columns name="POSTALCODE"/>
+      <columns name="COUNTRY"/>
+      <columns name="SALESREPEMPLOYEENUMBER"/>
+      <columns name="CREDITLIMIT"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="chartExample3.rptdesign" path="/IoT Demo/Report Designs/chartExample3.rptdesign" libraries="//@files.23">
+    <dataMap key="//@files.25" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="invoiceReport.rptdesign" path="/IoT Demo/Report Designs/invoiceReport.rptdesign" libraries="//@files.23 //@files.1">
+    <dataSets name="Data Set">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CUST_ADRESS1"/>
+      <columns name="CUST_ADRESS2"/>
+      <columns name="CUST_CITY"/>
+      <columns name="CUST_STATE"/>
+      <columns name="CUST_POSTALCODE"/>
+      <columns name="CUST_COUNTRY"/>
+      <columns name="SR_FIRSTNAME"/>
+      <columns name="SR_LASTNAME"/>
+      <columns name="SR_EMAIL"/>
+      <columns name="SR_ADRESS1"/>
+      <columns name="SR_ADRESS2"/>
+      <columns name="SR_CITY"/>
+      <columns name="SR_POSTALCODE"/>
+      <columns name="SR_STATE"/>
+      <columns name="ORDERNUMBER"/>
+      <columns name="ORDERDATE"/>
+      <columns name="SHIPPEDDATE"/>
+      <columns name="STATUS"/>
+      <columns name="PRODUCTLINE"/>
+      <columns name="PRODUCTCODE"/>
+      <columns name="PRODUCTNAME"/>
+      <columns name="QUANTITYORDERED"/>
+      <columns name="PRICEEACH"/>
+      <columns name="MSRP"/>
+    </dataSets>
+    <dataSets name="Data Set for parameter">
+      <columns name="CUSTOMERNAME"/>
+      <columns name="ORDERNUMBER"/>
+      <columns name="LIB" expression="row[&quot;ORDERNUMBER&quot;] + ' - ' + row[&quot;CUSTOMERNAME&quot;]"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="salesByRepDashboard.rptdesign" path="/IoT Demo/Report Designs/salesByRepDashboard.rptdesign" libraries="//@files.23 //@files.1">
+    <linkedFromReportsMap key="//@files.39" value="1"/>
+    <dataSets name="Data Set">
+      <columns name="COUNTRY"/>
+      <columns name="CITY"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="STATUS"/>
+      <columns name="CREDITLIMIT"/>
+      <columns name="NB_OF_ORDERS"/>
+      <columns name="AMOUNT_2012"/>
+      <columns name="AMOUNT_2013"/>
+      <columns name="BUY_AMOUNT_2012"/>
+      <columns name="BUY_AMOUNT_2013"/>
+      <columns name="FIRSTNAME"/>
+      <columns name="LASTNAME"/>
+      <columns name="Region" expression="if(row[&quot;COUNTRY&quot;] == 'USA' || row[&quot;COUNTRY&quot;] == 'Canada') 'NA'&#xD;&#xA;else if(row[&quot;COUNTRY&quot;] == 'Japan' || row[&quot;COUNTRY&quot;] == 'Australia' || row[&quot;COUNTRY&quot;] == 'Singapore' || row[&quot;COUNTRY&quot;] == 'Philippines' || row[&quot;COUNTRY&quot;] == 'Hong Kong' || row[&quot;COUNTRY&quot;] == 'New Zealand') 'APAC'&#xD;&#xA;else 'EMEA'"/>
+      <columns name="Total Orders" expression="row[&quot;NB_OF_ORDERS&quot;]"/>
+      <columns name="Rank" expression="row[&quot;AMOUNT_2013&quot;]"/>
+    </dataSets>
+    <dataSets name="Data Set Detail">
+      <columns name="FIRSTNAME"/>
+      <columns name="LASTNAME"/>
+      <columns name="PRODUCTLINE"/>
+      <columns name="TYPE"/>
+      <columns name="MONTH"/>
+      <columns name="NB_OF_ORDERS"/>
+      <columns name="AMOUNT_2012"/>
+      <columns name="AMOUNT_2013"/>
+    </dataSets>
+    <dataSets name="Data Set for parameter">
+      <columns name="FIRSTNAME"/>
+      <columns name="LASTNAME"/>
+      <columns name="FULLNAME" expression="row[&quot;FIRSTNAME&quot;] + ' ' + row[&quot;LASTNAME&quot;]"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="JQUERY - Cool Stuff.rptdesign" path="/IoT Demo/Report Designs/JQUERY - Cool Stuff.rptdesign" libraries="//@files.23 //@files.1">
+    <dataSets name="Data Set">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CONTACTLASTNAME"/>
+      <columns name="CONTACTFIRSTNAME"/>
+      <columns name="PHONE"/>
+      <columns name="ADDRESSLINE1"/>
+      <columns name="ADDRESSLINE2"/>
+      <columns name="CITY"/>
+      <columns name="STATE"/>
+      <columns name="POSTALCODE"/>
+      <columns name="COUNTRY"/>
+      <columns name="SALESREPEMPLOYEENUMBER"/>
+      <columns name="CREDITLIMIT"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="chartExample2.rptdesign" path="/IoT Demo/Report Designs/chartExample2.rptdesign" libraries="//@files.23">
+    <dataMap key="//@files.25" value="1"/>
+    <dataSets name="Data Set">
+      <columns name="Metric"/>
+      <columns name="Amt"/>
+      <columns name="CurrentOrGoal"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="JSAPICode.rptdesign" path="/IoT Demo/Report Designs/JSAPICode.rptdesign" libraries="//@files.23"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="secureReport.rptdesign" path="/IoT Demo/Report Designs/secureReport.rptdesign" libraries="//@files.23 //@files.1">
+    <dataSets name="Data Set">
+      <columns name="CUSTOMERNUMBER"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="CITY"/>
+      <columns name="COUNTRY"/>
+      <columns name="FIRSTNAME"/>
+      <columns name="LASTNAME"/>
+      <columns name="ORDERNUMBER"/>
+      <columns name="ORDERDATE"/>
+      <columns name="REQUIREDDATE"/>
+      <columns name="SHIPPEDDATE"/>
+      <columns name="STATUS"/>
+      <columns name="PRODUCTLINE"/>
+      <columns name="COMMENTS"/>
+      <columns name="AMOUNT"/>
+      <columns name="COST_BASIS"/>
+      <columns name="REGION" expression="if(row[&quot;COUNTRY&quot;] == 'USA' || row[&quot;COUNTRY&quot;] == 'Canada') 'NA'&#xD;&#xA;else if(row[&quot;COUNTRY&quot;] == 'Japan' || row[&quot;COUNTRY&quot;] == 'Australia' || row[&quot;COUNTRY&quot;] == 'Singapore' || row[&quot;COUNTRY&quot;] == 'Philippines' || row[&quot;COUNTRY&quot;] == 'Hong Kong' || row[&quot;COUNTRY&quot;] == 'New Zealand') 'APAC'&#xD;&#xA;else 'EMEA'"/>
+      <columns name="PROFIT" expression="row[&quot;AMOUNT&quot;] - row[&quot;COST_BASIS&quot;]"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="salesOrderReport.rptdesign" path="/IoT Demo/Report Designs/salesOrderReport.rptdesign" libraries="//@files.23 //@files.1">
+    <dataMap key="//@files.25" value="1"/>
+    <linkedToReportsMap key="1571" value="//@files.34"/>
+    <dataSets name="Data Set">
+      <columns name="COUNTRY"/>
+      <columns name="CITY"/>
+      <columns name="CUSTOMERNAME"/>
+      <columns name="STATUS"/>
+      <columns name="CREDITLIMIT"/>
+      <columns name="NB_OF_ORDERS"/>
+      <columns name="AMOUNT_2012"/>
+      <columns name="AMOUNT_2013"/>
+      <columns name="BUY_AMOUNT_2012"/>
+      <columns name="BUY_AMOUNT_2013"/>
+      <columns name="FIRSTNAME"/>
+      <columns name="LASTNAME"/>
+      <columns name="Region" expression="if(row[&quot;COUNTRY&quot;] == 'USA' || row[&quot;COUNTRY&quot;] == 'Canada') 'NA'&#xD;&#xA;else if(row[&quot;COUNTRY&quot;] == 'Japan' || row[&quot;COUNTRY&quot;] == 'Australia' || row[&quot;COUNTRY&quot;] == 'Singapore' || row[&quot;COUNTRY&quot;] == 'Philippines' || row[&quot;COUNTRY&quot;] == 'Hong Kong' || row[&quot;COUNTRY&quot;] == 'New Zealand') 'APAC'&#xD;&#xA;else 'EMEA'"/>
+      <columns name="Total Orders" expression="row[&quot;NB_OF_ORDERS&quot;]"/>
+    </dataSets>
+    <dataSets name="Data Set Detail">
+      <columns name="FIRSTNAME"/>
+      <columns name="LASTNAME"/>
+      <columns name="MONTH"/>
+      <columns name="NB_OF_ORDERS"/>
+      <columns name="AMOUNT_2012"/>
+      <columns name="AMOUNT_2013"/>
+    </dataSets>
+    <dataSets name="Data Set grouped">
+      <columns name="FIRSTNAME"/>
+      <columns name="LASTNAME"/>
+      <columns name="NB_OF_CUSTOMERS"/>
+      <columns name="NB_OF_ORDERS"/>
+      <columns name="AMOUNT_2012"/>
+      <columns name="AMOUNT_2013"/>
+      <columns name="RANK" expression="row[&quot;AMOUNT_2013&quot;]"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Dashboard" name="Fleet Maintenance.dashboard" path="/IoT Demo/Dashboards/Fleet Maintenance.dashboard"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:DataDesign" name="SampleFleet.datadesign" path="/IoT Demo/Data Objects/SampleFleet.datadesign">
+    <dataSets name="Vehicles">
+      <columns name="VIN"/>
+      <columns name="Make"/>
+      <columns name="Model"/>
+      <columns name="Model Year"/>
+      <columns name="Lesseeid"/>
+    </dataSets>
+    <dataSets name="Part Condition">
+      <columns name="VIN"/>
+      <columns name="partid"/>
+      <columns name="condition"/>
+      <columns name="cause"/>
+      <columns name="Predicted Replacement Date" expression="if(row[&quot;condition&quot;] &lt; 35){&#xD;&#xA;&#x9;BirtDateTime.addDay(BirtDateTime.today(), row[&quot;condition&quot;]);&#xD;&#xA;}else{&#xD;&#xA;&#x9;BirtDateTime.addDay(BirtDateTime.today(), Math.floor(Math.random() * 700) + 365);&#xD;&#xA;}"/>
+    </dataSets>
+    <dataSets name="Lessee">
+      <columns name="id"/>
+      <columns name="name"/>
+      <columns name="region"/>
+    </dataSets>
+    <dataSets name="Parts">
+      <columns name="ID"/>
+      <columns name="Part"/>
+      <columns name="Manufacturer"/>
+    </dataSets>
+    <dataSets name="Vehicle Details">
+      <columns name="VIN"/>
+      <columns name="Mileage"/>
+      <columns name="Oil Life"/>
+      <columns name="Average MPG"/>
+      <columns name="Brake Fluid Level"/>
+      <columns name="Brake Fluid Pressure"/>
+      <columns name="Oil Pressure"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:Data" name="SampleFleet.data" path="/IoT Demo/Data Objects/SampleFleet.data">
+    <targetReportsMap key="//@files.43" value="1"/>
+    <targetReportsMap key="//@files.44" value="1"/>
+    <targetReportsMap key="//@files.45" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Fleet Maintenance.rptdesign" path="/IoT Demo/Report Designs/Fleet Maintenance.rptdesign">
+    <missingDependencies>platform:/resource/IoT%20Demo/Report%20Designs/Vehicle%20Details.rptdesign</missingDependencies>
+    <dataMap key="//@files.42" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Vehicle Details.rptdesign" path="/IoT Demo/Report Designs/Vehicle Details.rptdesign">
+    <dataMap key="//@files.42" value="1"/>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Top Cars.rptdesign" path="/IoT Demo/Report Designs/Top Cars.rptdesign">
+    <dataMap key="//@files.42" value="1"/>
+  </files>
+</com.actuate.istudio.analysis.model:Project>

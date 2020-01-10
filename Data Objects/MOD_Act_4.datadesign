@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">2252.Join Data Set.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2252.Join Data Set.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2252.Join Data Set.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2252.Join Data Set.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2337.Summary.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2337.Summary.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2337.Summary.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2337.Summary.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2384.Summary.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2384.Summary.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2384.Summary.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2384.Summary.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2413.Summary.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2413.Summary.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2413.Summary.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2413.Summary.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2413.Details.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2413.Details.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2413.Details.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2413.Details.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2444.Summary.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2444.Summary.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2444.Summary.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2444.Summary.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2444.Details.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2444.Details.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2444.Details.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">2444.Details.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="2252.Join Data Set.x">372</property>
+    <property name="2252.Join Data Set.y">60</property>
+    <property name="2252.Join Data Set.width">150</property>
+    <property name="2252.Join Data Set.height">200</property>
+    <property name="2337.Summary.x">278</property>
+    <property name="2337.Summary.y">8</property>
+    <property name="2337.Summary.width">150</property>
+    <property name="2337.Summary.height">200</property>
+    <property name="2384.Summary.x">296</property>
+    <property name="2384.Summary.y">8</property>
+    <property name="2384.Summary.width">150</property>
+    <property name="2384.Summary.height">200</property>
+    <property name="2413.Summary.x">34</property>
+    <property name="2413.Summary.y">17</property>
+    <property name="2413.Summary.width">150</property>
+    <property name="2413.Summary.height">200</property>
+    <property name="2413.Details.x">234</property>
+    <property name="2413.Details.y">13</property>
+    <property name="2413.Details.width">150</property>
+    <property name="2413.Details.height">200</property>
+    <property name="2444.Summary.x">405</property>
+    <property name="2444.Summary.y">1</property>
+    <property name="2444.Summary.width">299</property>
+    <property name="2444.Summary.height">436</property>
+    <property name="2444.Details.x">10</property>
+    <property name="2444.Details.y">10</property>
+    <property name="2444.Details.width">236</property>
+    <property name="2444.Details.height">291</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Data Source" id="12">
+            <property name="HOME">data/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">NO</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Details" id="2249">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Icon URL</property>
+                    <expression name="expression" type="javascript">if (row["EventType"]== "HardAcceleration") {&#13;
+    // "http://poc-magellan164.eastus.cloudapp.azure.com/iportal/MOD/Accelerate.png"&#13;
+   "http://opentext.mapcite.com/images/ot/Accelerate.png"&#13;
+   } else if (row["EventType"] == "IgnitionOn") {&#13;
+  		"http://opentext.mapcite.com/images/ot/Start.png"&#13;
+ } else if (row["EventType"] == "IgnitionOff") {&#13;
+  		"http://opentext.mapcite.com/images/ot/Stop.png"&#13;
+} else if (row["EventType"] == "HardBrake") {&#13;
+  		"http://opentext.mapcite.com/images/ot/Braking.png"&#13;
+} else if (row["EventType"] == "RemoteStart") {&#13;
+  		"http://opentext.mapcite.com/images/ot/remote start.png"&#13;
+  		 // ""&#13;
+} else {&#13;
+&#13;
+      // Just a data point&#13;
+      "https://opentext.mapcite.com/images/features/Blue.png"&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">EventTypeMap</property>
+                    <expression name="expression" type="javascript">if (row["EventType"] == null) {&#13;
+ "BroadCast" &#13;
+} else {&#13;
+ (row["EventType"])&#13;
+ }</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">FontIcon</property>
+                    <expression name="expression" type="javascript">if (row["EventType"]== "HardAcceleration") {&#13;
+ 						 			 //"0xf0e4"&#13;
+ 						 			 "0xf072"&#13;
+   	} else if (row["EventType"] == "IgnitionOn") {&#13;
+              						 "0xf04b"&#13;
+    } else if (row["EventType"] == "Accelerate") {&#13;
+              						 "0xf054"&#13;
+	} else if (row["EventType"] == "IgnitionOff") {&#13;
+               						"0xf011"&#13;
+	} else if (row["EventType"] == "HardBrake") {&#13;
+              						 "0xf071"&#13;
+	} else if (row["EventType"] == "RemoteStart") {&#13;
+              						 "0xf18a"&#13;
+} else {&#13;
+      // Just a data point&#13;
+     						 "0xf041"&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">deviceId</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">deviceId</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">latitude</property>
+                    <property name="alias">Latitude</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">latitude</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">longitude</property>
+                    <property name="alias">Longitude</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">longitude</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">deviceAlias</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">deviceAlias</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">receivedDateTime</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">receivedDateTime</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">eventDateTime</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">eventDateTime</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">address</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">address</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">HDOP</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">HDOP</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">speed</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">speed</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">heading</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">heading</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">batteryBackup</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">batteryBackup</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">deviceSerialNumber</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">deviceSerialNumber</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">DriverID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">DriverID</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">JourneyID</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">JourneyID</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">EventType</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">EventType</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Icon URL</property>
+                    <property name="analysis">attribute</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">EventTypeMap</property>
+                    <property name="analysis">attribute</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">FontIcon</property>
+                    <property name="analysis">attribute</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="filter"/>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">deviceId</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Latitude</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Longitude</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">deviceAlias</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">receivedDateTime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">eventDateTime</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">address</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">HDOP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">speed</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">heading</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">batteryBackup</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">deviceSerialNumber</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">DriverID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">JourneyID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">EventType</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">Icon URL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">EventTypeMap</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">FontIcon</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">deviceId</property>
+                    <property name="nativeName">deviceId</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">latitude</property>
+                    <property name="nativeName">latitude</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">longitude</property>
+                    <property name="nativeName">longitude</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">deviceAlias</property>
+                    <property name="nativeName">deviceAlias</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">receivedDateTime</property>
+                    <property name="nativeName">receivedDateTime</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">eventDateTime</property>
+                    <property name="nativeName">eventDateTime</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">address</property>
+                    <property name="nativeName">address</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">HDOP</property>
+                    <property name="nativeName">HDOP</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">speed</property>
+                    <property name="nativeName">speed</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">heading</property>
+                    <property name="nativeName">heading</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">batteryBackup</property>
+                    <property name="nativeName">batteryBackup</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">deviceSerialNumber</property>
+                    <property name="nativeName">deviceSerialNumber</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">DriverID</property>
+                    <property name="nativeName">DriverID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">JourneyID</property>
+                    <property name="nativeName">JourneyID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">EventType</property>
+                    <property name="nativeName">EventType</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "deviceId", "latitude", "longitude", "deviceAlias", "receivedDateTime", "eventDateTime", "address", "HDOP", "speed", "heading", "batteryBackup", "deviceSerialNumber", "DriverID", "JourneyID", "EventType" from "JourneyMaster.csv" : {"deviceId","deviceId",STRING;"latitude","latitude",DOUBLE;"longitude","longitude",DOUBLE;"deviceAlias","deviceAlias",STRING;"receivedDateTime","receivedDateTime",STRING;"eventDateTime","eventDateTime",STRING;"address","address",STRING;"HDOP","HDOP",STRING;"speed","speed",DOUBLE;"heading","heading",STRING;"batteryBackup","batteryBackup",STRING;"deviceSerialNumber","deviceSerialNumber",STRING;"DriverID","DriverID",STRING;"JourneyID","JourneyID",STRING;"EventType","EventType",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>deviceId</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>deviceId</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>latitude</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>latitude</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>longitude</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>longitude</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>deviceAlias</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>deviceAlias</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>receivedDateTime</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>receivedDateTime</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>eventDateTime</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>eventDateTime</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>address</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>address</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>heading</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>heading</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>speed</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>speed</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>batteryVoltage</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>batteryVoltage</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>batteryBackup</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>batteryBackup</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ignitionEnabledFlag</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ignitionEnabledFlag</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>deviceSerialNumber</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>deviceSerialNumber</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Summary" id="13">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Vehicle</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Vehicle</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Start Location Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Start Location Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Start Time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Start Time</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">End Location Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">End Location Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">End Time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">End Time</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Distance (mi)</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Distance (mi)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Duration (min)</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Duration (min)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Fuel Cost (USD)</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Fuel Cost (USD)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Average MPG</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Average MPG</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Fuel Volume (gal)</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Fuel Volume (gal)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Hard Accelerations</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Hard Accelerations</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Hard Brakes</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Hard Brakes</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Duration Over 70 mph (secs)</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Duration Over 70 mph (secs)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Duration Over 75 mph (secs)</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Duration Over 75 mph (secs)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Duration Over 80 mph (secs)</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Duration Over 80 mph (secs)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Start Location Lat</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Start Location Lat</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Start Location Lon</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Start Location Lon</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Start Location Accuracy (meters)</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Start Location Accuracy (meters)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">End Location Lat</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">End Location Lat</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">End Location Lon</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">End Location Lon</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">End Location Accuracy (meters)</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">End Location Accuracy (meters)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Path</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Path</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Vehicle</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Start Location Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Start Time</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">End Location Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">End Time</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Distance (mi)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Duration (min)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Fuel Cost (USD)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Average MPG</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Fuel Volume (gal)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Hard Accelerations</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Hard Brakes</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Duration Over 70 mph (secs)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">Duration Over 75 mph (secs)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">Duration Over 80 mph (secs)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">Start Location Lat</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">Start Location Lon</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">Start Location Accuracy (meters)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">End Location Lat</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">End Location Lon</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">End Location Accuracy (meters)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">Path</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Vehicle</property>
+                    <property name="nativeName">Vehicle</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Start Location Name</property>
+                    <property name="nativeName">Start Location Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Start Time</property>
+                    <property name="nativeName">Start Time</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">End Location Name</property>
+                    <property name="nativeName">End Location Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">End Time</property>
+                    <property name="nativeName">End Time</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Distance (mi)</property>
+                    <property name="nativeName">Distance (mi)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Duration (min)</property>
+                    <property name="nativeName">Duration (min)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Fuel Cost (USD)</property>
+                    <property name="nativeName">Fuel Cost (USD)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Average MPG</property>
+                    <property name="nativeName">Average MPG</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Fuel Volume (gal)</property>
+                    <property name="nativeName">Fuel Volume (gal)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Hard Accelerations</property>
+                    <property name="nativeName">Hard Accelerations</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Hard Brakes</property>
+                    <property name="nativeName">Hard Brakes</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Duration Over 70 mph (secs)</property>
+                    <property name="nativeName">Duration Over 70 mph (secs)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">Duration Over 75 mph (secs)</property>
+                    <property name="nativeName">Duration Over 75 mph (secs)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">Duration Over 80 mph (secs)</property>
+                    <property name="nativeName">Duration Over 80 mph (secs)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">Start Location Lat</property>
+                    <property name="nativeName">Start Location Lat</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">Start Location Lon</property>
+                    <property name="nativeName">Start Location Lon</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">Start Location Accuracy (meters)</property>
+                    <property name="nativeName">Start Location Accuracy (meters)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">End Location Lat</property>
+                    <property name="nativeName">End Location Lat</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">End Location Lon</property>
+                    <property name="nativeName">End Location Lon</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">End Location Accuracy (meters)</property>
+                    <property name="nativeName">End Location Accuracy (meters)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">Path</property>
+                    <property name="nativeName">Path</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Vehicle", "Start Location Name", "Start Time", "End Location Name", "End Time", "Distance (mi)", "Duration (min)", "Fuel Cost (USD)", "Average MPG", "Fuel Volume (gal)", "Hard Accelerations", "Hard Brakes", "Duration Over 70 mph (secs)", "Duration Over 75 mph (secs)", "Duration Over 80 mph (secs)", "Start Location Lat", "Start Location Lon", "Start Location Accuracy (meters)", "End Location Lat", "End Location Lon", "End Location Accuracy (meters)", "Path" from "Excel out Trips.csv" : {"Vehicle","Vehicle",STRING;"Start Location Name","Start Location Name",STRING;"Start Time","Start Time",STRING;"End Location Name","End Location Name",STRING;"End Time","End Time",STRING;"Distance (mi)","Distance (mi)",STRING;"Duration (min)","Duration (min)",STRING;"Fuel Cost (USD)","Fuel Cost (USD)",STRING;"Average MPG","Average MPG",STRING;"Fuel Volume (gal)","Fuel Volume (gal)",STRING;"Hard Accelerations","Hard Accelerations",STRING;"Hard Brakes","Hard Brakes",STRING;"Duration Over 70 mph (secs)","Duration Over 70 mph (secs)",STRING;"Duration Over 75 mph (secs)","Duration Over 75 mph (secs)",STRING;"Duration Over 80 mph (secs)","Duration Over 80 mph (secs)",STRING;"Start Location Lat","Start Location Lat",STRING;"Start Location Lon","Start Location Lon",STRING;"Start Location Accuracy (meters)","Start Location Accuracy (meters)",STRING;"End Location Lat","End Location Lat",STRING;"End Location Lon","End Location Lon",STRING;"End Location Accuracy (meters)","End Location Accuracy (meters)",STRING;"Path","Path",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Vehicle</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Vehicle</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Start Location Name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Start Location Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Start Time</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Start Time</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>End Location Name</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>End Location Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>End Time</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>End Time</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Distance (mi)</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Distance (mi)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Duration (min)</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Duration (min)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Fuel Cost (USD)</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Fuel Cost (USD)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Average MPG</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Average MPG</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Fuel Volume (gal)</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Fuel Volume (gal)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Hard Accelerations</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Hard Accelerations</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Hard Brakes</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Hard Brakes</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Duration Over 70 mph (secs)</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Duration Over 70 mph (secs)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Duration Over 75 mph (secs)</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Duration Over 75 mph (secs)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Duration Over 80 mph (secs)</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Duration Over 80 mph (secs)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Start Location Lat</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Start Location Lat</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Start Location Lon</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Start Location Lon</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Start Location Accuracy (meters)</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Start Location Accuracy (meters)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>End Location Lat</design:name>
+              <design:position>19</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>End Location Lat</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>End Location Lon</design:name>
+              <design:position>20</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>End Location Lon</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>End Location Accuracy (meters)</design:name>
+              <design:position>21</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>End Location Accuracy (meters)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Path</design:name>
+              <design:position>22</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Path</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Tags</design:name>
+              <design:position>23</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Tags</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <linked-data-model name="Data Model" id="2444">
+            <property name="aliasDataSets">
+                <alias-data-set name="Details" id="2487">
+                    <property name="originDataSet">Details</property>
+                </alias-data-set>
+                <alias-data-set name="Summary" id="2488">
+                    <property name="originDataSet">Summary</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="2491">
+                    <property name="leftAliasDataSet">Data Model/Details</property>
+                    <property name="rightAliasDataSet">Data Model/Summary</property>
+                    <property name="type">inner</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="2492">
+                            <structure name="leftColumn">
+                                <property name="position">14</property>
+                                <property name="name">JourneyID</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">Vehicle</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="categories">
+                <category name="Details" id="2445">
+                    <property name="categoryColumns">
+                        <category-column name="deviceId" id="2446">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">deviceId</property>
+                        </category-column>
+                        <category-column name="Latitude" id="2447">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">Latitude</property>
+                        </category-column>
+                        <category-column name="Longitude" id="2448">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">Longitude</property>
+                        </category-column>
+                        <category-column name="deviceAlias" id="2449">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">deviceAlias</property>
+                        </category-column>
+                        <category-column name="receivedDateTime" id="2450">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">receivedDateTime</property>
+                        </category-column>
+                        <category-column name="eventDateTime" id="2451">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">eventDateTime</property>
+                        </category-column>
+                        <category-column name="address" id="2452">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">address</property>
+                        </category-column>
+                        <category-column name="HDOP" id="2453">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">HDOP</property>
+                        </category-column>
+                        <category-column name="speed" id="2454">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">speed</property>
+                        </category-column>
+                        <category-column name="heading" id="2455">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">heading</property>
+                        </category-column>
+                        <category-column name="batteryBackup" id="2456">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">batteryBackup</property>
+                        </category-column>
+                        <category-column name="deviceSerialNumber" id="2457">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">deviceSerialNumber</property>
+                        </category-column>
+                        <category-column name="DriverID" id="2458">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">DriverID</property>
+                        </category-column>
+                        <category-column name="JourneyID" id="2459">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">JourneyID</property>
+                        </category-column>
+                        <category-column name="EventType" id="2460">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">EventType</property>
+                        </category-column>
+                        <category-column name="Icon URL" id="2461">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">Icon URL</property>
+                        </category-column>
+                        <category-column name="EventTypeMap" id="2462">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">EventTypeMap</property>
+                        </category-column>
+                        <category-column name="FontIcon" id="2493">
+                            <property name="aliasDataSet">Data Model/Details</property>
+                            <property name="resultSetColumnName">FontIcon</property>
+                        </category-column>
+                    </property>
+                </category>
+                <category name="Summary" id="2463">
+                    <property name="categoryColumns">
+                        <category-column name="Vehicle" id="2464">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Vehicle</property>
+                        </category-column>
+                        <category-column name="Start Location Name" id="2465">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Start Location Name</property>
+                        </category-column>
+                        <category-column name="Start Time" id="2466">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Start Time</property>
+                        </category-column>
+                        <category-column name="End Location Name" id="2467">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">End Location Name</property>
+                        </category-column>
+                        <category-column name="End Time" id="2468">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">End Time</property>
+                        </category-column>
+                        <category-column name="Distance (mi)" id="2469">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Distance (mi)</property>
+                        </category-column>
+                        <category-column name="Duration (min)" id="2470">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Duration (min)</property>
+                        </category-column>
+                        <category-column name="Fuel Cost (USD)" id="2471">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Fuel Cost (USD)</property>
+                        </category-column>
+                        <category-column name="Average MPG" id="2472">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Average MPG</property>
+                        </category-column>
+                        <category-column name="Fuel Volume (gal)" id="2473">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Fuel Volume (gal)</property>
+                        </category-column>
+                        <category-column name="Hard Accelerations" id="2474">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Hard Accelerations</property>
+                        </category-column>
+                        <category-column name="Hard Brakes" id="2475">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Hard Brakes</property>
+                        </category-column>
+                        <category-column name="Duration Over 70 mph (secs)" id="2476">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Duration Over 70 mph (secs)</property>
+                        </category-column>
+                        <category-column name="Duration Over 75 mph (secs)" id="2477">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Duration Over 75 mph (secs)</property>
+                        </category-column>
+                        <category-column name="Duration Over 80 mph (secs)" id="2478">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Duration Over 80 mph (secs)</property>
+                        </category-column>
+                        <category-column name="Start Location Lat" id="2479">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Start Location Lat</property>
+                        </category-column>
+                        <category-column name="Start Location Lon" id="2480">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Start Location Lon</property>
+                        </category-column>
+                        <category-column name="Start Location Accuracy (meters)" id="2481">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Start Location Accuracy (meters)</property>
+                        </category-column>
+                        <category-column name="End Location Lat" id="2482">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">End Location Lat</property>
+                        </category-column>
+                        <category-column name="End Location Lon" id="2483">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">End Location Lon</property>
+                        </category-column>
+                        <category-column name="End Location Accuracy (meters)" id="2484">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">End Location Accuracy (meters)</property>
+                        </category-column>
+                        <category-column name="Path" id="2485">
+                            <property name="aliasDataSet">Data Model/Summary</property>
+                            <property name="resultSetColumnName">Path</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+    </property>
+</datamart>

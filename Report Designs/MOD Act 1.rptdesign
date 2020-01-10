@@ -1,0 +1,3497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <simple-property-list name="includeResource">
+        <value>Magellan_mashboard</value>
+    </simple-property-list>
+    <property name="units">in</property>
+    <property name="theme">demo 2018.defaultTheme</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+        <structure>
+            <property name="fileName">Report Libraries/demo 2018.rptlibrary</property>
+            <property name="namespace">demo 2018</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <dynamic-filter-parameter name="LocationP" id="837">
+            <property name="valueType">dynamic</property>
+            <expression name="valueExpr" type="javascript">dataSetRow["Location"]</expression>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">IN([Location],"4 Victoria Square","Cannon Street","Thames valley park")</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="linkedDataModelName">Data Model</property>
+            <property name="column">Location</property>
+            <property name="displayType">simple</property>
+            <property name="controlType">list-box</property>
+            <simple-property-list name="filterOperator">
+                <value>in</value>
+            </simple-property-list>
+        </dynamic-filter-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="com.actuate.data.oda.static" name="Static Data Source" id="194"/>
+        <data-mart-data-source name="Data Object Badge data" id="820">
+            <property name="datamartURL">Data Objects/MOD_Act_1</property>
+            <property name="accessType">transient</property>
+        </data-mart-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="chart2" id="446">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Value</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Value</text-property>
+                    <text-property name="heading">Value</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Delay</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Delay</text-property>
+                    <text-property name="heading">Delay</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Value</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Delay</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Static Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Value</property>
+                    <property name="nativeName">Value</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Delay</property>
+                    <property name="nativeName">Delay</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{"Columns":["Value","Delay"],"Types":[3,3]}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>X</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>X</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>X</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Value</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>3</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Value</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Value</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>DATA</name>
+                    <value>[["10","1"],["50","2"],["60","3"],["10","4"],["70","5"]]</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="Data Model" id="834">
+            <property name="dataSource">Data Object Badge data</property>
+            <property name="dataObject">Data Model</property>
+        </data-mart-linked-data-model>
+    </property>
+    <themes>
+        <report-item-theme type="Chart" name="MOD" id="842">
+            <xml-property name="customValues"><![CDATA[<type>1</type><ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Area Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" itemType="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font name="Tahoma" size="10.0"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,541.5,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <interactivity legendBehavior="1"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="">
+      <grouping groupType="1"/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,189,186,255"/>
+      <entries _body=",255,63,58,137"/>
+      <entries _body=",255,200,133,92"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",121,154,188,195"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="AreaSeries" seriesIdentifier="Accepted" stacked="false" curve="true">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&amp;quot;Accepted&amp;quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="BarSeries" seriesIdentifier="" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+     </series>
+     <series _type="LineSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="PieSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <title>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </title>
+     </series>
+     <series _type="DialSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dial>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+       <majorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </majorGrid>
+       <minorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </minorGrid>
+       <label>
+        <background _nil="1"/>
+        <outline>
+         <color _nil="1"/>
+        </outline>
+       </label>
+      </dial>
+      <needle>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+      </needle>
+     </series>
+     <series _type="ScatterSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="StockSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+     </series>
+     <series _type="BubbleSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <accLineAttributes>
+       <color _nil="1"/>
+      </accLineAttributes>
+     </series>
+     <series _type="DifferenceSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <negativeMarkers>
+       <outline/>
+      </negativeMarkers>
+      <negativeLineAttributes>
+       <color _nil="1"/>
+      </negativeLineAttributes>
+     </series>
+     <series _type="GanttSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <connectionLine>
+       <color _nil="1"/>
+      </connectionLine>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+      <decorationLabel>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </decorationLabel>
+     </series>
+     <series _type="RadarSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font>
+         <alignment/>
+        </font>
+       </caption>
+       <outline/>
+       <insets/>
+      </label>
+      <dataPoint/>
+      <marker>
+       <outline/>
+      </marker>
+      <lineAttributes/>
+      <webLineAttributes/>
+      <webLabel>
+       <caption>
+        <font>
+         <alignment/>
+        </font>
+       </caption>
+       <outline/>
+       <insets/>
+      </webLabel>
+      <catLabel>
+       <caption>
+        <font>
+         <alignment/>
+        </font>
+       </caption>
+       <outline/>
+       <insets/>
+      </catLabel>
+     </series>
+     <grouping _nil="1"/>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <ancillaryAxes>
+    <title>
+     <caption value="Z-Axis Title"/>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,189,186,255"/>
+      <entries _body=",255,63,58,137"/>
+      <entries _body=",255,200,133,92"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",121,154,188,195"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _type="NumberDataElement" value="0.0"/>
+    </origin>
+   </ancillaryAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,189,186,255"/>
+     <entries _body=",255,63,58,137"/>
+     <entries _body=",255,200,133,92"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",121,154,188,195"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&amp;quot;Date&amp;quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping _nil="1"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,192,192,192"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Tahoma" size="10.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="dd MMM"/>
+   <majorGrid>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>]]></xml-property>
+        </report-item-theme>
+    </themes>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">10px</property>
+            <property name="leftMargin">10px</property>
+            <property name="bottomMargin">10px</property>
+            <property name="rightMargin">10px</property>
+            <property name="height">1000px</property>
+            <property name="width">1500px</property>
+            <property name="headerHeight">1px</property>
+            <property name="footerHeight">1px</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="4">
+            <property name="marginLeft">5pt</property>
+            <property name="marginRight">5pt</property>
+            <property name="height">10.475in</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">TotalAccess</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["Accepted"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TotalRejected</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["Rejected"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TotalRetry</property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["Retry"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TotalAcceptedB</property>
+                    <expression name="expression" type="javascript">row["TotalAccess"]</expression>
+                    <property name="dataType">float</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TotalRetryB</property>
+                    <expression name="expression" type="javascript">row["TotalRetry"]</expression>
+                    <property name="dataType">float</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">TotalRejectsB</property>
+                    <expression name="expression" type="javascript">row["TotalRejected"]</expression>
+                    <property name="dataType">float</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">new Date();</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding_1</property>
+                    <expression name="expression" type="javascript">new Date();</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Date Time</property>
+                    <text-property name="displayName">Date Time</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Date Time"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">Date</property>
+                    <text-property name="displayName">Date</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Date"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">Time</property>
+                    <text-property name="displayName">Time</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Time"]</expression>
+                    <property name="dataType">time</property>
+                </structure>
+                <structure>
+                    <property name="name">Person ID</property>
+                    <text-property name="displayName">Person ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Person ID"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Name</property>
+                    <text-property name="displayName">Name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Surname</property>
+                    <text-property name="displayName">Surname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Surname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DOB</property>
+                    <text-property name="displayName">DOB</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DOB"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">Gender</property>
+                    <text-property name="displayName">Gender</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Gender"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Class</property>
+                    <text-property name="displayName">Class</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Class"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Device ID</property>
+                    <text-property name="displayName">Device ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Device ID"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Location</property>
+                    <text-property name="displayName">Location</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Location"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Long</property>
+                    <text-property name="displayName">Long</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Long"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Lat</property>
+                    <text-property name="displayName">Lat</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Lat"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">Zone</property>
+                    <text-property name="displayName">Zone</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Zone"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Grant</property>
+                    <text-property name="displayName">Grant</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Grant"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Accepted</property>
+                    <text-property name="displayName">Accepted</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Accepted"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Rejected</property>
+                    <text-property name="displayName">Rejected</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Rejected"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Retry</property>
+                    <text-property name="displayName">Retry</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Retry"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <property name="linkedDataModel">Data Model</property>
+            <column id="5"/>
+            <column id="6"/>
+            <column id="7"/>
+            <column id="8"/>
+            <column id="9"/>
+            <column id="10"/>
+            <row id="11">
+                <property name="height">30px</property>
+                <cell id="12">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="verticalAlign">middle</property>
+                    <image id="410">
+                        <property name="display">inline</property>
+                        <property name="height">20px</property>
+                        <property name="width">20px</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/user.png</expression>
+                    </image>
+                    <text id="46">
+                        <property name="paddingLeft">5pt</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[Total access]]></text-property>
+                    </text>
+                </cell>
+                <cell id="13">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="verticalAlign">middle</property>
+                    <image id="412">
+                        <property name="display">inline</property>
+                        <property name="height">0.17894736842105263in</property>
+                        <property name="width">0.2631578947368421in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/retweet.png</expression>
+                    </image>
+                    <text id="63">
+                        <property name="paddingLeft">5pt</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[Total re-try]]></text-property>
+                    </text>
+                </cell>
+                <cell id="14">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="verticalAlign">middle</property>
+                    <image id="411">
+                        <property name="display">inline</property>
+                        <property name="height">0.2in</property>
+                        <property name="width">0.20833333333333334in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/Cancel.png</expression>
+                    </image>
+                    <text id="65">
+                        <property name="paddingLeft">5pt</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[Total rejects]]></text-property>
+                    </text>
+                </cell>
+                <cell id="15">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="verticalAlign">middle</property>
+                    <image id="409">
+                        <property name="display">inline</property>
+                        <property name="height">23px</property>
+                        <property name="width">27px</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/wrench.png</expression>
+                    </image>
+                    <text id="67">
+                        <property name="paddingLeft">5pt</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[Device Failures]]></text-property>
+                    </text>
+                </cell>
+                <cell id="16">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="verticalAlign">middle</property>
+                    <image id="413">
+                        <property name="display">inline</property>
+                        <property name="height">0.19166666666666668in</property>
+                        <property name="width">0.175in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/red-arrow-png-26.png</expression>
+                    </image>
+                    <text id="69">
+                        <property name="paddingLeft">5pt</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[Down time]]></text-property>
+                    </text>
+                </cell>
+                <cell id="17">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="verticalAlign">middle</property>
+                    <image id="414">
+                        <property name="display">inline</property>
+                        <property name="height">0.21666666666666667in</property>
+                        <property name="width">0.23333333333333334in</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/exclamation-triangle.png</expression>
+                    </image>
+                    <text id="71">
+                        <property name="paddingLeft">5pt</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[Incidents]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="18">
+                <property name="height">30px</property>
+                <cell id="19">
+                    <property name="paddingLeft">10pt</property>
+                    <data id="830">
+                        <property name="backgroundAttachment">scroll</property>
+                        <property name="backgroundPositionX">0%</property>
+                        <property name="backgroundPositionY">0%</property>
+                        <property name="backgroundRepeat">repeat</property>
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontSize">40px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="fontVariant">normal</property>
+                        <property name="color">#73879C</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textOverline">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">black</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">black</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">black</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">black</property>
+                        <property name="borderTopStyle">none</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">0pt</property>
+                        <property name="marginRight">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">1pt</property>
+                        <property name="paddingRight">1pt</property>
+                        <property name="letterSpacing">normal</property>
+                        <property name="lineHeight">normal</property>
+                        <property name="orphans">2</property>
+                        <property name="textTransform">none</property>
+                        <property name="whiteSpace">normal</property>
+                        <property name="widows">2</property>
+                        <property name="wordSpacing">normal</property>
+                        <property name="display">inline</property>
+                        <property name="pageBreakAfter">auto</property>
+                        <property name="pageBreakBefore">auto</property>
+                        <property name="pageBreakInside">auto</property>
+                        <property name="showIfBlank">false</property>
+                        <property name="canShrink">false</property>
+                        <property name="overflow">hidden</property>
+                        <property name="resultSetColumn">TotalAcceptedB</property>
+                    </data>
+                </cell>
+                <cell id="20">
+                    <property name="borderLeftColor">#ACB8C4</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightColor">#ACB8C4</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="paddingLeft">10pt</property>
+                    <data id="831">
+                        <property name="backgroundAttachment">scroll</property>
+                        <property name="backgroundPositionX">0%</property>
+                        <property name="backgroundPositionY">0%</property>
+                        <property name="backgroundRepeat">repeat</property>
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontSize">40px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="fontVariant">normal</property>
+                        <property name="color">#73879C</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textOverline">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">black</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">black</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">black</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">black</property>
+                        <property name="borderTopStyle">none</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">0pt</property>
+                        <property name="marginRight">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">1pt</property>
+                        <property name="paddingRight">1pt</property>
+                        <property name="letterSpacing">normal</property>
+                        <property name="lineHeight">normal</property>
+                        <property name="orphans">2</property>
+                        <property name="textTransform">none</property>
+                        <property name="whiteSpace">normal</property>
+                        <property name="widows">2</property>
+                        <property name="wordSpacing">normal</property>
+                        <property name="display">inline</property>
+                        <property name="pageBreakAfter">auto</property>
+                        <property name="pageBreakBefore">auto</property>
+                        <property name="pageBreakInside">auto</property>
+                        <property name="showIfBlank">false</property>
+                        <property name="canShrink">false</property>
+                        <property name="overflow">hidden</property>
+                        <property name="resultSetColumn">TotalRetryB</property>
+                    </data>
+                </cell>
+                <cell id="21">
+                    <property name="borderLeftColor">#ACB8C4</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightColor">#ACB8C4</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="paddingLeft">10pt</property>
+                    <data id="832">
+                        <property name="backgroundAttachment">scroll</property>
+                        <property name="backgroundPositionX">0%</property>
+                        <property name="backgroundPositionY">0%</property>
+                        <property name="backgroundRepeat">repeat</property>
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontSize">40px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="fontVariant">normal</property>
+                        <property name="color">#73879C</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textOverline">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">black</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">black</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">black</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">black</property>
+                        <property name="borderTopStyle">none</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">0pt</property>
+                        <property name="marginRight">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">1pt</property>
+                        <property name="paddingRight">1pt</property>
+                        <property name="letterSpacing">normal</property>
+                        <property name="lineHeight">normal</property>
+                        <property name="orphans">2</property>
+                        <property name="textTransform">none</property>
+                        <property name="whiteSpace">normal</property>
+                        <property name="widows">2</property>
+                        <property name="wordSpacing">normal</property>
+                        <property name="display">inline</property>
+                        <property name="pageBreakAfter">auto</property>
+                        <property name="pageBreakBefore">auto</property>
+                        <property name="pageBreakInside">auto</property>
+                        <property name="showIfBlank">false</property>
+                        <property name="canShrink">false</property>
+                        <property name="overflow">hidden</property>
+                        <property name="resultSetColumn">TotalRejectsB</property>
+                    </data>
+                </cell>
+                <cell id="22">
+                    <property name="borderLeftColor">#ACB8C4</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightColor">#ACB8C4</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="paddingLeft">10pt</property>
+                    <text id="59">
+                        <property name="backgroundAttachment">scroll</property>
+                        <property name="backgroundPositionX">0%</property>
+                        <property name="backgroundPositionY">0%</property>
+                        <property name="backgroundRepeat">repeat</property>
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontSize">40px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="fontVariant">normal</property>
+                        <property name="color">#73879C</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textOverline">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">black</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">black</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">black</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">black</property>
+                        <property name="borderTopStyle">none</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">0pt</property>
+                        <property name="marginRight">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">1pt</property>
+                        <property name="paddingRight">1pt</property>
+                        <property name="textIndent">0em</property>
+                        <property name="letterSpacing">normal</property>
+                        <property name="lineHeight">normal</property>
+                        <property name="orphans">2</property>
+                        <property name="textTransform">none</property>
+                        <property name="whiteSpace">normal</property>
+                        <property name="widows">2</property>
+                        <property name="wordSpacing">normal</property>
+                        <property name="display">inline</property>
+                        <property name="pageBreakAfter">auto</property>
+                        <property name="pageBreakBefore">auto</property>
+                        <property name="pageBreakInside">auto</property>
+                        <property name="showIfBlank">false</property>
+                        <property name="canShrink">false</property>
+                        <property name="overflow">hidden</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[17]]></text-property>
+                    </text>
+                </cell>
+                <cell id="23">
+                    <property name="borderLeftColor">#ACB8C4</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightColor">#ACB8C4</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="paddingLeft">10pt</property>
+                    <text id="60">
+                        <property name="backgroundAttachment">scroll</property>
+                        <property name="backgroundPositionX">0%</property>
+                        <property name="backgroundPositionY">0%</property>
+                        <property name="backgroundRepeat">repeat</property>
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontSize">40px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="fontVariant">normal</property>
+                        <property name="color">#73879C</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textOverline">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">black</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">black</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">black</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">black</property>
+                        <property name="borderTopStyle">none</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">0pt</property>
+                        <property name="marginRight">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">1pt</property>
+                        <property name="paddingRight">1pt</property>
+                        <property name="textIndent">0em</property>
+                        <property name="letterSpacing">normal</property>
+                        <property name="lineHeight">normal</property>
+                        <property name="orphans">2</property>
+                        <property name="textTransform">none</property>
+                        <property name="whiteSpace">normal</property>
+                        <property name="widows">2</property>
+                        <property name="wordSpacing">normal</property>
+                        <property name="display">inline</property>
+                        <property name="pageBreakAfter">auto</property>
+                        <property name="pageBreakBefore">auto</property>
+                        <property name="pageBreakInside">auto</property>
+                        <property name="showIfBlank">false</property>
+                        <property name="canShrink">false</property>
+                        <property name="overflow">hidden</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[2.2 %]]></text-property>
+                    </text>
+                </cell>
+                <cell id="24">
+                    <property name="paddingLeft">10pt</property>
+                    <text id="61">
+                        <property name="backgroundAttachment">scroll</property>
+                        <property name="backgroundPositionX">0%</property>
+                        <property name="backgroundPositionY">0%</property>
+                        <property name="backgroundRepeat">repeat</property>
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontSize">40px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="fontVariant">normal</property>
+                        <property name="color">#73879C</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textOverline">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">black</property>
+                        <property name="borderBottomStyle">none</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">black</property>
+                        <property name="borderLeftStyle">none</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">black</property>
+                        <property name="borderRightStyle">none</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">black</property>
+                        <property name="borderTopStyle">none</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">0pt</property>
+                        <property name="marginRight">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">1pt</property>
+                        <property name="paddingRight">1pt</property>
+                        <property name="textIndent">0em</property>
+                        <property name="letterSpacing">normal</property>
+                        <property name="lineHeight">normal</property>
+                        <property name="orphans">2</property>
+                        <property name="textTransform">none</property>
+                        <property name="whiteSpace">normal</property>
+                        <property name="widows">2</property>
+                        <property name="wordSpacing">normal</property>
+                        <property name="display">inline</property>
+                        <property name="pageBreakAfter">auto</property>
+                        <property name="pageBreakBefore">auto</property>
+                        <property name="pageBreakInside">auto</property>
+                        <property name="showIfBlank">false</property>
+                        <property name="canShrink">false</property>
+                        <property name="overflow">hidden</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[14]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="25">
+                <property name="height">25px</property>
+                <cell id="26">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">5px</property>
+                    <image id="370">
+                        <property name="display">inline</property>
+                        <property name="height">10px</property>
+                        <property name="width">13px</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/arrow up green.png</expression>
+                    </image>
+                    <text id="48">
+                        <property name="style">kpi_green</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[ 2 %]]></text-property>
+                    </text>
+                    <label id="50">
+                        <property name="paddingLeft">3pt</property>
+                        <property name="display">inline</property>
+                        <text-property name="text" key="From Last Week">From Last Week</text-property>
+                    </label>
+                </cell>
+                <cell id="27">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">5px</property>
+                    <image id="369">
+                        <property name="display">inline</property>
+                        <property name="height">10px</property>
+                        <property name="width">13px</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/arrow up green.png</expression>
+                    </image>
+                    <text id="72">
+                        <property name="style">kpi_green</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[ 4 %]]></text-property>
+                    </text>
+                    <label id="73">
+                        <property name="paddingLeft">3pt</property>
+                        <property name="display">inline</property>
+                        <text-property name="text" key="From Last Week">From Last Week</text-property>
+                    </label>
+                </cell>
+                <cell id="28">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">5px</property>
+                    <image id="373">
+                        <property name="display">inline</property>
+                        <property name="height">12px</property>
+                        <property name="width">15px</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/arrow down red.png</expression>
+                    </image>
+                    <text id="75">
+                        <property name="style">kpi_orange_red</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[ 1 %]]></text-property>
+                    </text>
+                    <label id="76">
+                        <property name="paddingLeft">3pt</property>
+                        <property name="display">inline</property>
+                        <text-property name="text" key="From Last Week">From Last Week</text-property>
+                    </label>
+                </cell>
+                <cell id="29">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">5px</property>
+                    <image id="368">
+                        <property name="display">inline</property>
+                        <property name="height">10px</property>
+                        <property name="width">13px</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/arrow up green.png</expression>
+                    </image>
+                    <text id="78">
+                        <property name="style">kpi_green</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[ 12 %]]></text-property>
+                    </text>
+                    <label id="79">
+                        <property name="paddingLeft">3pt</property>
+                        <property name="display">inline</property>
+                        <text-property name="text" key="From Last Week">From Last Week</text-property>
+                    </label>
+                </cell>
+                <cell id="30">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">5px</property>
+                    <image id="371">
+                        <property name="display">inline</property>
+                        <property name="height">10px</property>
+                        <property name="width">13px</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/arrow up green.png</expression>
+                    </image>
+                    <text id="81">
+                        <property name="style">kpi_green</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[ 0.4 %]]></text-property>
+                    </text>
+                    <label id="82">
+                        <property name="paddingLeft">3pt</property>
+                        <property name="display">inline</property>
+                        <text-property name="text" key="From Last Week">From Last Week</text-property>
+                    </label>
+                </cell>
+                <cell id="31">
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">5px</property>
+                    <image id="372">
+                        <property name="display">inline</property>
+                        <property name="height">12px</property>
+                        <property name="width">15px</property>
+                        <property name="source">file</property>
+                        <expression name="uri" type="constant">images/arrow up red.png</expression>
+                    </image>
+                    <text id="84">
+                        <property name="style">kpi_orange_red</property>
+                        <property name="display">inline</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[ 27 %]]></text-property>
+                    </text>
+                    <label id="85">
+                        <property name="paddingLeft">3pt</property>
+                        <property name="display">inline</property>
+                        <text-property name="text" key="From Last Week">From Last Week</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="39">
+                <cell id="40">
+                    <property name="colSpan">6</property>
+                    <property name="rowSpan">1</property>
+                    <property name="paddingTop">4px</property>
+                    <property name="paddingBottom">4px</property>
+                    <grid id="105">
+                        <property name="height">4.041666666666667in</property>
+                        <column id="106"/>
+                        <column id="107">
+                            <property name="whiteSpace">pre</property>
+                            <property name="width">35%</property>
+                        </column>
+                        <row id="111">
+                            <property name="height">4.041666666666667in</property>
+                            <cell id="112">
+                                <property name="borderBottomStyle">none</property>
+                                <property name="borderLeftStyle">none</property>
+                                <property name="borderRightStyle">none</property>
+                                <property name="borderTopStyle">none</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="paddingLeft">5px</property>
+                                <property name="paddingBottom">1pt</property>
+                                <property name="paddingRight">5px</property>
+                                <grid id="483">
+                                    <property name="backgroundColor">white</property>
+                                    <property name="borderBottomColor">#E6E9ED</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#E6E9ED</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#E6E9ED</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#E6E9ED</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <column id="484"/>
+                                    <row id="485">
+                                        <cell id="486">
+                                            <property name="borderBottomColor">#ACB8C4</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <label id="118">
+                                                <property name="fontSize">16pt</property>
+                                                <property name="fontWeight">normal</property>
+                                                <property name="paddingTop">5pt</property>
+                                                <property name="paddingLeft">3pt</property>
+                                                <property name="paddingBottom">5pt</property>
+                                                <property name="display">block</property>
+                                                <text-property name="text">Rolling 7 Day Activities</text-property>
+                                            </label>
+                                        </cell>
+                                    </row>
+                                    <row id="487">
+                                        <cell id="488">
+                                            <table id="634">
+                                                <list-property name="userProperties">
+                                                    <structure>
+                                                        <property name="name">__ac_group_collapse_level</property>
+                                                        <property name="type">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">Date Time</property>
+                                                        <text-property name="displayName">Date Time</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Date Time"]</expression>
+                                                        <property name="dataType">date-time</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Date</property>
+                                                        <text-property name="displayName">Date</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Date"]</expression>
+                                                        <property name="dataType">date</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Accepted</property>
+                                                        <text-property name="displayName">Accepted</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Accepted"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Rejected</property>
+                                                        <text-property name="displayName">Rejected</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Rejected"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Retry</property>
+                                                        <text-property name="displayName">Retry</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Retry"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="linkedDataModel">Data Model</property>
+                                                <column id="641"/>
+                                                <header>
+                                                    <row id="635">
+                                                        <cell id="636"/>
+                                                    </row>
+                                                </header>
+                                            </table>
+                                        </cell>
+                                    </row>
+                                </grid>
+                                <extended-item extensionName="Chart" id="117">
+                                    <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Area Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" itemType="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font name="Tahoma" size="10.0"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,541.5,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="12.0,8.0,24.0,16.0,20.0" seriesDefinitionIndex="1"/>
+   <orthogonalSampleData dataSetRepresentation="18.0,12.0,36.0,24.0,30.0" seriesDefinitionIndex="2"/>
+  </sampleData>
+  <interactivity legendBehavior="1"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="">
+      <grouping groupType="1"/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,189,186,255"/>
+      <entries _body=",255,63,58,137"/>
+      <entries _body=",255,200,133,92"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",121,154,188,195"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="AreaSeries" seriesIdentifier="Accepted" stacked="false" curve="true">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Accepted&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <sortKey/>
+    </seriesDefinitions>
+    <seriesDefinitions sorting="0" zOrder="2">
+     <query definition="">
+      <grouping groupType="1"/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,63,58,137"/>
+      <entries _body=",255,200,133,92"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",121,154,188,195"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,189,186,255"/>
+     </seriesPalette>
+     <series _type="AreaSeries" seriesIdentifier="Rejected" stacked="false" curve="true">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Rejected&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions sorting="0" zOrder="1">
+     <query definition="">
+      <grouping groupType="1"/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,200,133,92"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",121,154,188,195"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,189,186,255"/>
+      <entries _body=",255,63,58,137"/>
+     </seriesPalette>
+     <series _type="AreaSeries" seriesIdentifier="Retry" stacked="false" curve="true">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Retry&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Tahoma" size="10.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,189,186,255"/>
+     <entries _body=",255,63,58,137"/>
+     <entries _body=",255,200,133,92"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",121,154,188,195"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Date&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupType="1"/>
+    <sortKey definition="row[&quot;Date&quot;]"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,192,192,192"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Tahoma" size="10.0"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="dd MMM"/>
+   <majorGrid>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                                    <property name="outputFormat">JS</property>
+                                    <list-property name="filter">
+                                        <structure>
+                                            <expression name="expr" type="javascript">row["Location"]</expression>
+                                            <property name="dynamicFilterParameter">LocationP</property>
+                                            <property name="updateAggregation">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="inheritColumns">false</property>
+                                    <property name="canShrink">true</property>
+                                    <property name="height">345px</property>
+                                    <property name="width">915px</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">Date</property>
+                                            <text-property name="displayName">Date</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["Date"]</expression>
+                                            <property name="dataType">date</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Accepted</property>
+                                            <text-property name="displayName">Accepted</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["Accepted"]</expression>
+                                            <property name="dataType">integer</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Rejected</property>
+                                            <text-property name="displayName">Rejected</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["Rejected"]</expression>
+                                            <property name="dataType">integer</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Retry</property>
+                                            <text-property name="displayName">Retry</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["Retry"]</expression>
+                                            <property name="dataType">integer</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Location</property>
+                                            <expression name="expression" type="javascript">dataSetRow["Location"]</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="linkedDataModel">Data Model</property>
+                                </extended-item>
+                            </cell>
+                            <cell id="113">
+                                <property name="borderBottomStyle">none</property>
+                                <property name="borderLeftStyle">none</property>
+                                <property name="borderRightStyle">none</property>
+                                <property name="borderTopStyle">none</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="paddingLeft">5px</property>
+                                <property name="paddingBottom">1pt</property>
+                                <property name="paddingRight">15px</property>
+                                <grid id="477">
+                                    <property name="backgroundColor">white</property>
+                                    <property name="borderBottomColor">#E6E9ED</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#E6E9ED</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#E6E9ED</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#E6E9ED</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="height">3.8333333333333335in</property>
+                                    <column id="478"/>
+                                    <row id="479">
+                                        <property name="height">0.43333333333333335in</property>
+                                        <cell id="480">
+                                            <property name="borderBottomColor">#ACB8C4</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <label id="123">
+                                                <property name="fontSize">16pt</property>
+                                                <property name="fontWeight">normal</property>
+                                                <property name="marginBottom">0pt</property>
+                                                <property name="paddingTop">5pt</property>
+                                                <property name="paddingLeft">3pt</property>
+                                                <property name="paddingBottom">5pt</property>
+                                                <property name="display">block</property>
+                                                <text-property name="text">Access by location</text-property>
+                                            </label>
+                                        </cell>
+                                    </row>
+                                    <row id="481">
+                                        <property name="height">1.2in</property>
+                                        <cell id="482">
+                                            <property name="paddingTop">10pt</property>
+                                            <extended-item extensionName="Chart" id="655">
+                                                <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Stacked" orientation="0">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <cursor type="0"/>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <insets _body="3.0,3.0,3.0,3.0"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <cursor type="0"/>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,220.5,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="10.0,8.0,24.0" seriesDefinitionIndex="1"/>
+   <orthogonalSampleData dataSetRepresentation="15.0,12.0,36.0" seriesDefinitionIndex="2"/>
+  </sampleData>
+  <interactivity enable="true"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="2">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Accepted" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <caption>
+        <font size="9.0"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Accepted&quot;]">
+       <grouping enabled="true"/>
+      </dataDefinition>
+      <curveFitting _nil="1"/>
+      <cursor type="0"/>
+     </series>
+     <grouping _nil="1"/>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Retry" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <caption>
+        <font size="9.0"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Retry&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <curveFitting _nil="1"/>
+      <cursor type="0"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Rejected" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <caption>
+        <font size="9.0"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Rejected&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <cursor type="0"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale autoExpand="true"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+    <cursor type="0"/>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Location&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true"/>
+    <sortKey definition="row[&quot;Location&quot;]"/>
+   </seriesDefinitions>
+   <lineAttributes visible="false">
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <scale showOutside="false"/>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+   <cursor type="0"/>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                                                <property name="outputFormat">PNG</property>
+                                                <list-property name="filter">
+                                                    <structure>
+                                                        <expression name="expr" type="javascript">row["Location"]</expression>
+                                                        <property name="dynamicFilterParameter">LocationP</property>
+                                                        <property name="updateAggregation">true</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="inheritColumns">false</property>
+                                                <property name="height">73.19999999999999pt</property>
+                                                <property name="width">479px</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">Location</property>
+                                                        <text-property name="displayName">Location</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Location"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Accepted</property>
+                                                        <text-property name="displayName">Accepted</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Accepted"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Rejected</property>
+                                                        <text-property name="displayName">Rejected</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Rejected"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Retry</property>
+                                                        <text-property name="displayName">Retry</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Retry"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="theme">MOD</property>
+                                                <property name="linkedDataModel">Data Model</property>
+                                            </extended-item>
+                                        </cell>
+                                    </row>
+                                    <row id="823">
+                                        <property name="height">2.2in</property>
+                                        <cell id="824">
+                                            <property name="paddingTop">10pt</property>
+                                            <label id="825">
+                                                <property name="fontSize">16pt</property>
+                                                <property name="fontWeight">normal</property>
+                                                <property name="marginBottom">0pt</property>
+                                                <property name="paddingTop">5pt</property>
+                                                <property name="paddingLeft">3pt</property>
+                                                <property name="paddingBottom">5pt</property>
+                                                <property name="display">block</property>
+                                                <text-property name="text">Access by Device</text-property>
+                                            </label>
+                                            <extended-item extensionName="Chart" id="826">
+                                                <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Stacked" orientation="0">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <cursor type="0"/>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <insets _body="3.0,3.0,3.0,3.0"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <cursor type="0"/>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,220.5,130.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="6,4,12,8,10"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="10.0,8.0,24.0" seriesDefinitionIndex="1"/>
+   <orthogonalSampleData dataSetRepresentation="15.0,12.0,36.0" seriesDefinitionIndex="2"/>
+  </sampleData>
+  <interactivity enable="true"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="0">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Accepted" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Accepted&quot;]">
+       <grouping enabled="true"/>
+      </dataDefinition>
+      <curveFitting _nil="1"/>
+      <cursor type="0"/>
+     </series>
+     <grouping _nil="1"/>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Retry" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Retry&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <curveFitting _nil="1"/>
+      <cursor type="0"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="Rejected" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Rejected&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <cursor type="0"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale autoExpand="true"/>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+    <cursor type="0"/>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;Device ID&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupType="0"/>
+    <sortKey definition="row[&quot;Location&quot;]"/>
+   </seriesDefinitions>
+   <lineAttributes visible="false">
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <scale showOutside="false"/>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+   <cursor type="0"/>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                                                <property name="outputFormat">PNG</property>
+                                                <list-property name="filter">
+                                                    <structure>
+                                                        <expression name="expr" type="javascript">row["Location"]</expression>
+                                                        <property name="dynamicFilterParameter">LocationP</property>
+                                                        <property name="updateAggregation">true</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="inheritColumns">false</property>
+                                                <property name="height">111.60000000000001pt</property>
+                                                <property name="width">479px</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">Device ID</property>
+                                                        <text-property name="displayName">Device ID</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Device ID"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Location</property>
+                                                        <text-property name="displayName">Location</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Location"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Accepted</property>
+                                                        <text-property name="displayName">Accepted</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Accepted"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Rejected</property>
+                                                        <text-property name="displayName">Rejected</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Rejected"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Retry</property>
+                                                        <text-property name="displayName">Retry</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Retry"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                    <structure>
+                                                        <property name="name">Device ID_1</property>
+                                                        <text-property name="displayName">Device ID</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["Device ID"]</expression>
+                                                        <property name="dataType">float</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="theme">MOD</property>
+                                                <property name="linkedDataModel">Data Model</property>
+                                            </extended-item>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+            <row id="489">
+                <property name="height">5.65in</property>
+                <cell id="490">
+                    <property name="colSpan">6</property>
+                    <property name="rowSpan">1</property>
+                    <property name="paddingTop">4px</property>
+                    <property name="paddingLeft">1pt</property>
+                    <property name="paddingBottom">4px</property>
+                    <property name="paddingRight">1pt</property>
+                    <grid id="496">
+                        <property name="height">5.683333333333334in</property>
+                        <column id="497"/>
+                        <column id="498">
+                            <property name="width">23%</property>
+                        </column>
+                        <row id="499">
+                            <property name="height">5.683333333333334in</property>
+                            <cell id="500">
+                                <property name="colSpan">1</property>
+                                <property name="rowSpan">1</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="paddingLeft">5pt</property>
+                                <property name="paddingBottom">1pt</property>
+                                <property name="paddingRight">5pt</property>
+                                <grid id="502">
+                                    <property name="backgroundColor">white</property>
+                                    <property name="borderBottomColor">#E6E9ED</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#E6E9ED</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#E6E9ED</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#E6E9ED</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <column id="503"/>
+                                    <row id="508">
+                                        <property name="height">330px</property>
+                                        <cell id="509">
+                                            <grid id="578">
+                                                <property name="backgroundColor">white</property>
+                                                <property name="borderBottomColor">#E6E9ED</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">thin</property>
+                                                <property name="borderLeftColor">#E6E9ED</property>
+                                                <property name="borderLeftStyle">solid</property>
+                                                <property name="borderLeftWidth">thin</property>
+                                                <property name="borderRightColor">#E6E9ED</property>
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">thin</property>
+                                                <property name="borderTopColor">#E6E9ED</property>
+                                                <property name="borderTopStyle">solid</property>
+                                                <property name="borderTopWidth">thin</property>
+                                                <property name="marginTop">5pt</property>
+                                                <property name="height">3.15625in</property>
+                                                <column id="579"/>
+                                                <row id="580">
+                                                    <property name="height">0.5833333333333334in</property>
+                                                    <cell id="581">
+                                                        <property name="borderBottomColor">#ACB8C4</property>
+                                                        <property name="borderBottomStyle">solid</property>
+                                                        <property name="borderBottomWidth">medium</property>
+                                                        <label id="407">
+                                                            <property name="fontSize">16pt</property>
+                                                            <property name="fontWeight">normal</property>
+                                                            <property name="paddingTop">5pt</property>
+                                                            <property name="paddingLeft">3pt</property>
+                                                            <property name="paddingBottom">5pt</property>
+                                                            <property name="display">block</property>
+                                                            <text-property name="text">Live activity</text-property>
+                                                        </label>
+                                                    </cell>
+                                                </row>
+                                                <row id="582">
+                                                    <property name="height">2.5729166666666665in</property>
+                                                    <cell id="583">
+                                                        <extended-item extensionName="Chart" id="431">
+                                                            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" reverseCategory="false">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <cursor type="0"/>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,0.0,180.0"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <triggers condition="15">
+    <action type="3">
+     <value _type="ScriptValue" script="// set up the updating of the chart each 5 seconds&#13;&#10;&#13;&#10;var series = this.series[0];&#13;&#10;&#13;&#10;setInterval(function() {&#13;&#10; var x = (new Date()).getTime(),&#13;&#10;       y = Math.round(Math.random() * 100);&#13;&#10;&#13;&#10;  series.addPoint([x, y], true, true);&#13;&#10;&#13;&#10;}, 5000);"/>
+    </action>
+   </triggers>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3" interval="2" categoryAxis="false">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes type="0" primaryAxis="true" percent="false">
+    <title visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,95,201,183"/>
+      <entries _body=",255,242,88,106"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Activity" stacked="false" curve="true">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;Value&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers type="3" size="5" visible="true">
+       <outline visible="false"/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,95,201,183"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="new Date().getTime() - (5000 * row[&quot;Delay&quot;])"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="0"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes visible="false">
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="hh:mm:ss a"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="true">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin type="2">
+    <value _type="NumberDataElement" value="0.0"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                                                            <property name="outputFormat">JS</property>
+                                                            <property name="inheritColumns">false</property>
+                                                            <property name="height">180pt</property>
+                                                            <property name="width">100%</property>
+                                                            <property name="dataSet">chart2</property>
+                                                            <list-property name="boundDataColumns">
+                                                                <structure>
+                                                                    <property name="name">Value</property>
+                                                                    <text-property name="displayName">Value</text-property>
+                                                                    <expression name="expression" type="javascript">dataSetRow["Value"]</expression>
+                                                                    <property name="dataType">integer</property>
+                                                                </structure>
+                                                                <structure>
+                                                                    <property name="name">Delay</property>
+                                                                    <text-property name="displayName">Delay</text-property>
+                                                                    <expression name="expression" type="javascript">dataSetRow["Delay"]</expression>
+                                                                    <property name="dataType">integer</property>
+                                                                </structure>
+                                                            </list-property>
+                                                            <property name="theme">ThemesReportItems31.Chart-Clean Blue</property>
+                                                        </extended-item>
+                                                    </cell>
+                                                </row>
+                                            </grid>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="501">
+                                <property name="paddingTop">1pt</property>
+                                <property name="paddingLeft">5pt</property>
+                                <property name="paddingBottom">5pt</property>
+                                <property name="paddingRight">10pt</property>
+                                <grid id="513">
+                                    <property name="backgroundColor">white</property>
+                                    <property name="borderBottomColor">#E6E9ED</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#E6E9ED</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#E6E9ED</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#E6E9ED</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="marginBottom">5pt</property>
+                                    <property name="display">block</property>
+                                    <expression name="bookmark" type="javascript">"WeatherGadget"</expression>
+                                    <column id="514"/>
+                                    <column id="515">
+                                        <property name="width">10px</property>
+                                    </column>
+                                    <column id="516"/>
+                                    <column id="517">
+                                        <property name="width">10px</property>
+                                    </column>
+                                    <column id="518"/>
+                                    <column id="519">
+                                        <property name="width">10px</property>
+                                    </column>
+                                    <column id="520"/>
+                                    <column id="521">
+                                        <property name="width">10px</property>
+                                    </column>
+                                    <column id="522"/>
+                                    <column id="523">
+                                        <property name="width">10px</property>
+                                    </column>
+                                    <column id="524"/>
+                                    <row id="525">
+                                        <cell id="526">
+                                            <property name="colSpan">11</property>
+                                            <property name="rowSpan">1</property>
+                                            <property name="backgroundAttachment">scroll</property>
+                                            <property name="backgroundColor">#FFFFFF</property>
+                                            <property name="backgroundImageType">url</property>
+                                            <property name="backgroundPositionX">0%</property>
+                                            <property name="backgroundPositionY">0%</property>
+                                            <property name="backgroundRepeat">repeat</property>
+                                            <property name="backgroundSizeHeight">auto</property>
+                                            <property name="backgroundSizeWidth">auto</property>
+                                            <property name="fontFamily">"Tahoma"</property>
+                                            <property name="fontSize">11pt</property>
+                                            <property name="fontWeight">normal</property>
+                                            <property name="fontStyle">normal</property>
+                                            <property name="fontVariant">normal</property>
+                                            <property name="color">#73879C</property>
+                                            <property name="textLineThrough">none</property>
+                                            <property name="textOverline">none</property>
+                                            <property name="textUnderline">none</property>
+                                            <property name="borderBottomColor">#ACB8C4</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <property name="marginTop">0pt</property>
+                                            <property name="marginLeft">0pt</property>
+                                            <property name="marginBottom">0pt</property>
+                                            <property name="marginRight">0pt</property>
+                                            <property name="paddingTop">1pt</property>
+                                            <property name="paddingLeft">1pt</property>
+                                            <property name="paddingBottom">1pt</property>
+                                            <property name="paddingRight">1pt</property>
+                                            <property name="textIndent">0em</property>
+                                            <property name="letterSpacing">normal</property>
+                                            <property name="lineHeight">normal</property>
+                                            <property name="orphans">2</property>
+                                            <property name="textTransform">none</property>
+                                            <property name="whiteSpace">normal</property>
+                                            <property name="widows">2</property>
+                                            <property name="wordSpacing">normal</property>
+                                            <property name="display">block</property>
+                                            <property name="pageBreakAfter">auto</property>
+                                            <property name="pageBreakBefore">auto</property>
+                                            <property name="pageBreakInside">auto</property>
+                                            <property name="showIfBlank">false</property>
+                                            <property name="canShrink">false</property>
+                                            <property name="overflow">hidden</property>
+                                            <label id="527">
+                                                <property name="backgroundAttachment">scroll</property>
+                                                <property name="backgroundPositionX">0%</property>
+                                                <property name="backgroundPositionY">0%</property>
+                                                <property name="backgroundRepeat">repeat</property>
+                                                <property name="fontFamily">"Tahoma"</property>
+                                                <property name="fontSize">16pt</property>
+                                                <property name="fontWeight">normal</property>
+                                                <property name="fontStyle">normal</property>
+                                                <property name="fontVariant">normal</property>
+                                                <property name="color">#73879C</property>
+                                                <property name="textLineThrough">none</property>
+                                                <property name="textOverline">none</property>
+                                                <property name="textUnderline">none</property>
+                                                <property name="borderBottomColor">black</property>
+                                                <property name="borderBottomStyle">none</property>
+                                                <property name="borderBottomWidth">medium</property>
+                                                <property name="borderLeftColor">black</property>
+                                                <property name="borderLeftStyle">none</property>
+                                                <property name="borderLeftWidth">medium</property>
+                                                <property name="borderRightColor">black</property>
+                                                <property name="borderRightStyle">none</property>
+                                                <property name="borderRightWidth">medium</property>
+                                                <property name="borderTopColor">black</property>
+                                                <property name="borderTopStyle">none</property>
+                                                <property name="borderTopWidth">medium</property>
+                                                <property name="marginTop">0pt</property>
+                                                <property name="marginLeft">0pt</property>
+                                                <property name="marginBottom">0pt</property>
+                                                <property name="marginRight">0pt</property>
+                                                <property name="paddingTop">5pt</property>
+                                                <property name="paddingLeft">3pt</property>
+                                                <property name="paddingBottom">5pt</property>
+                                                <property name="paddingRight">1pt</property>
+                                                <property name="letterSpacing">normal</property>
+                                                <property name="lineHeight">normal</property>
+                                                <property name="orphans">2</property>
+                                                <property name="textTransform">none</property>
+                                                <property name="whiteSpace">normal</property>
+                                                <property name="widows">2</property>
+                                                <property name="wordSpacing">normal</property>
+                                                <property name="display">block</property>
+                                                <property name="pageBreakAfter">auto</property>
+                                                <property name="pageBreakBefore">auto</property>
+                                                <property name="pageBreakInside">auto</property>
+                                                <property name="showIfBlank">false</property>
+                                                <property name="canShrink">false</property>
+                                                <property name="overflow">hidden</property>
+                                                <text-property name="text">Weather</text-property>
+                                            </label>
+                                        </cell>
+                                    </row>
+                                    <row id="528">
+                                        <cell id="529">
+                                            <property name="colSpan">5</property>
+                                            <property name="rowSpan">1</property>
+                                            <property name="paddingLeft">5pt</property>
+                                            <data id="530">
+                                                <property name="paddingLeft">1pt</property>
+                                                <structure name="dateTimeFormat">
+                                                    <property name="category">Custom</property>
+                                                    <property name="pattern">EEEE, h:mm a</property>
+                                                </structure>
+                                                <property name="resultSetColumn">Column Binding</property>
+                                            </data>
+                                            <image id="531">
+                                                <property name="marginLeft">20pt</property>
+                                                <property name="height">100px</property>
+                                                <property name="width">100px</property>
+                                                <property name="source">file</property>
+                                                <expression name="uri" type="constant">images/weather-sun-cloudy.png</expression>
+                                            </image>
+                                        </cell>
+                                        <cell id="532"/>
+                                        <cell id="533">
+                                            <property name="colSpan">5</property>
+                                            <property name="rowSpan">1</property>
+                                            <property name="paddingRight">5pt</property>
+                                            <label id="534">
+                                                <property name="textAlign">right</property>
+                                                <text-property name="text">Partly Cloudy Day</text-property>
+                                            </label>
+                                            <label id="535">
+                                                <property name="fontSize">13pt</property>
+                                                <property name="textAlign">right</property>
+                                                <text-property name="text">23°</text-property>
+                                            </label>
+                                        </cell>
+                                    </row>
+                                    <row id="400">
+                                        <cell id="536">
+                                            <property name="borderBottomColor">#ACB8C4</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <property name="borderTopColor">#ACB8C4</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">medium</property>
+                                            <text-data id="401">
+                                                <property name="paddingLeft">3pt</property>
+                                                <expression name="valueExpr">today = BirtDateTime.addDay(new Date(),1);&#13;
+if (reportContext.getLocale() == "fr_FR") {&#13;
+	ma = ['Dim','Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];&#13;
+} else {&#13;
+	ma = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];&#13;
+}&#13;
+ma[BirtDateTime.dayOfWeek(today)-1]</expression>
+                                                <property name="contentType">html</property>
+                                            </text-data>
+                                        </cell>
+                                        <cell id="402"/>
+                                        <cell id="537">
+                                            <property name="borderBottomColor">#ACB8C4</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <property name="borderTopColor">#ACB8C4</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">medium</property>
+                                            <text-data id="403">
+                                                <expression name="valueExpr">today = BirtDateTime.addDay(new Date(),2);&#13;
+if (reportContext.getLocale() == "fr_FR") {&#13;
+	ma = ['Dim','Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];&#13;
+} else {&#13;
+	ma = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];&#13;
+}&#13;
+ma[BirtDateTime.dayOfWeek(today)-1]</expression>
+                                                <property name="contentType">html</property>
+                                            </text-data>
+                                        </cell>
+                                        <cell id="404"/>
+                                        <cell id="538">
+                                            <property name="borderBottomColor">#ACB8C4</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <property name="borderTopColor">#ACB8C4</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">medium</property>
+                                            <text-data id="405">
+                                                <expression name="valueExpr">today = BirtDateTime.addDay(new Date(),3);&#13;
+if (reportContext.getLocale() == "fr_FR") {&#13;
+	ma = ['Dim','Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];&#13;
+} else {&#13;
+	ma = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];&#13;
+}&#13;
+ma[BirtDateTime.dayOfWeek(today)-1]</expression>
+                                                <property name="contentType">html</property>
+                                            </text-data>
+                                        </cell>
+                                        <cell id="406"/>
+                                        <cell id="539">
+                                            <property name="borderBottomColor">#ACB8C4</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <property name="borderTopColor">#ACB8C4</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">medium</property>
+                                            <text-data id="540">
+                                                <expression name="valueExpr">today = BirtDateTime.addDay(new Date(),4);&#13;
+if (reportContext.getLocale() == "fr_FR") {&#13;
+	ma = ['Dim','Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];&#13;
+} else {&#13;
+	ma = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];&#13;
+}&#13;
+ma[BirtDateTime.dayOfWeek(today)-1]</expression>
+                                                <property name="contentType">html</property>
+                                            </text-data>
+                                        </cell>
+                                        <cell id="408"/>
+                                        <cell id="541">
+                                            <property name="borderBottomColor">#ACB8C4</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <property name="borderTopColor">#ACB8C4</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">medium</property>
+                                            <text-data id="542">
+                                                <expression name="valueExpr">today = BirtDateTime.addDay(new Date(),5);&#13;
+if (reportContext.getLocale() == "fr_FR") {&#13;
+	ma = ['Dim','Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];&#13;
+} else {&#13;
+	ma = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];&#13;
+}&#13;
+ma[BirtDateTime.dayOfWeek(today)-1]</expression>
+                                                <property name="contentType">html</property>
+                                            </text-data>
+                                        </cell>
+                                        <cell id="543"/>
+                                        <cell id="544">
+                                            <property name="borderBottomColor">#ACB8C4</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <property name="borderTopColor">#ACB8C4</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">medium</property>
+                                            <text-data id="545">
+                                                <expression name="valueExpr">today = BirtDateTime.addDay(new Date(),6);&#13;
+if (reportContext.getLocale() == "fr_FR") {&#13;
+	ma = ['Dim','Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];&#13;
+} else {&#13;
+	ma = ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];&#13;
+}&#13;
+ma[BirtDateTime.dayOfWeek(today)-1]</expression>
+                                                <property name="contentType">html</property>
+                                            </text-data>
+                                        </cell>
+                                    </row>
+                                    <row id="546">
+                                        <cell id="547">
+                                            <label id="548">
+                                                <property name="paddingLeft">3pt</property>
+                                                <text-property name="text">25°</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="549"/>
+                                        <cell id="550">
+                                            <label id="415">
+                                                <text-property name="text">25°</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="416"/>
+                                        <cell id="551">
+                                            <label id="552">
+                                                <text-property name="text">27°</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="417"/>
+                                        <cell id="553">
+                                            <label id="554">
+                                                <text-property name="text">27°</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="418"/>
+                                        <cell id="419">
+                                            <label id="420">
+                                                <text-property name="text">28°</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="421"/>
+                                        <cell id="422">
+                                            <label id="423">
+                                                <text-property name="text">26°</text-property>
+                                            </label>
+                                        </cell>
+                                    </row>
+                                    <row id="424">
+                                        <property name="textAlign">center</property>
+                                        <cell id="425">
+                                            <property name="paddingLeft">3pt</property>
+                                            <image id="555">
+                                                <property name="height">32px</property>
+                                                <property name="width">32px</property>
+                                                <property name="source">file</property>
+                                                <expression name="uri" type="constant">images/weather-sun 2.png</expression>
+                                            </image>
+                                        </cell>
+                                        <cell id="556"/>
+                                        <cell id="426">
+                                            <image id="557">
+                                                <property name="height">32px</property>
+                                                <property name="width">32px</property>
+                                                <property name="source">file</property>
+                                                <expression name="uri" type="constant">images/weather-rain.png</expression>
+                                            </image>
+                                        </cell>
+                                        <cell id="427"/>
+                                        <cell id="558">
+                                            <image id="559">
+                                                <property name="height">32px</property>
+                                                <property name="width">32px</property>
+                                                <property name="source">file</property>
+                                                <expression name="uri" type="constant">images/weather-snow.png</expression>
+                                            </image>
+                                        </cell>
+                                        <cell id="428"/>
+                                        <cell id="429">
+                                            <image id="560">
+                                                <property name="height">32px</property>
+                                                <property name="width">32px</property>
+                                                <property name="source">file</property>
+                                                <expression name="uri" type="constant">images/weather-storm.png</expression>
+                                            </image>
+                                        </cell>
+                                        <cell id="430"/>
+                                        <cell id="561">
+                                            <image id="562">
+                                                <property name="height">32px</property>
+                                                <property name="width">32px</property>
+                                                <property name="source">file</property>
+                                                <expression name="uri" type="constant">images/weather-wind.png</expression>
+                                            </image>
+                                        </cell>
+                                        <cell id="432"/>
+                                        <cell id="433">
+                                            <image id="563">
+                                                <property name="height">32px</property>
+                                                <property name="width">32px</property>
+                                                <property name="source">file</property>
+                                                <expression name="uri" type="constant">images/weather-cloudy.png</expression>
+                                            </image>
+                                        </cell>
+                                    </row>
+                                    <row id="434">
+                                        <cell id="435">
+                                            <property name="paddingBottom">5pt</property>
+                                            <label id="564">
+                                                <property name="fontStyle">italic</property>
+                                                <property name="marginBottom">10pt</property>
+                                                <property name="paddingLeft">3pt</property>
+                                                <text-property name="text">15 km/h</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="565"/>
+                                        <cell id="566">
+                                            <label id="567">
+                                                <property name="fontStyle">italic</property>
+                                                <text-property name="text">12 km/h</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="568"/>
+                                        <cell id="569">
+                                            <label id="436">
+                                                <property name="fontStyle">italic</property>
+                                                <text-property name="text">14 km/h</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="437"/>
+                                        <cell id="438">
+                                            <label id="439">
+                                                <property name="fontStyle">italic</property>
+                                                <text-property name="text">15 km/h</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="440"/>
+                                        <cell id="441">
+                                            <label id="570">
+                                                <property name="fontStyle">italic</property>
+                                                <text-property name="text">11 km/h</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="442"/>
+                                        <cell id="443">
+                                            <label id="571">
+                                                <property name="fontStyle">italic</property>
+                                                <text-property name="text">10 km/h</text-property>
+                                            </label>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

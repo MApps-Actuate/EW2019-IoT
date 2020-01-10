@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Badge data" id="598">
+            <property name="HOME">data/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">YES</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Badge data set" id="599">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Accepted</property>
+                    <expression name="expression" type="javascript">if (row["Grant"] == "Accepted") { &#13;
+1 &#13;
+} else {&#13;
+0&#13;
+}</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Rejected</property>
+                    <expression name="expression" type="javascript">if (row["Grant"] == "Rejected") { &#13;
+1 &#13;
+} else {&#13;
+0&#13;
+}</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Retry</property>
+                    <expression name="expression" type="javascript">if (row["Grant"] == "Retry") { &#13;
+1 &#13;
+} else {&#13;
+0&#13;
+}</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">last 24</property>
+                    <expression name="expression" type="javascript">if (row["Date Time"] == BirtDateTime.addDay(BirtDateTime.now(),-1)) { &#13;
+  "Y"&#13;
+} else {&#13;
+  "N"&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Date Time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Date Time</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <structure name="valueFormat">
+                        <property name="category">Unformatted</property>
+                    </structure>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Date</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <structure name="valueFormat">
+                        <property name="category">Short Date</property>
+                        <property name="pattern">Short Date</property>
+                    </structure>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Time</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Person ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Person ID</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Name</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Surname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Surname</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">DOB</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">DOB</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Gender</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Gender</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Class</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Class</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Device ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Device ID</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Location</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Location</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Long</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Long</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Lat</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Lat</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Zone</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Zone</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Grant</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Grant</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Accepted</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Rejected</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Retry</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">last 24</property>
+                    <property name="analysis">attribute</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="filter"/>
+            <list-property name="parameters"/>
+            <list-property name="sortHints">
+                <structure>
+                    <property name="columnName">dataSetRow["Location"]</property>
+                    <property name="direction">asc</property>
+                    <property name="isOptional">true</property>
+                </structure>
+                <structure>
+                    <property name="columnName">dataSetRow["Device ID"]</property>
+                    <property name="direction">asc</property>
+                    <property name="isOptional">true</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Date Time</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Time</property>
+                        <property name="dataType">time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Person ID</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Surname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">DOB</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Gender</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Class</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Device ID</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Location</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Long</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Lat</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">Zone</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">Grant</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">Accepted</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">Rejected</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">Retry</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">last 24</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Badge data</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Date Time</property>
+                    <property name="nativeName">Date Time</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Date</property>
+                    <property name="nativeName">Date</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Time</property>
+                    <property name="nativeName">Time</property>
+                    <property name="dataType">time</property>
+                    <property name="nativeDataType">92</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Person ID</property>
+                    <property name="nativeName">Person ID</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Name</property>
+                    <property name="nativeName">Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Surname</property>
+                    <property name="nativeName">Surname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">DOB</property>
+                    <property name="nativeName">DOB</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Gender</property>
+                    <property name="nativeName">Gender</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Class</property>
+                    <property name="nativeName">Class</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Device ID</property>
+                    <property name="nativeName">Device ID</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Location</property>
+                    <property name="nativeName">Location</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Long</property>
+                    <property name="nativeName">Long</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Lat</property>
+                    <property name="nativeName">Lat</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">Zone</property>
+                    <property name="nativeName">Zone</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">Grant</property>
+                    <property name="nativeName">Grant</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Date Time", "Date", "Time", "Person ID", "Name", "Surname", "DOB", "Gender", "Class", "Device ID", "Location", "Long", "Lat", "Zone", "Grant" from "Act 1 badge data.csv" : {"Date Time","Date Time",TIMESTAMP;"Date","Date",DATE;"Time","Time",TIME;"Person ID","Person ID",DOUBLE;"Name","Name",STRING;"Surname","Surname",STRING;"DOB","DOB",DATE;"Gender","Gender",STRING;"Class","Class",STRING;"Device ID","Device ID",DOUBLE;"Location","Location",STRING;"Long","Long",DOUBLE;"Lat","Lat",DOUBLE;"Zone","Zone",STRING;"Grant","Grant",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Date Time</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Date Time</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Date</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Time</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>92</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Time</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Person ID</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Person ID</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Name</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Surname</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Surname</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DOB</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DOB</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Gender</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Gender</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Class</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Class</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Device ID</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Device ID</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Location</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Location</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Long</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Long</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Lat</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Lat</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Zone</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Zone</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Grant</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Grant</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <linked-data-model name="Data Model" id="600">
+            <property name="aliasDataSets">
+                <alias-data-set name="Badge data set" id="625">
+                    <property name="originDataSet">Badge data set</property>
+                </alias-data-set>
+            </property>
+            <property name="drillPaths">
+                <drill-path id="621">
+                    <text-property name="displayName">Date Time</text-property>
+                    <simple-property-list name="drillPathColumns">
+                        <value>dataSetRow["Date Time"]["Year"]</value>
+                        <value>dataSetRow["Date Time"]["Month"]</value>
+                        <value>dataSetRow["Date Time"]["DayOfWeek"]</value>
+                        <value>dataSetRow["Date Time"]["Hour"]</value>
+                    </simple-property-list>
+                </drill-path>
+                <drill-path id="622">
+                    <text-property name="displayName">Buildings</text-property>
+                    <simple-property-list name="drillPathColumns">
+                        <value>dataSetRow["Location"]</value>
+                        <value>dataSetRow["Device ID"]</value>
+                    </simple-property-list>
+                </drill-path>
+            </property>
+            <property name="categories">
+                <category name="Badge data set" id="626">
+                    <property name="categoryColumns">
+                        <category-column name="Date Time" id="627">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Date Time</property>
+                        </category-column>
+                        <category-column name="Date" id="628">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Date</property>
+                        </category-column>
+                        <category-column name="Time" id="629">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Time</property>
+                        </category-column>
+                        <category-column name="Person ID" id="630">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Person ID</property>
+                        </category-column>
+                        <category-column name="Name" id="631">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Name</property>
+                        </category-column>
+                        <category-column name="Surname" id="632">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Surname</property>
+                        </category-column>
+                        <category-column name="DOB" id="633">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">DOB</property>
+                        </category-column>
+                        <category-column name="Gender" id="634">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Gender</property>
+                        </category-column>
+                        <category-column name="Class" id="635">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Class</property>
+                        </category-column>
+                        <category-column name="Device ID" id="636">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Device ID</property>
+                        </category-column>
+                        <category-column name="Location" id="637">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Location</property>
+                        </category-column>
+                        <category-column name="Long" id="638">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Long</property>
+                        </category-column>
+                        <category-column name="Lat" id="639">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Lat</property>
+                        </category-column>
+                        <category-column name="Zone" id="640">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Zone</property>
+                        </category-column>
+                        <category-column name="Grant" id="641">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Grant</property>
+                        </category-column>
+                        <category-column name="Accepted" id="642">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Accepted</property>
+                        </category-column>
+                        <category-column name="Rejected" id="643">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Rejected</property>
+                        </category-column>
+                        <category-column name="Retry" id="644">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">Retry</property>
+                        </category-column>
+                        <category-column name="last 24" id="645">
+                            <property name="aliasDataSet">Data Model/Badge data set</property>
+                            <property name="resultSetColumnName">last 24</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+    </property>
+</datamart>

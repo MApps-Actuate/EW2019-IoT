@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="JourneryIDParam" id="2500">
+            <property name="valueType">dynamic</property>
+            <property name="isRequired">false</property>
+            <expression name="valueExpr" type="javascript">dataSetRow["Vehicle"]</expression>
+            <expression name="labelExpr" type="javascript">dataSetRow["Vehicle"]</expression>
+            <expression name="sortByColumn">dataSetRow["Vehicle"]</expression>
+            <property name="sortDirection">asc</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">PT101802</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="linkedDataModelName">Data Model</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">false</property>
+            <property name="fixedOrder">false</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="EventType" id="2501">
+            <property name="valueType">dynamic</property>
+            <property name="isRequired">false</property>
+            <expression name="valueExpr" type="javascript">dataSetRow["EventTypeMap"]</expression>
+            <expression name="labelExpr" type="javascript">dataSetRow["EventTypeMap"]</expression>
+            <expression name="sortByColumn">dataSetRow["EventTypeMap"]</expression>
+            <property name="sortDirection">asc</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">RemoteStart</value>
+                <value type="constant">IgnitionOn</value>
+                <value type="constant">IgnitionOff</value>
+                <value type="constant">HardAcceleration</value>
+                <value type="constant">HardBrake</value>
+                <value type="constant">BroadCast</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="linkedDataModelName">Data Model</property>
+            <property name="paramType">multi-value</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">false</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <data-mart-data-source name="Data Source" id="2415">
+            <property name="datamartURL">Data Objects/MOD_Act_4</property>
+            <property name="accessType">transient</property>
+        </data-mart-data-source>
+    </data-sources>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="Data Model" id="2416">
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Data Model</property>
+        </data-mart-linked-data-model>
+    </property>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">landscape</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="2454">
+            <property name="width">12.241666666666667in</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">JourneyID</property>
+                    <text-property name="displayName">JourneyID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["JourneyID"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Vehicle</property>
+                    <text-property name="displayName">Vehicle</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Vehicle"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <expression name="bookmark" type="javascript">"Table"</expression>
+            <property name="linkedDataModel">Data Model</property>
+            <column id="2468"/>
+            <column id="2469">
+                <property name="width">7.016666666666667in</property>
+            </column>
+            <footer>
+                <row id="2465">
+                    <property name="height">4.983333333333333in</property>
+                    <cell id="2466">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <extended-item extensionName="HTMLControl" id="6">
+                            <property name="html">&lt;!--  &#13;
+// &lt;copyright company="MAPCITE">&#13;
+// Copyright (c) 2017 All Rights Reserved&#13;
+// &lt;/copyright>&#13;
+// &lt;author>MAPCITE&lt;/author>&#13;
+// &lt;date>05/03/2018 00:00:00&lt;/date>&#13;
+// &lt;summary>Unless otherwise stated, the software is provided "as-is," without any express or implied warranty. In no event shall MAPCITE be held liable for any damages arising from the use of the software.&lt;/summary>&#13;
+-->&#13;
+&#13;
+&#13;
+&#13;
+&lt;div id="map">&#13;
+&#13;
+	&lt;div class="mapciteLogo">&#13;
+ 		&lt;a href="http://www.mapcite.com" target="_blank">&lt;img src="http://opentext.mapcite.com/images/mapcite_logo_18_B.png" style="height:64px;" />&lt;/a>&#13;
+	&lt;/div>&#13;
+    &lt;div id="popup" class="ol-popup">&#13;
+      &lt;a href="#" id="popup-closer" class="ol-popup-closer">&lt;/a>&#13;
+      &lt;div id="popup-content" style="max-height:300px; overflow:auto; margin-top:10px;">&lt;/div>&#13;
+    &lt;/div>&#13;
+    &#13;
+    &lt;div class="modal-dialog" style="display:none"> &#13;
+		&lt;div>&#13;
+			&lt;h2>Please wait...&lt;/h2>&#13;
+			&lt;p>calculating and indexing shapes can take a little while&lt;/p>&#13;
+		&lt;/div>&#13;
+	&lt;/div>&#13;
+&#13;
+&lt;/div></property>
+                            <property name="css">/*&#13;
+// &lt;copyright company="MAPCITE">&#13;
+// Copyright (c) 2017 All Rights Reserved&#13;
+// &lt;/copyright>&#13;
+// &lt;author>MAPCITE&lt;/author>&#13;
+// &lt;date>05/03/2017 00:00:00&lt;/date>&#13;
+// &lt;summary>Unless otherwise stated, the software is provided "as-is," without any express or implied warranty. In no event shall MAPCITE be held liable for any damages arising from the use of the software.&lt;/summary>&#13;
+*/&#13;
+&#13;
+#map,.tooltip-measure{background-color:#fff}.mapciteLogo{position:absolute;top:5px;right:5px;-webkit-filter:drop-shadow(0 2px 0 rgba(0,0,0,.1));filter:drop-shadow(0 2px 0 rgba(0, 0, 0, .1));z-index:9999}.featureAttributes{border:1px solid #ddd;margin-bottom:5px;padding:5px}.ol-popup{padding-left:0;padding-right:0}.tooltip{border:1px solid #ddd;-webkit-filter:drop-shadow(0 2px 0 rgba(0,0,0,.1));filter:drop-shadow(0 2px 0 rgba(0, 0, 0, .1))}.custom-scale,.ol-mycontrol{background:#fff;-webkit-filter:drop-shadow(0 1px 1px rgba(0, 0, 0, .2))}.tooltip-measure{padding:3px;color:#000;text-align:center;text-decoration:none}#map{border:1px solid #eee;position:relative;top:0;left:0;overflow:hidden;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;color:#333}#map,.menuBtn{line-height:1.42857143}.menuBtn,.modal-dialog div{text-align:center;vertical-align:middle}*{box-sizing:border-box}.row::after{content:"";clear:both;display:table}[class*=col-]{float:left;padding:5px;text-align:center}.col-1{width:8.33%}.col-2{width:16.66%}.col-3{width:25%}.col-4{width:33.33%}.col-5{width:41.66%}.col-6{width:50%}.col-7{width:58.33%}.col-8{width:66.66%}.col-9{width:75%}.col-10{width:83.33%}.col-11{width:91.66%}.col-12{background:#fff;width:100%;padding:0}.col-12 h1{margin:0}h4{color:#888}.custom-scale,.custom-zoom{position:absolute;z-index:1}.custom-zoom{top:5px;left:5px}#mapMenuList,.intersectsDiv,.ol-mycontrol{position:absolute;top:0}.custom-scale{bottom:5px;left:55px;color:#000;padding:10px;opacity:1;filter:drop-shadow(0 1px 1px rgba(0, 0, 0, .2))}.intersectsDiv{opacity:.95;-webkit-filter:drop-shadow(0 1px 2px rgba(0, 0, 0, .2))}.ol-mycontrol{opacity:1;left:0;bottom:0;z-index:2;width:50px;height:100%;filter:drop-shadow(0 1px 1px rgba(0, 0, 0, .2))}.custom-scale-inner{border:1px solid rgba(0,0,0,1);border-radius:0;border-top:none;color:#000;font-size:10px;text-align:center;margin:1px}.custom-zoom button{background-color:rgba(0,0,0,1);font-size:24px}.custom-mouse-position{position:absolute;z-index:2;bottom:50px;left:55px;color:#000;font-size:10px}.custom-attribution{position:absolute;z-index:2;bottom:5px;right:5px;color:#000;background:#fff;padding:10px;border-radius:0;-webkit-filter:drop-shadow(0 1px 1px rgba(0, 0, 0, .2));filter:drop-shadow(0 1px 1px rgba(0, 0, 0, .2))}.custom-attribution ul{list-style-type:none;padding:5px 5px 0;font-size:10px}.custom-attribution ul li{display:inline}.custom-attribution button,.custom-attribution img{display:none}.intersectsDiv{bottom:37px;right:0;background-color:#fff;height:100%;max-width:500px;overflow:auto;filter:drop-shadow(0 1px 2px rgba(0, 0, 0, .2))}.intersectsDiv table{width:100%;margin-top:20px;border-top:1px solid #ddd;border-spacing:0;border-collapse:collapse}.intersectsHeader{padding:10px;border:1px solid #ddd}.intersectsCount{padding-right:15px;font-size:14px}.intersectsDiv tr:nth-child(even){background-color:#f2f2f2}.intersectsDiv td,.intersectsDiv th{border-bottom:1px solid #ddd;padding:5px;text-align:center}.menuBtn{margin-bottom:0;font-size:14px;font-weight:400;white-space:nowrap;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:none;color:#000;background-color:#fff;text-decoration:none;opacity:1;height:75px;width:100%}.menuBtn_active{background-color:#39f}#mapMenuList{left:-300px;background:#fff;z-index:-2;opacity:0;width:50px}#map .list-group{padding:0}#map .list-group-item{position:relative;display:block;padding:10px;min-width:50px;height:75px;width:100%}#map .list-group-item-colour{position:relative;display:block;text-align:center;padding:5x;min-width:50px}.progress{width:100%;background-color:#fff}.progressBar{width:100%;height:1px;background-color:#ddd}.ol-popup{position:absolute;background-color:#fff;padding:15px;border-radius:0;bottom:12px;left:-50px;min-width:280px;-webkit-filter:drop-shadow(0 1px 2px rgba(0, 0, 0, .2));filter:drop-shadow(0 1px 2px rgba(0, 0, 0, .2))}.ol-popup:after,.ol-popup:before{top:100%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none}.ol-popup:after{border-top-color:#fff;border-width:10px;left:48px;margin-left:-10px}.ol-popup:before{border-top-color:#fff;border-width:11px;left:48px;margin-left:-11px}.ol-popup-closer{text-decoration:none;position:absolute;top:2px;right:8px;color:#999}.ol-popup-closer:after{content:"X"}.color-scale,.color-scheme{margin:3rem auto;padding:0;list-style:none;overflow:hidden}.color-scheme li{width:10rem;height:10rem;float:left;position:relative}.color-scale li{width:5rem;height:5rem;float:left;position:relative;-webkit-transition:opacity .3s ease-in-out;-moz-transition:opacity .3s ease-in-out;transition:opacity .3s ease-in-out;cursor:pointer}.color-scale li:hover{opacity:.8}.color-info{position:absolute;padding:.5rem;background-color:#FFF;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:5px;font-size:85%;text-align:center}.color-info span{display:block}.modal-dialog{position:absolute;top:0;right:0;bottom:0;left:0;z-index:1040;padding:10px;display:none;opacity:.95}.modal-dialog div{position:relative;top:40%;width:200px;margin-right:auto;margin-left:auto;background:#fff;padding:10px;filter:drop-shadow(0 1px 2px rgba(0, 0, 0, .2))}</property>
+                            <method name="clientOnCreate"><![CDATA[// JavaScript source code
+// © MAPCITE 2017
+// <copyright company="MAPCITE">
+// Copyright (c) 2017 All Rights Reserved
+// </copyright>
+// <author>MAPCITE</author>
+// <date>01/03/2018 00:00:00</date>
+// <summary>Unless otherwise stated, the software is provided "as-is," without any express or implied warranty. In no event shall MAPCITE be held liable for any damages arising from the use of the software.</summary>
+
+var config = {
+    /* specify layer defaults */
+    layers: {
+        base: 'OSM', // OSM, MONO, LITE, LABELS
+        markers: true,
+        heatmap: false,
+        shapes: false
+    },
+    /* specify a KPI field - defaults to number of locations if blank */
+    kpiColumn: "", //
+    /* specify the default image url field for the map markers */
+    markerImageColumn: "", //"Icon URL", //"http://image path"
+    /* specify marker label fields. Example: ["Store", "Time"] */
+    markerLabelFields: ["EventTypeMap","speed","Average MPG","JourneyID","heading"],
+    /* specify the default center coornidates for the map */
+    mapCenter: {
+        /* the latitude for the center */
+        lat: 42.63,
+        /* the longitude for the center */
+        lng: -83.46
+        
+    },
+    /* specifiy a default map zoom level*/
+    mapZoomLevel: 12,
+    /* specify colurs used for heatmap layer. Default: ['#00f', '#0ff', '#0f0', '#ff0', '#f00']*/
+    heatmapColours: ['#00f', '#0ff', '#0f0', '#ff0', '#f00'],
+    /* specify if the heatmap bias should be reversed - **Experimental** -  */
+    heatmapAlt: false,
+    /* specify if the data should cluster on the map - advised for large datasets */
+    clusterMarkers: false,
+    /* specify colurs used for area map layer (text or hexidecimal) example : ['white', 'yellow', 'orange', 'red'] or ['ffffff', '000000']*/
+    shapeColours: ['ffffff', '0076b6'], //['white', 'yellow', 'orange', 'red']
+    /* specify path column*/
+    pathColumn: "Path",
+    /* specify font icon column */
+    fontColumn: "FontIcon"
+};
+
+var featureLayer,map,mask,mousePositionControl,featureCollection,features,scaleLineControl,index,clusterSource,colorStops,scaleStops,polygonStyle,polygonLayer,heatmapLayer,clusterLayer,extractSource,extractLayer,shapes,drawMode,annotateMode,overlay,draw,snap,annotate,scalesData,tempPolygons,baseGeoJsonGroup,pathSource,pathLayer,NUTS2,NUTS3,listener,measureTooltipElement,measureTooltip,popupTextKPI,popupTextCount,customViz=this,polyline=[],container=document.getElementById("popup"),content=document.getElementById("popup-content"),closer=document.getElementById("popup-closer");function getMarkerData(){var e=customViz.getData();if(!e||!e.rows||!e.columns)return[];for(var t=[],n=0;n<e.rows.length;n++){e.rows[n];for(var o={},a=0;a<e.columns.length;a++){var r=e.columns[a],l=e.rows[n][a];o[r]=l}t.push(o)}return t}function createMap(){for(key in customViz.opts.birtOpts)"height"===key?$("#map").css("height",customViz.opts.birtOpts[key]):"width"===key&amp;&amp;$("#map").css("width",customViz.opts.birtOpts[key]);window.app={};var e=window.app;e.CustomToolbarControl=function(e){var t=e||{},n=document.createElement("div");n.className="row";var o=document.createElement("div");o.className="col-12";var a=document.createElement("button");a.innerHTML='<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',a.id="zoomInButton",a.title="Zoom In",a.className="menuBtn";a.addEventListener("click",function(e){zoomIn()},!1),o.appendChild(a);var r=document.createElement("div");r.className="col-12";var l=document.createElement("button");l.innerHTML='<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 13H5v-2h14v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',l.id="zoomInButton",l.title="Zoom In",l.className="menuBtn";l.addEventListener("click",function(e){zoomOut()},!1),r.appendChild(l);var i=document.createElement("div");i.className="col-12";var s=document.createElement("button");s.innerHTML='<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34c-.39-.39-1.02-.39-1.41 0L9 12.25 11.75 15l8.96-8.96c.39-.39.39-1.02 0-1.41z"/></svg>',s.id="annotateButton",s.title="Annotate",s.className="menuBtn";s.addEventListener("click",function(e){$(this).hasClass("menuBtn_active")?($("#mapAreaButton").removeAttr("disabled"),$("#mapAreaButton img").css("filter","invert(0%)"),$("#mapAreaButton").css("cursor","pointer"),$("#mapDrawButton").removeAttr("disabled"),$("#mapDrawButton img").css("filter","invert(0%)"),$("#mapDrawButton").css("cursor","pointer"),map.removeInteraction(annotate),annotateMode=0,V.clear()):($("#mapAreaButton").attr("disabled","disabled"),$("#mapAreaButton img").css("filter","invert(50%)"),$("#mapAreaButton").css("cursor","not-allowed"),$("#mapDrawButton").attr("disabled","disabled"),$("#mapDrawButton img").css("filter","invert(50%)"),$("#mapDrawButton").css("cursor","not-allowed"),annotateMode=1,map.removeInteraction(annotate),(annotate=new ol.interaction.Draw({source:V,type:"LineString",freehand:!0})).on("drawstart",function(e){}),annotate.on("drawend",function(e){}),map.addInteraction(annotate)),$(this).toggleClass("menuBtn_active")},!1),i.appendChild(s);var c=document.createElement("div");c.className="col-12";var p=document.createElement("button");p.innerHTML='<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg>',p.id="mapMenuButton",p.title="Map Layers",p.className="menuBtn";p.addEventListener("click",function(e){e.preventDefault(),$(this).toggleClass("menuBtn_active"),toggleMapMenu()},!1),c.appendChild(p);var m=document.createElement("div");m.className="col-12";var u=document.createElement("button");u.innerHTML='<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',u.id="mapPrintButton",u.title="Print PDF",u.className="menuBtn";u.addEventListener("click",function(e){printMap()},!1),m.appendChild(u);var d=document.createElement("div");d.className="col-12";var h=document.createElement("button");h.innerHTML='<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4.59 6.89c.7-.71 1.4-1.35 1.71-1.22.5.2 0 1.03-.3 1.52-.25.42-2.86 3.89-2.86 6.31 0 1.28.48 2.34 1.34 2.98.75.56 1.74.73 2.64.46 1.07-.31 1.95-1.4 3.06-2.77 1.21-1.49 2.83-3.44 4.08-3.44 1.63 0 1.65 1.01 1.76 1.79-3.78.64-5.38 3.67-5.38 5.37 0 1.7 1.44 3.09 3.21 3.09 1.63 0 4.29-1.33 4.69-6.1H21v-2.5h-2.47c-.15-1.65-1.09-4.2-4.03-4.2-2.25 0-4.18 1.91-4.94 2.84-.58.73-2.06 2.48-2.29 2.72-.25.3-.68.84-1.11.84-.45 0-.72-.83-.36-1.92.35-1.09 1.4-2.86 1.85-3.52.78-1.14 1.3-1.92 1.3-3.28C8.95 3.69 7.31 3 6.44 3 5.12 3 3.97 4 3.72 4.25c-.36.36-.66.66-.88.93l1.75 1.71zm9.29 11.66c-.31 0-.74-.26-.74-.72 0-.6.73-2.2 2.87-2.76-.3 2.69-1.43 3.48-2.13 3.48z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',h.id="mapDrawButton",h.title="Draw",h.className="menuBtn",h.style.height="55px";h.addEventListener("click",function(e){$(this).toggleClass("menuBtn_active"),$(this).hasClass("menuBtn_active")?($("#mapAreaButton").attr("disabled","disabled"),$("#mapAreaButton").css("cursor","not-allowed"),drawMode=1,map.removeInteraction(draw),map.removeInteraction(snap),addInteractions(),v.disabled=!1):($("#mapAreaButton").removeAttr("disabled"),$("#mapAreaButton").css("cursor","pointer"),map.removeInteraction(draw),map.removeInteraction(snap),drawMode=0,extractSource.clear(),measureTooltip.setPosition(void 0),mask&amp;&amp;extractLayer.removeFilter(mask),$("#intersectResults").remove(),v.disabled=!0)},!1);var g=["Polygon","Circle"],v=document.createElement("select");v.id="typeSelect",v.style.border="none",v.style.width="100%",v.disabled=!0,v.onchange=function(e){};for(var f=0;f<g.length;f++){(T=document.createElement("option")).value=g[f],T.text=g[f],v.appendChild(T)}d.appendChild(h),d.appendChild(v),n.appendChild(o),n.appendChild(r),n.appendChild(c),n.appendChild(m),n.appendChild(d),n.appendChild(i);var y=document.createElement("div");y.className="row";var w=document.createElement("div");w.className="col-12";var C=document.createElement("button");C.innerHTML='<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><circle cx="7.2" cy="14.4" r="3.2"/><circle cx="14.8" cy="18" r="2"/><circle cx="15.2" cy="8.8" r="4.8"/></svg>',C.id="mapHeatmapButton",C.title="Heatmap",C.className="menuBtn";C.addEventListener("click",function(e){$(this).hasClass("menuBtn_active")?heatmapLayer.setVisible(!1):heatmapLayer.setVisible(!0),$(this).toggleClass("menuBtn_active")},!1),w.appendChild(C);var E=document.createElement("div");E.className="col-12";var S=document.createElement("button");S.innerHTML='<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',S.id="mapClusterButton",S.title="Clusters",S.className="menuBtn";S.addEventListener("click",function(e){$(this).hasClass("menuBtn_active")?clusterLayer.setVisible(!1):clusterLayer.setVisible(!0),$(this).toggleClass("menuBtn_active")},!1),E.appendChild(S);var b=document.createElement("div");b.className="col-12";var M=document.createElement("button");M.innerHTML='<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3v18h18V3H3zm8 16H5v-6h6v6zm0-8H5V5h6v6zm8 8h-6v-6h6v6zm0-8h-6V5h6v6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',M.id="mapAreaButton",M.title="Area",M.className="menuBtn",M.style.height="55px";M.addEventListener("click",function(e){var t=document.getElementById("polygonColourScale");$(this).hasClass("menuBtn_active")?($("#mapDrawButton").removeAttr("disabled"),$("#mapDrawButton img").css("filter","invert(0%)"),$("#mapDrawButton").css("cursor","pointer"),mask&amp;&amp;polygonLayer.removeFilter(mask),$("#intersectResults").remove(),$(t).hide(),polygonLayer.setVisible(!1),document.getElementById("areaSelect").disabled=!0,map.getLayers().forEach(function(e){e.get("title")&amp;&amp;-1!==e.get("title").toString().indexOf("NUTS")&amp;&amp;e.setVisible(!1)})):(shapes="",$("#mapDrawButton").attr("disabled","disabled"),$("#mapDrawButton img").css("filter","invert(50%)"),$("#mapDrawButton").css("cursor","not-allowed"),indexShapes(),polygonLayer.setVisible(!0),clusterLayer.setVisible(!1),S.className="menuBtn",heatmapLayer.setVisible(!1),C.className="menuBtn",document.getElementById("areaSelect").disabled=!1),$(this).toggleClass("menuBtn_active")},!1);var x=document.createElement("select");x.id="areaSelect",x.style.border="none",x.style.width="100%",x.disabled=!0,x.onchange=function(e){shapes="",mask&amp;&amp;polygonLayer.removeFilter(mask),$("#intersectResults").remove(),indexShapes()};for(f=0;f<baseGeoJsonGroup.length;f++){(T=document.createElement("option")).value=baseGeoJsonGroup[f].url,T.text=baseGeoJsonGroup[f].name,x.appendChild(T)}b.appendChild(M),b.appendChild(x);var L=document.createElement("div");L.className="col-12";var P=document.createElement("button");P.innerHTML='<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',P.id="mapBaseLayersButton",P.title="Base Layers",P.className="menuBtn menuBtn_active",P.style.height="55px";P.addEventListener("click",function(e){var n,t=A.getLayers(),o=$("#baseLayersSelect").val();osSelectionChecked=e.target.checked,$(this).hasClass("menuBtn_active")?(t.forEach(function(e,t){e.setVisible(!1)}),document.getElementById("baseLayersSelect").disabled=!0):(t.forEach(function(e,t){n=e.getProperties().title,o===n?e.setVisible(!0):e.setVisible(!1)}),document.getElementById("baseLayersSelect").disabled=!1),$(this).toggleClass("menuBtn_active")},!1);var N=A.getLayers().getArray(),k=document.createElement("select");k.id="baseLayersSelect",k.style.border="none",k.style.width="100%",k.onchange=function(e){for(var t=0;t<N.length;t++){N[t].get("title")===this.value?N[t].setVisible(!0):N[t].setVisible(!1)}};for(f=0;f<N.length;f++){var T;(T=document.createElement("option")).value=N[f].getProperties().title,T.text=N[f].getProperties().title,k.appendChild(T)}L.appendChild(P),L.appendChild(k),y.appendChild(L),y.appendChild(E),y.appendChild(w),y.appendChild(b);var B=document.createElement("div");B.className="list-group",B.id="mapMenuList";var H=document.createElement("div");H.className="ol-unselectable ol-mycontrol",B.appendChild(y),H.appendChild(n),H.appendChild(B),ol.control.Control.call(this,{element:H,target:t.target})},ol.inherits(e.CustomToolbarControl,ol.control.Control),mousePositionControl=new ol.control.MousePosition({coordinateFormat:ol.coordinate.createStringXY(4),projection:"EPSG:4326",className:"custom-mouse-position",target:document.getElementById("mouse-position"),undefinedHTML:"&amp;nbsp;"}),scaleLineControl=new ol.control.ScaleLine,baseGeoJsonGroup=[{name:"NUTS1",url:"https://opentext.mapcite.com/NUTS_Level_1_18.json-nuts118nm"},{name:"NUTS2",url:"https://opentext.mapcite.com/NUTS_Level_2_18.json-nuts218nm"},{name:"NUTS3",url:"https://opentext.mapcite.com/NUTS_Level_3_18.json-nuts318nm"}];for(var A=new ol.layer.Group({title:"Base maps",layers:[new ol.layer.Tile({title:"OSM",type:"base",visible:!1,source:new ol.source.OSM}),new ol.layer.Tile({title:"MONO",type:"base",visible:!1,source:new ol.source.Stamen({layer:"toner",crossOrigin:"anonymous"})}),new ol.layer.Tile({title:"LITE",type:"base",visible:!1,source:new ol.source.Stamen({layer:"toner-lite",crossOrigin:"anonymous"})}),new ol.layer.Tile({title:"LABELS",type:"base",visible:!1,source:new ol.source.Stamen({layer:"terrain-labels",crossOrigin:"anonymous"})})]}),t=new ol.control.Attribution({collapsible:!1,className:"custom-attribution"}),o=0;o<baseGeoJsonGroup.length;o++){var a=baseGeoJsonGroup[o].url.split("-");$.ajax({url:a[0],dataType:"json",async:!1,success:function(e){e.features[0].properties.hasOwnProperty("nuts318cd")?NUTS3=e:e.features[0].properties.hasOwnProperty("nuts218cd")?NUTS2=e:NUTS1=e}})}var r=getMarkerData();if(featureCollection={type:"FeatureCollection",features:[]},pathSource=new ol.source.Vector({crossOrigin:"anonymous",updateWhileAnimating:!0,updateWhileInteracting:!0,attributions:' <a href="http://www.mapcite.com" target="_blank"> Plugin by MAPCITE.</a>'}),r&amp;&amp;0!=r.length){for(var l=0;l<r.length;l++)if(r[l].Longitude&amp;&amp;r[l].Latitude){var i={type:"Feature",properties:{name:"point_"+l,attributes:n={}},geometry:{type:"Point",coordinates:[+r[l].Longitude,+r[l].Latitude]}};for(key in r[l]){var s=r[l][key];n[key]=s,i.properties=n}featureCollection.features.push(i)}else{var c=lookupLatLon(r[l]);c&amp;&amp;featureCollection.features.push(c)}for(l=0;l<r.length;l++)if(config.pathColumn){var p=new ol.format.Polyline({}).readGeometry(r[l].Path,{dataProjection:"EPSG:4326",featureProjection:"EPSG:900913"}),m=new ol.Feature({geometry:p});pathSource.addFeature(m)}}var u;pathLayer=new ol.layer.Vector({name:"paths",source:pathSource,style:function(e,t){return pStyle=new ol.style.Style({stroke:new ol.style.Stroke({color:"black",width:4,lineCap:"round",lineJoin:"round"}),fill:new ol.style.Fill({color:"rgba(255, 255, 255, 0)"})}),pStyle},visible:!0,zIndex:0}),u=config.clusterMarkers?100:0,(index=supercluster({radius:u,maxZoom:20,initial:function(){return{count:0,sum:0,min:1/0,max:-1/0}},map:function(e){var t=config.kpiColumn;return{count:1,sum:Number(e[t]),min:Number(e[t]),max:Number(e[t]),max_alt:Number(e[t])}},reduce:function(e,t){e.sum+=Math.round(100*t.sum)/100,e.count+=t.count,e.min=Math.round(100*Math.min(e.min,t.min))/100,e.max=Math.round(100*Math.max(e.max,t.max))/100,e.avg=Math.round(100*e.sum/e.count)/100}})).load(featureCollection.features),clusterSource=new ol.source.Vector({crossOrigin:"anonymous",updateWhileAnimating:!0,updateWhileInteracting:!0,attributions:' <a href="http://www.mapcite.com" target="_blank"> Plugin by MAPCITE.</a>'});var d={};clusterLayer=new ol.layer.Vector({name:"clusters",source:clusterSource,style:function(e,t){var n,o,a,r=1e4<=(n=config.kpiColumn&amp;&amp;void 0!==config.kpiColumn?e.getProperties().sum:e.getProperties().count)?Math.round(n/1e3)+"k":1e3<=n?Math.round(n/100)/10+"k":n;return r&amp;&amp;(n=r),void 0===n&amp;&amp;(n=1),style=d[n],a=String.fromCharCode(e.get(config.fontColumn)),o=e.get(config.markerImageColumn)?e.get(config.markerImageColumn):"https://opentext.mapcite.com/images/features/Blue.png",style||(config.clusterMarkers?style=1===n?new ol.style.Style({image:new ol.style.Icon({crossOrigin:"anonymous",src:o})}):d[n]=new ol.style.Style({image:new ol.style.Circle({radius:18,stroke:new ol.style.Stroke({color:"rgba(0,0,0 1)",width:3}),fill:new ol.style.Fill({color:"rgba(0, 104, 255, 1)"})}),text:new ol.style.Text({text:n.toString(),fill:new ol.style.Fill({color:"#fff"})})}):style=new ol.style.Style({image:new ol.style.Circle({radius:10,stroke:new ol.style.Stroke({color:"#007bff",width:3}),fill:new ol.style.Fill({color:"#007bff"})}),text:new ol.style.Text({text:a,font:"normal 14px FontAwesome",fill:new ol.style.Fill({color:"#ffffff"})})})),[style]},visible:!1,zIndex:4}),heatmapLayer=new ol.layer.Heatmap({source:clusterSource,gradient:config.heatmapColours,blur:30,radius:30,weight:function(e){var t;if(config.kpiColumn&amp;&amp;void 0!==config.kpiColumn){t="sum";n=e.get("sum")}else{t="count";var n=e.get("count")}return n=convertValue(n,t)},visible:!1,zIndex:3}),overlay=new ol.Overlay({element:container,autoPan:!0,autoPanAnimation:{duration:250}}),polygonStyle=function(t,e){var n;for(var o in t.getProperties())-1!==o.indexOf("nm")&amp;&amp;(n=t.getProperties()[o]);if(config.kpiColumn&amp;&amp;void 0!==config.kpiColumn){var a=Math.max.apply(Math,scaleStops.filter(function(e){return e<=t.getProperties().KPI}));for(o=0;o<colorStops.length;o++)for(var r in colorStops[o])r===a.toString()&amp;&amp;(l=new ol.style.Style({stroke:new ol.style.Stroke({color:"black",width:2}),fill:new ol.style.Fill({color:colorStops[o][r]})}));return l}Math.max.apply(Math,scaleStops.filter(function(e){return e<=t.getProperties().Count}));for(var l,o=0;o<colorStops.length;o++)for(var r in colorStops[o])l=new ol.style.Style({stroke:new ol.style.Stroke({color:"black",width:2}),fill:new ol.style.Fill({color:"rgba(0, 118, 182, 0.9)"}),text:new ol.style.Text({fill:new ol.style.Fill({color:"#fff"}),text:n})});return l},polygonLayer=new ol.layer.Vector({name:"polygons",source:new ol.source.Vector({overlaps:!1,crossOrigin:"anonymous",attributions:' <a href="http://www.mapcite.com" target="_blank"> Plugin by MAPCITE.</a>'}),style:polygonStyle,visible:!1,zIndex:2}),annotateStyle=function(e,t){return aStyle=new ol.style.Style({stroke:new ol.style.Stroke({color:"black",width:4,lineCap:"round",lineJoin:"round"})}),aStyle};var V=new ol.source.Vector({wrapX:!1,crossOrigin:"anonymous",attributions:' <a href="http://www.mapcite.com" target="_blank"> Plugin by MAPCITE.</a>'}),h=new ol.layer.Vector({source:V,style:annotateStyle,zIndex:7});extractStyle=function(e,t){return eStyle=new ol.style.Style({stroke:new ol.style.Stroke({color:"black",width:2,lineCap:"round",lineJoin:"round"}),fill:new ol.style.Fill({color:"rgba(255, 255, 255, 0)"})}),eStyle},extractSource=new ol.source.Vector({wrapX:!1,crossOrigin:"anonymous",attributions:' <a href="http://www.mapcite.com" target="_blank"> Plugin by MAPCITE.</a>'}),extractLayer=new ol.layer.Vector({source:extractSource,style:extractStyle,zIndex:6}),(map=new ol.Map({layers:[A,polygonLayer,heatmapLayer,clusterLayer,extractLayer,h,pathLayer],overlays:[overlay],target:"map",controls:[],view:new ol.View({center:ol.proj.fromLonLat([config.mapCenter.lng,config.mapCenter.lat]),zoom:config.mapZoomLevel})})).addControl(new ol.control.ScaleLine({className:"custom-scale"})),map.addControl(t),map.addControl(mousePositionControl),map.addControl(new e.CustomToolbarControl),map.getView().on("change:resolution",function(){overlay.setPosition(void 0)});var g=function(e,t){var n;for(var o in e.getProperties())-1!==o.indexOf("nm")&amp;&amp;(n=e.getProperties()[o]);return new ol.style.Style({stroke:new ol.style.Stroke({color:"white",width:2}),fill:new ol.style.Fill({color:"rgba(217, 217, 217, 0.5)"}),text:new ol.style.Text({fill:new ol.style.Fill({color:"#000"}),text:n})})};for(o=0;o<baseGeoJsonGroup.length;o++){a=baseGeoJsonGroup[o].url.split("-");$.ajax({url:a[0],dataType:"json",async:!1,success:function(e){if(e.features[0].properties.hasOwnProperty("nuts318cd")){var t=new ol.source.Vector({features:(new ol.format.GeoJSON).readFeatures(e,{featureProjection:"EPSG:3857"})}),n=new ol.layer.Vector({title:"NUTS3",source:t,style:g,visible:!1,zIndex:1});map.addLayer(n)}else if(e.features[0].properties.hasOwnProperty("nuts218cd")){t=new ol.source.Vector({features:(new ol.format.GeoJSON).readFeatures(e,{featureProjection:"EPSG:3857"})}),n=new ol.layer.Vector({title:"NUTS2",source:t,style:g,visible:!1,zIndex:1});map.addLayer(n)}else{t=new ol.source.Vector({features:(new ol.format.GeoJSON).readFeatures(e,{featureProjection:"EPSG:3857"})}),n=new ol.layer.Vector({title:"NUTS1",source:t,style:g,visible:!1,zIndex:1});map.addLayer(n)}}})}document.getElementById("typeSelect").onchange=function(){map.removeInteraction(draw),addInteractions()},map.on("pointermove",function(e){if(1===drawMode||1===annotateMode);else{var t=map.forEachFeatureAtPixel(e.pixel,function(e,t){return t.get("name"),e});map.getTargetElement().style.cursor=t?"pointer":"auto",e.dragging&amp;&amp;(map.getTargetElement().style.cursor="move")}}),map.on("singleclick",function(o){if(overlay.setPosition(void 0),content.innerHTML="",1===drawMode||1===annotateMode);else{var a=[],r=[];map.forEachFeatureAtPixel(o.pixel,function(e,t){if("clusters"===t.get("name"))a.push(e);else if("polygons"===t.get("name")){var n;"MultiPolygon"===e.getGeometry().getType()?(n=turf.multiPolygon(e.getGeometry().getPolygons(),e.getProperties()),r.push(n)):polygonAnalysis(n=turf.polygon(e.getGeometry().getCoordinates(),e.getProperties())),map.setView(new ol.View({center:o.coordinate,zoom:map.getView().getZoom()}))}});if(0<r.length&amp;&amp;polygonAnalysis(r),0<a.length)if(popupTextCount=popupTextKPI=0,config.kpiColumn&amp;&amp;void 0!==config.kpiColumn)for(t=0;t<a.length;t++)if(!0===a[t].get("cluster"));else{if(a[t].getProperties(config.kpiColumn)){n=document.createElement("div");for(var e in n.className="featureAttributes",a[t].getProperties()){if(0<=config.markerLabelFields.indexOf(e)){i=document.createElement("p"),s=document.createElement("span"),c=document.createElement("span");if(isValidURL(a[t].getProperties()[e])){m=new Image,u=document.createElement("canvas").getContext("2d");m.onload=function(){u.drawImage(this,0,0)},m.crossOrigin="Anonymous",(p=new XMLHttpRequest).onload=function(){var e=new FileReader;e.onloadend=function(){m.src=e.result,i.appendChild(m)},e.readAsDataURL(p.response)},p.open("GET",a[t].getProperties()[e]),p.responseType="blob",p.send()}else s.innerHTML=e+": ",c.innerHTML=a[t].getProperties()[e],i.appendChild(s),i.appendChild(c);n.appendChild(i)}content.appendChild(n)}}d=o.coordinate;overlay.setPosition(d)}else for(var t=0;t<a.length;t++)if(!0===a[t].get("cluster"));else{var n=document.createElement("div");for(var l in n.className="featureAttributes",a[t].getProperties()){if(0<=config.markerLabelFields.indexOf(l)){var i=document.createElement("p"),s=document.createElement("span"),c=document.createElement("span");if(isValidURL(a[t].getProperties()[l])){var p,m=new Image,u=document.createElement("canvas").getContext("2d");m.onload=function(){u.drawImage(this,0,0)},m.crossOrigin="Anonymous",(p=new XMLHttpRequest).onload=function(){var e=new FileReader;e.onloadend=function(){m.src=e.result,i.appendChild(m)},e.readAsDataURL(p.response)},p.open("GET",a[t].getProperties()[l]),p.responseType="blob",p.send()}else s.innerHTML=l+": ",c.innerHTML=a[t].getProperties()[l],i.appendChild(s),i.appendChild(c);n.appendChild(i)}content.appendChild(n)}var d=o.coordinate;overlay.setPosition(d)}}}),map.on("moveend",update),!0===config.layers.markers?$("#mapClusterButton").trigger("click"):!0===config.layers.heatmap?$("#mapHeatmapButton").trigger("click"):!0===config.layers.shapes&amp;&amp;($("#mapAreaButton").trigger("click"),$("#mapMenuButton").trigger("click")),$("#baseLayersSelect").val(config.layers.base).trigger("change"),filterUpdate()}function filterUpdate(){var e=$("#container_NUTS3").text();SelectElement("areaSelect",e.substring(e.lastIndexOf("[")+1,e.lastIndexOf("]")).replace("CD",""))}function SelectElement(e,t){for(var n=document.getElementById(e),o=0;o<n.options.length;o++)if(n.options[o].text===t){n.selectedIndex=o,$("#areaSelect").trigger("change");break}}function addInteractions(){var o=typeSelect.value;"None"!==o&amp;&amp;(draw="Circle"!==o?new ol.interaction.Draw({source:extractSource,type:typeSelect.value,freehand:!0}):new ol.interaction.Draw({source:extractSource,features:features,type:"Circle",geometryFunction:function(e,t){t||(t=new ol.geom.Polygon(null));var n=e[0],o=e[1],a=n[0]-o[0],r=n[1]-o[1],l=Math.sqrt(a*a+r*r),i=ol.geom.Polygon.circular(new ol.Sphere(6378137),ol.proj.toLonLat(n),l);return i.transform("EPSG:4326","EPSG:3857"),t.setCoordinates(i.getCoordinates()),t}}),createMeasureTooltip(),draw.on("drawstart",function(e){measureTooltip.setPosition(void 0),extractSource.clear(),mask&amp;&amp;extractLayer.removeFilter(mask),listener=e.feature.getGeometry().on("change",function(e){var t=e.coordinate,n=e.target;t=n.getInteriorPoint().getCoordinates(),measureTooltipElement.innerHTML="Circle"!==o?""+formatArea(n):""+formatRadius(n),measureTooltip.setPosition(t)})}),draw.on("drawend",function(e){drawnPolygonAnalysis(turf.polygon(e.feature.getGeometry().getCoordinates())),map.getView().fit(e.feature.getGeometry().getExtent(),map.getSize());map.getView().getCenter();zoomOut(),mask=new ol.filter.Mask({feature:e.feature,inner:!1,fill:new ol.style.Fill({color:[0,0,0,.5]})}),extractLayer.addFilter(mask)}),map.addInteraction(draw),snap=new ol.interaction.Snap({source:extractSource}),map.addInteraction(snap))}var formatArea=function(e){var t=ol.Sphere.getArea(e);return 1e4<t?Math.round(t/1e6*100)/100+" km<sup>2</sup>":Math.round(100*t)/100+" m<sup>2</sup>"},formatRadius=function(e){var t=ol.proj.transform(e.getFirstCoordinate(),"EPSG:3857","EPSG:4326"),n=ol.proj.transform([e.getInteriorPoint().getCoordinates()[0],e.getInteriorPoint().getCoordinates()[1]],"EPSG:3857","EPSG:4326"),o=turf.point(t),a=turf.point(n),r=turf.distance(o,a);return Math.round(100*r)/100+" km"};function createMeasureTooltip(){measureTooltipElement&amp;&amp;measureTooltipElement.parentNode.removeChild(measureTooltipElement),(measureTooltipElement=document.createElement("div")).className="tooltip tooltip-measure",measureTooltip=new ol.Overlay({element:measureTooltipElement,offset:[0,0],positioning:"bottom-center"}),map.addOverlay(measureTooltip)}function update(){var e=ol.proj.transformExtent(map.getView().calculateExtent(map.getSize()),"EPSG:3857","EPSG:4326");features=[],clusterArray=index.getClusters(e,map.getView().getZoom());for(var t=0;t<clusterArray.length;++t){var n=new ol.Feature({geometry:new ol.geom.Point(ol.proj.transform([clusterArray[t].geometry.coordinates[0],clusterArray[t].geometry.coordinates[1]],"EPSG:4326","EPSG:3857"))});n.setProperties(clusterArray[t].properties),features.push(n)}var o=clusterLayer.getSource();o.clear(),o.addFeatures(features)}function convertValue(e,t){e&amp;&amp;void 0!==e||(e=0);var n=ol.proj.transformExtent(map.getView().calculateExtent(map.getSize()),"EPSG:3857","EPSG:4326"),o=turf.featureCollection(index.getClusters(n,Math.floor(map.getView().getZoom())));if("count"===t)var a=getFeatureDomain(o,"count");else a=getFeatureDomain(o,"sum");Array.max=function(e){return Math.max.apply(Math,e)};var r=Array.max(a);Array.min=function(e){return Math.min.apply(Math,e)};var l=Array.min(a);return config.heatmapAlt||!0===config.heatmapAlt?(xMax=0,xMin=1):(xMax=1,xMin=0),yMax=r,yMin=l,percent=(e-yMin)/(yMax-yMin),outputX=percent*(xMax-xMin)+xMin,outputX}function createColorStops(e,n){return stops=[],e.forEach(function(e){var t={};t[e]=n(e).alpha(.5).css(),stops.push(t)}),stops}function getFeatureDomain(e,n){var o=[];return"sum"===n||"count"===n?turf.propEach(e,function(e,t){e[n]&amp;&amp;o.push(Math.round(100*parseFloat(e[n])/100))}):"max"===n?turf.propEach(e,function(e,t){o.push(Number(e[n]))}):"min"===n?turf.propEach(e,function(e,t){o.push(Number(e[n]))}):n===config.kpiColumn?turf.propEach(e,function(e,t){o.push(Math.round(Number(e[n])))}):"test"===n&amp;&amp;turf.propEach(e,function(e,t){o.push(Math.round(Number("1")))}),o}var objectToCSVRow=function(e){var t=[];for(var n in e){var o=(null===e[n]?"":e[n].toString()).replace(/"/g,'""');o='"'+o+'"',t.push(o)}return t.join(" ")+"\r\n"};function printMap(){var e;e=$("#container___BIRT_ROOT")?"#container___BIRT_ROOT":"#dashboardBody",html2canvas(document.querySelector(e)).then(function(e){dataUrl=e.toDataURL("image/jpeg"),printJS(dataUrl,"image")})}function indexShapes(){if(shapes);else{polygonLayer.getSource().clear(),document.getElementById("polygonColourScale")&amp;&amp;(element=document.getElementById("polygonColourScale"),element.parentNode.removeChild(element)),$(".modal-dialog").css("display","block"),map.getLayers().forEach(function(e){e.get("title")&amp;&amp;-1!==e.get("title").toString().indexOf("NUTS")&amp;&amp;e.setVisible(!1)}),"NUTS3"===$("#areaSelect>option:selected").text()?(shapes=NUTS3,map.getLayers().forEach(function(e){"NUTS2"===e.get("title")&amp;&amp;e.setVisible(!0)})):"NUTS2"===$("#areaSelect>option:selected").text()?(shapes=NUTS2,map.getLayers().forEach(function(e){"NUTS1"===e.get("title")&amp;&amp;e.setVisible(!0)})):(shapes=NUTS1,map.getLayers().forEach(function(e){"NUTS1"===e.get("title")&amp;&amp;e.setVisible(!0)})),map.getLayers().forEach(function(e){e.get("name")});for(var e=new ol.source.Vector,t=0;t<shapes.features.length;t++){var n=(new ol.format.GeoJSON).readFeature(shapes.features[t],{dataProjection:"EPSG:4326",featureProjection:"EPSG:3857"});e.addFeature(n)}var o=ol.proj.transformExtent(e.getExtent(),"EPSG:3857","EPSG:4326"),a=[],r=index.getClusters(o,22);if(6e4<r.length){$(".modal-dialog div").html('<h3>Data volume too high</h3><p>Please filter data</p><a href="#" id="closeDialog">Close</a>')}else{for(var l=0;l<r.length;++l){var i=turf.point([r[l].geometry.coordinates[0],r[l].geometry.coordinates[1]],r[l].properties);a.push(i)}shapeStyle(turf.featureCollection(a))}}}function indexParentShapes(e){for(var t=turf.polygon(e[0].getGeometry().getCoordinates(),e[0].getProperties()),n=0;n<NUTS3.features.length;n++){var o=ol.proj.transform([NUTS3.features[n].properties.long,NUTS3.features[n].properties.lat],"EPSG:4326","EPSG:3857"),a=turf.point(o);if(turf.booleanContains(t,a)){var r=e[0].getProperties().withinPolygon;processPolygon(NUTS3.features[n],r)}}}function shapeStyle(l){scalesData=[],tempPolygons=[];var i=shapes.features.length-1,s=new this.RepeatingOperation(function(){if(0===l.features.length||processPolygon(shapes.features[i],l),0<=--i)s.step();else{polygonLayer.getSource().clear();for(var e=0;e<tempPolygons.length;e++)0<tempPolygons[e].getProperties().withinPolygon.features.length&amp;&amp;polygonLayer.getSource().addFeature(tempPolygons[e]);scaleStops=chroma.limits(scalesData,"e",6);var t=chroma.scale(config.shapeColours).domain(scaleStops);colorStops=createColorStops(scaleStops,t);var n=document.createElement("ul");n.id="polygonColourScale",n.style="display:none;",n.className="list-group",n.innerHTML="";for(var o=0;o<colorStops.length;o++)for(var a in colorStops[o]){var r=document.createElement("li");r.className="list-group-item-colour",r.style.backgroundColor=colorStops[o][a],r.innerHTML=numberWithCommas(Number(a).toFixed(0)),n.appendChild(r)}$(".modal-dialog").css("display","none")}},10);s.step()}function processPolygon(e,t){if("MultiPolygon"===e.geometry.type){var n=turf.multiPolygon(e.geometry.coordinates),o=turf.featureCollection([n]),a=turf.within(t,o);if(config.kpiColumn&amp;&amp;void 0!==config.kpiColumn){r=[getFeatureDomain(a,config.kpiColumn).reduce(add,0)];Array.prototype.push.apply(scalesData,r),(i=(new ol.format.GeoJSON).readFeature(e,{dataProjection:"EPSG:4326",featureProjection:"EPSG:3857"})).set("KPI",getFeatureDomain(a,config.kpiColumn).reduce(add,0)),i.set("withinPolygon",a)}else{var r=[getFeatureDomain(a,"test").reduce(add,0)];Array.prototype.push.apply(scalesData,r),(i=(new ol.format.GeoJSON).readFeature(e,{dataProjection:"EPSG:4326",featureProjection:"EPSG:3857"})).set("Count",getFeatureDomain(a,"test").reduce(add,0)),i.set("withinPolygon",a)}tempPolygons.push(i)}else if("Polygon"===e.geometry.type){var l=turf.polygon(e.geometry.coordinates);o=turf.featureCollection([l]),a=turf.within(t,o);if(config.kpiColumn&amp;&amp;void 0!==config.kpiColumn){r=[getFeatureDomain(a,config.kpiColumn).reduce(add,0)];Array.prototype.push.apply(scalesData,r),(i=(new ol.format.GeoJSON).readFeature(e,{dataProjection:"EPSG:4326",featureProjection:"EPSG:3857"})).set("KPI",getFeatureDomain(a,config.kpiColumn).reduce(add,0)),i.set("withinPolygon",a)}else{var i,r=[getFeatureDomain(a,"test").reduce(add,0)];Array.prototype.push.apply(scalesData,r),(i=(new ol.format.GeoJSON).readFeature(e,{dataProjection:"EPSG:4326",featureProjection:"EPSG:3857"})).set("Count",getFeatureDomain(a,"test").reduce(add,0)),i.set("withinPolygon",a)}tempPolygons.push(i)}}function polygonAnalysis(e){var t,n,o=[],a=$("#areaSelect").val();a.toString();var r=a.split("-");if($("#intersectResults").remove(),0<e.length){for(B=0;B<e.length;B++)o.push(e[B].properties.withinPolygon.features);t=[].concat.apply([],o),n=e[0].properties[r[1]]}else t=e.properties.withinPolygon.features,n=e.properties[r[1]];var l,s,c=[],p=[],m=0;if(config.kpiColumn&amp;&amp;void 0!==config.kpiColumn){if(0<t.length){for(T=0;T<t.length;T++)m+=Number(t[T].properties[config.kpiColumn]),p.push(Number(t[T].properties[config.kpiColumn]));l=Math.max.apply(null,p),s=Math.min.apply(null,p)}P=(u=m)/t.length;for(d=Math.max.apply(null,[l]),h=Math.min.apply(null,[s]),(g=document.createElement("div")).id="intersectResults",g.className="intersectsDiv",document.createElement("div").className="intersectsSubDiv",(v=document.createElement("div")).className="row",(f=document.createElement("div")).className="col-12",(y=document.createElement("h3")).innerHTML=n,f.appendChild(y),(w=document.createElement("div")).className="col-12",(E=document.createElement("div")).className="col-6",E.innerHTML="<h4> kpi </h4><h3>"+config.kpiColumn+"</h3>",w.appendChild(E),(S=document.createElement("div")).className="col-6",S.innerHTML="<h4> locations </h4><h3>"+numberWithCommas(t.length)+"</h3>",w.appendChild(S),(C=document.createElement("div")).className="col-12",(E=document.createElement("div")).className="col-6",E.innerHTML="<h4> sum </h4><h3>"+numberWithCommas(u)+"</h3>",C.appendChild(E),(S=document.createElement("div")).className="col-6",S.innerHTML="<h4> max </h4><h3>"+numberWithCommas(d)+"</h3>",C.appendChild(S),(b=document.createElement("div")).className="col-12",(M=document.createElement("div")).className="col-6",M.innerHTML="<h4> min </h4><h3>"+numberWithCommas(h)+"</h3>",b.appendChild(M),(x=document.createElement("div")).className="col-6",x.innerHTML="<h4> avg. </h4><h3>"+P.toFixed(2)+"</h3>",b.appendChild(x),(L=document.createElement("div")).className="col-12",i=0;i<t.length;i++){N=t[i];csvItem=N.properties,c.push(csvItem)}T="data:text/csv;charset=utf-8,",B=customViz.getData();T+=objectToCSVRow(B.columns),c.forEach(function(e){T+=objectToCSVRow(e)}),(k=document.createElement("div")).className="col-6";I=encodeURI(T);(H=document.createElement("a")).innerHTML='<h4> download </h4><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',H.id="downloadLink",H.title="Download",H.className="menuBtn downloadLink",H.setAttribute("href",I),H.setAttribute("download","mapcite_report.csv"),k.appendChild(H),L.appendChild(k),(A=document.createElement("div")).className="col-6",(V=document.createElement("a")).innerHTML='<h4> close </h4><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',V.id="closeLink",V.title="Close",V.className="menuBtn closeLink",V.setAttribute("href","#"),A.appendChild(V),L.appendChild(A),f.appendChild(w),f.appendChild(C),f.appendChild(b),f.appendChild(L),v.appendChild(f),g.appendChild(v)}else{if(0<t.length){for(T=0;T<t.length;T++)m+=Number(t[T].properties[config.kpiColumn]),p.push(Number(t[T].properties[config.kpiColumn]));l=Math.max.apply(null,p),s=Math.min.apply(null,p)}var u,d,h,g,v,f,y,w,C,E,S,b,M,x,L,P=(u=m)/t.length;for(d=Math.max.apply(null,[l]),h=Math.min.apply(null,[s]),(g=document.createElement("div")).id="intersectResults",g.className="intersectsDiv",document.createElement("div").className="intersectsSubDiv",(v=document.createElement("div")).className="row",(f=document.createElement("div")).className="col-12",(y=document.createElement("h3")).innerHTML=n,f.appendChild(y),(w=document.createElement("div")).className="col-12",(E=document.createElement("div")).className="col-6",E.innerHTML="<h4> kpi </h4><h3>N/A</h3>",w.appendChild(E),(S=document.createElement("div")).className="col-6",S.innerHTML="<h4> locations </h4><h3>"+numberWithCommas(t.length)+"</h3>",w.appendChild(S),(C=document.createElement("div")).className="col-12",(E=document.createElement("div")).className="col-6",E.innerHTML="<h4> sum </h4><h3>N/A</h3>",C.appendChild(E),(S=document.createElement("div")).className="col-6",S.innerHTML="<h4> max </h4><h3>N/A</h3>",C.appendChild(S),(b=document.createElement("div")).className="col-12",(M=document.createElement("div")).className="col-6",M.innerHTML="<h4> min </h4><h3>N/A</h3>",b.appendChild(M),(x=document.createElement("div")).className="col-6",x.innerHTML="<h4> avg. </h4><h3>N/A</h3>",b.appendChild(x),(L=document.createElement("div")).className="col-12",i=0;i<t.length;i++){var N=t[i];csvItem=N.properties,c.push(csvItem)}var k,T="data:text/csv;charset=utf-8,",B=customViz.getData();T+=objectToCSVRow(B.columns),c.forEach(function(e){T+=objectToCSVRow(e)}),(k=document.createElement("div")).className="col-6";var H,A,V,I=encodeURI(T);(H=document.createElement("a")).innerHTML='<h4> download </h4><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',H.id="downloadLink",H.title="Download",H.className="menuBtn downloadLink",H.setAttribute("href",I),H.setAttribute("download","mapcite_report.csv"),k.appendChild(H),L.appendChild(k),(A=document.createElement("div")).className="col-6",(V=document.createElement("a")).innerHTML='<h4> close </h4><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',V.id="closeLink",V.title="Close",V.className="menuBtn closeLink",V.setAttribute("href","#"),A.appendChild(V),L.appendChild(A),f.appendChild(w),f.appendChild(C),f.appendChild(b),f.appendChild(L),v.appendChild(f),g.appendChild(v)}$("#map").append(g)}function drawnPolygonAnalysis(e){$("#intersectResults").remove();var t=[],n=clusterSource.getFeatures(),o=[];for(i=0;i<n.length;i++){queryPoint=turf.point(n[i].getGeometry().getCoordinates(),n[i].getProperties()),turf.inside(queryPoint,e)&amp;&amp;o.push(queryPoint)}if(0<o.length){var a,l=[],s=[],c=[];for(j=0;j<o.length;j++)if(config.kpiColumn in o[j].properties)c.push(o[j]),s.push(o[j]);else{l.push(o[j]);var p=o[j].properties.cluster_id;p?(a=index.getLeaves(p,Math.floor(map.getView().getZoom()),limit=1/0),Array.prototype.push.apply(s,a)):(c.push(o[j]),s.push(o[j]))}var m,u,d=[],h=0;if(0<c.length){for(R=0;R<c.length;R++)h+=Number(c[R].properties[config.kpiColumn]),d.push(Number(c[R].properties[config.kpiColumn]));m=Math.max.apply(null,d),u=Math.min.apply(null,d)}var g,v,f=0,y=0;0<l.length&amp;&amp;(clusterData=turf.featureCollection(l),f=getFeatureDomain(clusterData,"sum").reduce(add,0),g=Math.max.apply(null,getFeatureDomain(clusterData,"max")),v=Math.max.apply(null,getFeatureDomain(clusterData,"min")),y=getFeatureDomain(clusterData,"count").reduce(add,0));var w,C,E=h+f,S=E/(y+c.length);C=m&amp;&amp;u?g&amp;&amp;g?(w=Math.max.apply(null,[g,m]),Math.min.apply(null,[v,u])):(w=Math.max.apply(null,[m]),Math.min.apply(null,[u])):(w=Math.max.apply(null,[g]),Math.min.apply(null,[v]));var b=document.createElement("div");b.id="intersectResults",b.className="intersectsDiv",document.createElement("div").className="intersectsSubDiv";var M=document.createElement("div");M.className="row";var x=document.createElement("div");x.className="col-12";var L=document.createElement("div");L.className="col-12",(P=document.createElement("div")).className="col-6",P.innerHTML="<h4> kpi </h4><h3>"+config.kpiColumn+"</h3>",L.appendChild(P),(N=document.createElement("div")).className="col-6",N.innerHTML="<h4> locations </h4><h3>"+numberWithCommas(y+c.length)+"</h3>",L.appendChild(N);var P,N,k=document.createElement("div");k.className="col-12",(P=document.createElement("div")).className="col-6",P.innerHTML="<h4> sum </h4><h3>"+numberWithCommas(E)+"</h3>",k.appendChild(P),(N=document.createElement("div")).className="col-6",N.innerHTML="<h4> max </h4><h3>"+numberWithCommas(w)+"</h3>",k.appendChild(N);var T=document.createElement("div");T.className="col-12";var B=document.createElement("div");B.className="col-6",B.innerHTML="<h4> min </h4><h3>"+numberWithCommas(C)+"</h3>",T.appendChild(B);var H=document.createElement("div");H.className="col-6",H.innerHTML="<h4> avg. </h4><h3>"+S.toFixed(2)+"</h3>",T.appendChild(H);var A=document.createElement("div");A.className="col-12";var V=document.createElement("div");V.className="col-12";var I=document.createElement("h4");I.innerHTML="data preview",V.appendChild(I);var z=document.createElement("table");r=document.createElement("tbody"),z.appendChild(r);var D=document.createElement("tr");D.className="intersectsTableHeaderRow";var G=s[0];for(key in G.properties)if(G.properties.hasOwnProperty(key)&amp;&amp;"geometry"!=key&amp;&amp;"Latitude"!=key&amp;&amp;"Longitude"!=key&amp;&amp;"Image"!=key){var F=document.createElement("th");F.innerHTML=key,D.appendChild(F)}for(r.appendChild(D),i=0;i<s.length;i++)if(100<i);else{var O=document.createElement("tr");O.className="intersectsTableRow";var _=s[i];for(key in _.properties)if(_.properties.hasOwnProperty(key)&amp;&amp;"geometry"!=key&amp;&amp;"Latitude"!=key&amp;&amp;"Longitude"!=key&amp;&amp;"Image"!=key){var U=document.createElement("td");U.innerHTML=_.properties[key],O.appendChild(U)}r.appendChild(O),csvItem=_.properties,t.push(csvItem)}var R="data:text/csv;charset=utf-8,",J=customViz.getData();R+=objectToCSVRow(J.columns),t.forEach(function(e){R+=objectToCSVRow(e)}),V.appendChild(z);var W=document.createElement("div");W.className="col-6";var Z=encodeURI(R),q=document.createElement("a");q.innerHTML='<h4> download </h4><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',q.id="downloadLink",q.title="Download",q.className="menuBtn downloadLink",q.setAttribute("href",Z),q.setAttribute("download","mapcite_report.csv"),W.appendChild(q),A.appendChild(W);var X=document.createElement("div");X.className="col-6";var K=document.createElement("a");K.innerHTML='<h4> close </h4><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>',K.id="closeLink",K.title="Close",K.className="menuBtn closeLink",K.setAttribute("href","#"),X.appendChild(K),A.appendChild(X),A.appendChild(V),x.appendChild(L),x.appendChild(k),x.appendChild(T),x.appendChild(A),M.appendChild(x),b.appendChild(M),$("#map").append(b)}}RepeatingOperation=function(e,t){var n=0;this.step=function(){if(++n>=t)return n=0,void setTimeout(function(){e()},1,[]);e()}};var getJson=function(e,t,n){if(t&amp;&amp;"object"==typeof t){var o="",a=encodeURIComponent;for(x in t)o+="&amp;"+a(x)+"="+a(t[x]);t=o.slice(1),e+=(/\?/.test(e)?"&amp;":"?")+t}var r=new XMLHttpRequest;r.open("GET",e,!0),r.setRequestHeader("Accept","application/json, text/javascript"),r.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),r.onreadystatechange=function(){4==r.readyState&amp;&amp;(200==r.status||304==r.status?n(JSON.parse(r.response)):n(""))},r.send(null)};function zoomIn(){var e=map.getView().getZoom();map.getView().setZoom(e+1)}function zoomOut(){var e=map.getView().getZoom();map.getView().setZoom(e-1)}function toggleMapMenu(){$("#mapMenuList").hasClass("mapMenuList_active")?($("#mapMenuButton").attr("disabled","disabled"),$("#mapMenuList").stop().animate({opacity:0,left:"-=350"},350,function(){$("#mapMenuList").removeClass("mapMenuList_active").addClass("mapMenu"),$("#mapMenuButton").removeAttr("disabled")})):($("#mapMenuButton").attr("disabled","disabled"),$("#mapMenuList").stop().animate({opacity:1,left:"+=350"},350,function(){$("#mapMenuList").removeClass("mapMenuList").addClass("mapMenuList_active"),$("#mapMenuButton").removeAttr("disabled")}))}function numberWithCommas(e){return(e+="").replace(new RegExp("\\B(?=(\\d{3})+"+(~e.indexOf(".")?"\\.":"$")+")","g"),",")}function add(e,t){return e+t}function isValidURL(e){return null!=e.toString().match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&amp;//=]*)/g)}function lookupLatLon(t){var e,o=NUTS3.features.find(function(e){return e.properties.nuts318nm===t.NUTS3NM});if(o)for(key in e={type:"Feature",properties:{name:"point_0",attributes:n={}},geometry:{type:"Point",coordinates:[o.properties.long,o.properties.lat]}},t){var a=t[key];n[key]=a,e.properties=n}return e}$(document).on("click","#closeLink",function(){$("#intersectResults").remove()}),$(document).on("click","#closeDialog",function(){$(".modal-dialog").css("display","none");$(".modal-dialog div").html("<h2>Please wait...</h2><p>calculating and indexing shapes can take a little while</p>"),$("#mapDrawButton").removeAttr("disabled"),$("#mapDrawButton img").css("filter","invert(0%)"),$("#mapDrawButton").css("cursor","pointer"),$("#mapAreaButton").removeAttr("disabled"),$("#mapAreaButton img").css("filter","invert(0%)"),$("#mapAreaButton").css("cursor","pointer"),$("#mapAreaButton").toggleClass("menuBtn_active"),shapes=""}),closer.onclick=function(){return overlay.setPosition(void 0),!1},$(window).trigger("resize"),head.load("https://opentext.mapcite.com/Styles/ol.css","https://opentext.mapcite.com/styles/font-awesome.css","https://opentext.mapcite.com/scripts/ol.js","https://opentext.mapcite.com/scripts/filter.js","https://opentext.mapcite.com/scripts/maskfilter.js","https://opentext.mapcite.com/scripts/FileSaver.min.js","https://opentext.mapcite.com/scripts/supercluster.js","https://opentext.mapcite.com/scripts/turf.js","https://opentext.mapcite.com/scripts/html2canvas.js","https://opentext.mapcite.com/scripts/print.js","https://opentext.mapcite.com/scripts/chroma.js",createMap);
+]]></method>
+                            <list-property name="filter">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <expression name="expr" type="javascript">row["Vehicle"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">params["JourneryIDParam"].value</value>
+                                    </simple-property-list>
+                                    <property name="updateAggregation">true</property>
+                                </structure>
+                                <structure>
+                                    <property name="operator">in</property>
+                                    <expression name="expr" type="javascript">row["EventTypeMap"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">params["EventType"].value</value>
+                                    </simple-property-list>
+                                    <property name="updateAggregation">true</property>
+                                </structure>
+                            </list-property>
+                            <property name="height">584px</property>
+                            <property name="width">12.158333333333333in</property>
+                            <expression name="bookmark" type="javascript">"MAP"</expression>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">deviceId</property>
+                                    <text-property name="displayName">deviceId</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["deviceId"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Latitude</property>
+                                    <text-property name="displayName">Latitude</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Latitude"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Longitude</property>
+                                    <text-property name="displayName">Longitude</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Longitude"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">deviceAlias</property>
+                                    <text-property name="displayName">deviceAlias</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["deviceAlias"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">receivedDateTime</property>
+                                    <text-property name="displayName">receivedDateTime</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["receivedDateTime"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">eventDateTime</property>
+                                    <text-property name="displayName">eventDateTime</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["eventDateTime"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">address</property>
+                                    <text-property name="displayName">address</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["address"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">HDOP</property>
+                                    <text-property name="displayName">HDOP</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["HDOP"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">speed</property>
+                                    <text-property name="displayName">speed</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["speed"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">heading</property>
+                                    <text-property name="displayName">heading</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["heading"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">batteryBackup</property>
+                                    <text-property name="displayName">batteryBackup</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["batteryBackup"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">deviceSerialNumber</property>
+                                    <text-property name="displayName">deviceSerialNumber</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["deviceSerialNumber"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">DriverID</property>
+                                    <text-property name="displayName">DriverID</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["DriverID"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">JourneyID</property>
+                                    <text-property name="displayName">JourneyID</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["JourneyID"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">EventType</property>
+                                    <text-property name="displayName">EventType</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["EventType"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Icon URL</property>
+                                    <text-property name="displayName">Icon URL</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Icon URL"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">EventTypeMap</property>
+                                    <text-property name="displayName">EventTypeMap</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["EventTypeMap"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">FontIcon</property>
+                                    <text-property name="displayName">FontIcon</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["FontIcon"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Vehicle</property>
+                                    <text-property name="displayName">Vehicle</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Vehicle"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Start Location Name</property>
+                                    <text-property name="displayName">Start Location Name</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Start Location Name"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Start Time</property>
+                                    <text-property name="displayName">Start Time</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Start Time"]</expression>
+                                    <property name="dataType">time</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">End Location Name</property>
+                                    <text-property name="displayName">End Location Name</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["End Location Name"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">End Time</property>
+                                    <text-property name="displayName">End Time</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["End Time"]</expression>
+                                    <property name="dataType">time</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Distance (mi)</property>
+                                    <text-property name="displayName">Distance (mi)</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Distance (mi)"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Duration (min)</property>
+                                    <text-property name="displayName">Duration (min)</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Duration (min)"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Fuel Cost (USD)</property>
+                                    <text-property name="displayName">Fuel Cost (USD)</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Fuel Cost (USD)"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Average MPG</property>
+                                    <text-property name="displayName">Average MPG</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Average MPG"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Fuel Volume (gal)</property>
+                                    <text-property name="displayName">Fuel Volume (gal)</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Fuel Volume (gal)"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Hard Accelerations</property>
+                                    <text-property name="displayName">Hard Accelerations</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Hard Accelerations"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Hard Brakes</property>
+                                    <text-property name="displayName">Hard Brakes</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Hard Brakes"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Duration Over 70 mph (secs)</property>
+                                    <text-property name="displayName">Duration Over 70 mph (secs)</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Duration Over 70 mph (secs)"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Duration Over 75 mph (secs)</property>
+                                    <text-property name="displayName">Duration Over 75 mph (secs)</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Duration Over 75 mph (secs)"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Duration Over 80 mph (secs)</property>
+                                    <text-property name="displayName">Duration Over 80 mph (secs)</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Duration Over 80 mph (secs)"]</expression>
+                                    <property name="dataType">float</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Start Location Lat</property>
+                                    <text-property name="displayName">Start Location Lat</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Start Location Lat"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Start Location Lon</property>
+                                    <text-property name="displayName">Start Location Lon</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Start Location Lon"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Start Location Accuracy (meters)</property>
+                                    <text-property name="displayName">Start Location Accuracy (meters)</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Start Location Accuracy (meters)"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">End Location Lat</property>
+                                    <text-property name="displayName">End Location Lat</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["End Location Lat"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">End Location Lon</property>
+                                    <text-property name="displayName">End Location Lon</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["End Location Lon"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">End Location Accuracy (meters)</property>
+                                    <text-property name="displayName">End Location Accuracy (meters)</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["End Location Accuracy (meters)"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Path</property>
+                                    <text-property name="displayName">Path</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["Path"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                            </list-property>
+                            <property name="linkedDataModel">Data Model</property>
+                        </extended-item>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">mapcite_logo_32x32_G.png</property>
+            <property name="type">image/png</property>
+            <property name="data">
+                iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFn
+                ZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/
+                IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6
+                bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8w
+                OS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9y
+                Zy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIg
+                eG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDov
+                L25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20v
+                eGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9w
+                IENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUyREY3Njg1QjFBQTEx
+                RTg4QUEzQ0UzMTBFMjdDNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUyREY3Njg2QjFBQTEx
+                RTg4QUEzQ0UzMTBFMjdDNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9Inht
+                cC5paWQ6RTJERjc2ODNCMUFBMTFFODhBQTNDRTMxMEUyN0M1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9Inht
+                cC5kaWQ6RTJERjc2ODRCMUFBMTFFODhBQTNDRTMxMEUyN0M1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+
+                IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6eRG+TAAAEKUlEQVR42uxW
+                3W4bRRTemZ399Xrt2E7cWLZI7DRtShIBpVxwUyEheATeAHGDxDv0jvfgCvEILVdIqKrgJmmQJUpLWuL6
+                J3Zsr71/M8NZ73q9tuOQIlXigrEl7453z3fm+853ZtA3P3wuvM2Bhbc8/tsACAXfqwdZ+bKAXGpPfgWB
+                c0lUFh4QJSzw4CNi5LvsDQGQ4Pj27eLdT299AQiP6t8fNx7LRIF40WsybtQvjh6+ZJTv3S9VDnKrMC4H
+                oMwrmpUvP36gEA1ua4WDbx9+1ej/SbAU0Erw8Nz56bu61XMRFrqvhp99fZjd1KnHrquB67vvl++H0WEA
+                Px9UPvGoG5FDUPP3/qjvypooKaI79hv1HhbRG4gsYhGyTs7ALRFJyB5n3OraIsFTMUSr5zCfXyr4JQBM
+                oKaaq2RvJifL2VpGzTNOEULumNpDX0kRQIIhqaJnU8fyEEbXAqDU3zS30spaclKXzFKm6jMPYzS+cIEW
+                1ZA41BAX4IK6bNh1rg3A/Grh3eX5WmGfMgqqDtpj0BPiosnbakpijA+a4+tShDGpFQ6X56uBDJA177fG
+                UK+SBqJg0FbWCYTut20o2WWMRQBg2VTXFgSYyrCT1fL2yIUahdwhuqQSSRbBEyDMqOc4I3+ZpUUAn/mb
+                mS1DyS4D6FK6nKsNupZjBYEgWUUnQfo4cDvobJ07/wzAQID8/irf72wc9FoW8wNDgbxKStLScmhvqCig
+                bpkisuQAknQAtCMgPXbcdm5/1PYFFEXUszJEDJsE5A7ihzJwvmIFIEAaBFibCfDb6ydPG4/j2xv6tuSk
+                uRBEhHVkb+i5skH9CGDUc0P2VlIEZV7KbBvyTICTeYCUYlZLu2HPgDTNopYtpUKKUCjDkhvmV8DoggDP
+                Oycvzk+4MFvze3sfgRMnLQ+l85qRU4giXiEDvkKA7rjZGr5sW2cd6ywBcE+SFHAW+EszpUBnU4bbSIbW
+                eMENeN4BuXJCgD86xyN3MPasZ53jeHJ3+85Grui5nlFQIXforOa6yqcAo4tFGXBSgM1AgEw8U2/+yqcX
+                8aSZytx8Z8/z3ExRDwsmvFglA060IFot7CcXBCsAt8L3eecpbEEzlm7fE0SeXtcYC3g38iq0DR7LMN+U
+                ZgBkXoDXg9Pm4BWoAvMt66+z/ov4r8NbH2byhpYmnHKICH07lVVilgI3JPYGHOe7pq/vJHocpG971mTL
+                R443etY5iv86qN7dvbPDMZ8MAfpdekPzHQotFhQetGx7ONsbIidDIaqScXT2szCtyCenjyD96CFR/uX0
+                RyiBCIGjrb1S2z0VJ/0aguYrhjMNCksJrRcdH+KjI2C4vp1gTAqb80Q9BCXgUy8+cyhEBZhZFIySezJQ
+                xKftgiQPQnHPiSCnD8GFiKD7JxoXn3NTkDXj/59N/934W4ABAJWSGhg2Om+wAAAAAElFTkSuQmCC
+</property>
+        </structure>
+    </list-property>
+</report>

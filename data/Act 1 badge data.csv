@@ -1,0 +1,102 @@
+Date Time,Date,Time,Person ID,Name,Surname,DOB,Gender,Class,Device ID,Location,Long,Lat,Zone,Grant
+TIMESTAMP,Date,Time,Float,String,String,Date,String,String,Float,String,DOUBLE,DOUBLE,String,String
+11/6/18 17:51,6/11/18,17:51:35,1549099281,Mrs O Twycross,Twycross,8/5/39,F,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/6/18 19:07,6/11/18,19:07:20,1567130125,Miss G Reid,Reid,9/25/36,F,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/9/18 18:25,9/11/18,18:25:06,1579016627,Mr O E Wiseman,Wiseman,4/7/37,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/8/18 9:33,8/11/18,9:33:37,1613625268,Mr P R Bain,Bain,4/21/41,M,Grade 4,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/7/18 15:51,7/11/18,15:51:57,1615781226,Ms V Knox,Knox,12/13/31,F,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/10/18 6:44,10/11/18,6:44:25,1800912123,Mr C M Black,Black,4/26/37,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/7/18 13:56,7/11/18,13:56:08,1823075023,Mr H I Green,Green,10/30/41,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/9/18 6:17,9/11/18,6:17:55,1838143550,Mrs M Davidson,Davidson,7/14/37,F,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/7/18 15:29,7/11/18,15:29:26,1838752376,Mrs K J Davidson,Davidson,4/17/42,F,Grade 4,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/10/18 12:02,10/11/18,12:02:02,1848528485,Mr B E Masson,Masson,4/24/42,M,Grade 6,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/9/18 9:41,9/11/18,9:41:13,1845571868,Ms M J Murphy,Murphy,7/22/40,F,Grade 7,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/8/18 7:23,8/11/18,7:23:20,1848765061,Mr H F Macelwee,Macelwee,11/26/39,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/8/18 19:29,8/11/18,19:29:52,1852208529,Mr L G Freeman,Freeman,1/31/39,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/11/18 14:25,11/11/18,14:25:42,1548978048,Ms E Tait,Tait,8/25/34,F,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/7/18 7:49,7/11/18,7:49:28,1566910436,Mr L Marshall,Marshall,3/10/35,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/8/18 10:55,8/11/18,10:55:38,1579016627,Mr O E Wiseman,Wiseman,4/7/37,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/9/18 10:20,9/11/18,10:20:48,1823075023,Mr H I Green,Green,10/30/41,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/6/18 17:59,6/11/18,17:59:55,1831989496,Miss C M Donaldson,Donaldson,4/25/40,F,Grade 3,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/6/18 13:41,6/11/18,13:41:53,1838752376,Mrs K J Davidson,Davidson,4/17/42,F,Grade 4,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/7/18 10:44,7/11/18,10:44:23,1848478194,Mr F G Pirie,Pirie,11/26/41,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/11/18 8:36,11/11/18,8:36:32,1848765061,Mr H F Macelwee,Macelwee,11/26/39,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/11/18 11:20,11/11/18,11:20:58,1849335559,Mr N O English,English,12/10/41,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/8/18 10:51,8/11/18,10:51:32,1299789016,Mr B O Bruce,Bruce,10/30/33,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/6/18 18:20,6/11/18,18:20:19,1566910436,Mr L Marshall,Marshall,3/10/35,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/7/18 10:10,7/11/18,10:10:33,1595961285,Mr S N Cooper,Cooper,10/13/38,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/9/18 9:59,9/11/18,9:59:56,1613625268,Mr P R Bain,Bain,4/21/41,M,Grade 4,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/6/18 12:55,6/11/18,12:55:01,1838665693,Mr H L Mackenzie,Mackenzie,1/23/41,M,Grade 7,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/6/18 14:32,6/11/18,14:32:07,1838752376,Mrs K J Davidson,Davidson,4/17/42,F,Grade 4,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/9/18 15:37,9/11/18,15:37:08,1845786730,Mr N T Trujillo,Trujillo,12/17/36,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/8/18 9:29,8/11/18,9:29:36,1848423521,Mr C I Alderton,Alderton,8/28/41,M,Grade 4,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/11/18 14:00,11/11/18,14:00:28,1848610838,Miss P M Smith,Smith,5/15/38,F,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/6/18 19:16,6/11/18,19:16:38,1595961285,Mr S N Cooper,Cooper,10/13/38,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/6/18 16:52,6/11/18,16:52:48,1656485182,Miss F T Buchan,Buchan,4/11/40,F,VIP,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/11/18 15:47,11/11/18,15:47:53,1823075023,Mr H I Green,Green,10/30/41,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/11/18 19:43,11/11/18,19:43:01,1838430072,Mr S O Wiseman,Wiseman,3/4/41,M,Grade 7,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/8/18 17:21,8/11/18,17:21:26,1845555325,Ms M J Grigor,Grigor,10/30/41,F,Grade 7,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/10/18 11:29,10/11/18,11:29:10,1848753638,Mr P G Mcintosh,Mcintosh,7/24/36,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/7/18 17:00,7/11/18,17:00:21,1849220959,Mr W S Nobel,Nobel,9/13/40,M,Grade 3,30010,4 Victoria Square,51.7491555,-0.32824,A,Rejected
+11/6/18 9:47,6/11/18,9:47:37,1845571868,Ms M J Murphy,Murphy,7/22/40,F,Grade 7,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/10/18 15:46,10/11/18,15:46:00,1848765061,Mr H F Macelwee,Macelwee,11/26/39,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/9/18 18:32,9/11/18,18:32:22,1850980137,Mr I Morphew,Morphew,12/18/39,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/8/18 6:10,8/11/18,6:10:43,1851717850,Mr E R Samson,Samson,7/2/38,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/11/18 7:34,11/11/18,7:34:02,1854180718,Miss B Randall,Randall,8/3/40,F,Office Worker,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/11/18 15:24,11/11/18,15:24:36,1854684362,Mr C Cragg,Cragg,4/9/41,M,Grade 6,30010,4 Victoria Square,51.7491555,-0.32824,A,Accepted
+11/7/18 18:29,7/11/18,18:29:39,1389796020,Mr H A Cole,Cole,4/23/35,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/10/18 8:31,10/11/18,8:31:43,1548978048,Ms E Tait,Tait,8/25/34,F,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/11/18 19:00,11/11/18,19:00:26,1580038503,Mr S K Wells,Wells,12/24/41,M,Grade 2,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/7/18 16:42,7/11/18,16:42:13,1615781226,Ms V Knox,Knox,12/13/31,F,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/6/18 7:29,6/11/18,7:29:18,1800912123,Mr C M Black,Black,4/26/37,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/10/18 19:09,10/11/18,19:09:54,1800946329,Mr I N Duguid,Duguid,7/26/40,M,Grade 8,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/6/18 6:05,6/11/18,6:05:28,1826272205,Mr R Allan,Allan,11/26/40,M,Houseperson,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/6/18 15:17,6/11/18,15:17:39,1848033395,Mr N W Ruddy,Ruddy,8/5/34,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/6/18 6:39,6/11/18,6:39:14,1849298047,Mr L Heath,Heath,8/2/36,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/11/18 10:21,11/11/18,10:21:00,1849335559,Mr N O English,English,12/10/41,M,Visitor,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/9/18 16:38,9/11/18,16:38:04,1854180718,Miss B Randall,Randall,8/3/40,F,Office Worker,30010,4 Victoria Square,51.7491555,-0.32824,A,Retry
+11/10/18 7:36,10/11/18,7:36:42,1846188019,Ms M B Goode,Goode,2/23/39,F,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/11/18 11:21,11/11/18,11:21:27,1847222171,Mr O Hopkins,Hopkins,12/14/39,M,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/7/18 12:23,7/11/18,12:23:34,1848033395,Mr N W Ruddy,Ruddy,8/5/34,M,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/10/18 6:16,10/11/18,6:16:14,1848478814,Mr E C Pittendriegh,Pittendriegh,3/31/40,M,Grade 6,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/11/18 10:31,11/11/18,10:31:49,1854544541,Mr G E White,White,5/28/42,M,Grade 3,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/8/18 8:35,8/11/18,8:35:08,1854684362,Mr C Cragg,Cragg,4/9/41,M,Grade 6,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/9/18 6:54,9/11/18,6:54:24,1362845141,Miss B O Mclaughlin,Mclaughlin,7/18/37,F,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/6/18 7:30,6/11/18,7:30:43,1365775170,Mr L H Robertson,Robertson,10/15/40,M,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/8/18 13:19,8/11/18,13:19:10,1549099281,Mrs O Twycross,Twycross,8/5/39,F,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/6/18 13:38,6/11/18,13:38:08,1566910436,Mr L Marshall,Marshall,3/10/35,M,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/10/18 11:28,10/11/18,11:28:32,1595501909,Mrs C Atta,Atta,5/8/40,F,Grade 3,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/8/18 9:35,8/11/18,9:35:22,1613625268,Mr P R Bain,Bain,4/21/41,M,Grade 4,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/11/18 19:45,11/11/18,19:45:04,1615781226,Ms V Knox,Knox,12/13/31,F,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/9/18 10:13,9/11/18,10:13:02,1694332701,Mr E A Chegwin,Chegwin,2/6/42,M,Grade 6,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/7/18 8:25,7/11/18,8:25:40,1847247426,Mr I P Anderson,Anderson,5/14/31,M,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/7/18 17:40,7/11/18,17:40:21,1848423521,Mr C I Alderton,Alderton,8/28/41,M,Grade 4,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/10/18 10:34,10/11/18,10:34:11,1849298047,Mr L Heath,Heath,8/2/36,M,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/9/18 17:59,9/11/18,17:59:11,1852208529,Mr L G Freeman,Freeman,1/31/39,M,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/7/18 13:23,7/11/18,13:23:25,1854544541,Mr G E White,White,5/28/42,M,Grade 3,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/7/18 15:29,7/11/18,15:29:19,1403134570,Mrs A T Bruce,Bruce,10/16/34,F,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/8/18 12:57,8/11/18,12:57:43,1702458290,Mr C Humble,Humble,5/12/42,M,Grade 7,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/7/18 13:33,7/11/18,13:33:48,1836933424,Miss L B Begg,Begg,4/8/37,F,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/6/18 17:29,6/11/18,17:29:18,1838202976,Mrs L R Garvock,Garvock,7/19/28,F,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Accepted
+11/7/18 15:29,7/11/18,15:29:58,1665933263,Miss H H Shand,Shand,9/10/38,F,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Rejected
+11/10/18 13:13,10/11/18,13:13:23,1694332701,Mr E A Chegwin,Chegwin,2/6/42,M,Grade 6,40010,Cannon Street,51.5130653,-0.0975138,A,Rejected
+11/8/18 15:39,8/11/18,15:39:19,1801629734,Mr T D Watt,Watt,3/14/42,M,Grade 6,40010,Cannon Street,51.5130653,-0.0975138,A,Rejected
+11/11/18 10:40,11/11/18,10:40:56,1826272205,Mr R Allan,Allan,11/26/40,M,Houseperson,40010,Cannon Street,51.5130653,-0.0975138,A,Rejected
+11/7/18 14:03,7/11/18,14:03:07,1845786730,Mr N T Trujillo,Trujillo,12/17/36,M,Visitor,40010,Cannon Street,51.5130653,-0.0975138,A,Retry
+11/8/18 14:37,8/11/18,14:37:53,1389443383,Mr D Mcdade,Mcdade,5/22/37,M,Visitor,56786,Thames valley park,51.4604594,-0.9310769,D,Accepted
+04/2/2019 19:26,4/1/2019,19:26,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+04/2/2019 19:42,4/1/2019,19:42,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+04/2/2019 19:56,4/1/2019,19:56,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+04/2/2019 19:56,4/1/2019,19:56,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+04/2/2019 20:40,4/1/2019,20:40,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+04/2/2019 20:40,4/1/2019,20:40,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+04/2/2019 20:41,4/1/2019,20:41,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+04/2/2019 20:41,4/1/2019,20:41,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+04/2/2019 20:42,4/1/2019,20:42,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+04/2/2019 20:42,4/1/2019,20:42,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+12/2/2019 22:11,12/1/2019,22:11,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+12/2/2019 22:11,12/1/2019,22:11,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+12/2/2019 22:11,12/1/2019,22:11,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+12/2/2019 22:11,12/1/2019,22:11,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+12/2/2019 22:11,12/1/2019,22:11,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted
+12/2/2019 22:11,12/1/2019,22:11,793544,Dominick Marino,Marino,06/28/79,M,Grade 14,1111,4 Victoria Square,34.51,30.20,A,Accepted

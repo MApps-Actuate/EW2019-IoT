@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Container data" id="598">
+            <property name="HOME">data/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">YES</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Container Data Set" id="637">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Count</property>
+                    <expression name="expression" type="javascript">1</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">MapText</property>
+                    <expression name="expression" type="javascript">if (row["Zone Actual"]== row["Zone expected"]) &#13;
+      row["Zone Actual"]&#13;
+else &#13;
+("Wrong location, Expected "+ row["Zone expected"])</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Bulb</property>
+                    <expression name="expression" type="javascript">if (row["Light Level"] &lt; 25) {&#13;
+      // Low light clear bulb&#13;
+   			"https://static.wixstatic.com/media/706b51_43d09c5675d646c6bfeaa33dcff6d1ba~mv2.png"&#13;
+ } else if (BirtComp.between(row["Light Level"],25,100) ) {&#13;
+        // Medium light level Yellow bulb&#13;
+  		"https://static.wixstatic.com/media/706b51_5c1f90f94e6849329937098852587c13~mv2.png"&#13;
+} else {&#13;
+      // High light level Red bulb&#13;
+      "https://static.wixstatic.com/media/706b51_c18a65433a034c17b33da13a0fb9e15e~mv2.png"&#13;
+&#13;
+&#13;
+&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MapContainerIcon</property>
+                    <expression name="expression" type="javascript">if (row["Zone Actual"]== row["Zone expected"]) &#13;
+      row["Container icon"]&#13;
+else &#13;
+("http://opentext.mapcite.com/images/ot/Incident.png")</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Date Time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Date Time</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Date</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Time</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Container ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Container ID</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Container Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Container Type</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Temp Sensitive</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Temp Sensitive</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Temp Range</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Temp Range</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Zone expected</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Zone expected</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Zone Actual</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Zone Actual</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Sub Location</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Sub Location</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Location</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Location</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Latitude</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Latitude</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Longitude</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Longitude</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Temp icon</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Temp icon</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Container icon</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Container icon</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Temprature</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Temprature</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Light Level</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Light Level</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Count</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">MapText</property>
+                    <property name="analysis">attribute</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Bulb</property>
+                    <property name="analysis">attribute</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">MapContainerIcon</property>
+                    <property name="analysis">attribute</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Date Time</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Date</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Time</property>
+                        <property name="dataType">time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Container ID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Container Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Temp Sensitive</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Temp Range</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Zone expected</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Zone Actual</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Sub Location</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Location</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Latitude</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Longitude</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">Temp icon</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">Container icon</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">Temprature</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">Light Level</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">Count</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">MapText</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">Bulb</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">MapContainerIcon</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Container data</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Date Time</property>
+                    <property name="nativeName">Date Time</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Date</property>
+                    <property name="nativeName">Date</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Time</property>
+                    <property name="nativeName">Time</property>
+                    <property name="dataType">time</property>
+                    <property name="nativeDataType">92</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Container ID</property>
+                    <property name="nativeName">Container ID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Container Type</property>
+                    <property name="nativeName">Container Type</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Temp Sensitive</property>
+                    <property name="nativeName">Temp Sensitive</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Temp Range</property>
+                    <property name="nativeName">Temp Range</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Zone expected</property>
+                    <property name="nativeName">Zone expected</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Zone Actual</property>
+                    <property name="nativeName">Zone Actual</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Sub Location</property>
+                    <property name="nativeName">Sub Location</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Location</property>
+                    <property name="nativeName">Location</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Latitude</property>
+                    <property name="nativeName">Latitude</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Longitude</property>
+                    <property name="nativeName">Longitude</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">Temp icon</property>
+                    <property name="nativeName">Temp icon</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">Container icon</property>
+                    <property name="nativeName">Container icon</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">Temprature</property>
+                    <property name="nativeName">Temprature</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">Light Level</property>
+                    <property name="nativeName">Light Level</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Date Time", "Date", "Time", "Container ID", "Container Type", "Temp Sensitive", "Temp Range", "Zone expected", "Zone Actual", "Sub Location", "Location", "Latitude", "Longitude", "Temp icon", "Container icon", "Temprature", "Light Level" from "Act 2 container data-new.csv" : {"Date Time","Date Time",TIMESTAMP;"Date","Date",DATE;"Time","Time",TIME;"Container ID","Container ID",STRING;"Container Type","Container Type",STRING;"Temp Sensitive","Temp Sensitive",STRING;"Temp Range","Temp Range",STRING;"Zone expected","Zone expected",STRING;"Zone Actual","Zone Actual",STRING;"Sub Location","Sub Location",STRING;"Location","Location",STRING;"Latitude","Latitude",DOUBLE;"Longitude","Longitude",DOUBLE;"Temp icon","Temp icon",STRING;"Container icon","Container icon",STRING;"Temprature","Temprature",DOUBLE;"Light Level","Light Level",DOUBLE}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Date Time</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Date Time</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Date</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Date</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Time</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>92</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Time</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Container ID</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Container ID</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Container Type</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Container Type</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Temp Sensitive</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Temp Sensitive</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Temp Range</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Temp Range</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Zone expected</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Zone expected</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Zone Actual</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Zone Actual</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Device ID</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Device ID</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Location</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Location</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Long</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Long</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Lat</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Lat</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>NA1</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>NA1</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>NA2</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>NA2</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <linked-data-model name="Data Model" id="722">
+            <property name="aliasDataSets">
+                <alias-data-set name="Container Data Set" id="740">
+                    <property name="originDataSet">Container Data Set</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="Container Data Set" id="723">
+                    <property name="categoryColumns">
+                        <category-column name="Date Time" id="724">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Date Time</property>
+                        </category-column>
+                        <category-column name="Date" id="725">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Date</property>
+                        </category-column>
+                        <category-column name="Time" id="726">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Time</property>
+                        </category-column>
+                        <category-column name="Container ID" id="727">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Container ID</property>
+                        </category-column>
+                        <category-column name="Container Type" id="728">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Container Type</property>
+                        </category-column>
+                        <category-column name="Temp Sensitive" id="729">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Temp Sensitive</property>
+                        </category-column>
+                        <category-column name="Temp Range" id="730">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Temp Range</property>
+                        </category-column>
+                        <category-column name="Zone expected" id="731">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Zone expected</property>
+                        </category-column>
+                        <category-column name="Zone Actual" id="732">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Zone Actual</property>
+                        </category-column>
+                        <category-column name="Sub Location" id="733">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Sub Location</property>
+                        </category-column>
+                        <category-column name="Location" id="734">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Location</property>
+                        </category-column>
+                        <category-column name="Latitude" id="735">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Latitude</property>
+                        </category-column>
+                        <category-column name="Longitude" id="736">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Longitude</property>
+                        </category-column>
+                        <category-column name="Temp icon" id="737">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Temp icon</property>
+                        </category-column>
+                        <category-column name="Container icon" id="738">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Container icon</property>
+                        </category-column>
+                        <category-column name="Count" id="739">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Count</property>
+                        </category-column>
+                        <category-column name="MapText" id="741">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">MapText</property>
+                        </category-column>
+                        <category-column name="Light Level" id="742">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Light Level</property>
+                        </category-column>
+                        <category-column name="Temprature" id="744">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Temprature</property>
+                        </category-column>
+                        <category-column name="Bulb" id="745">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">Bulb</property>
+                        </category-column>
+                        <category-column name="MapContainerIcon" id="746">
+                            <property name="aliasDataSet">Data Model/Container Data Set</property>
+                            <property name="resultSetColumnName">MapContainerIcon</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+    </property>
+</datamart>

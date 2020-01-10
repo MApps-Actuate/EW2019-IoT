@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <oda-data-source extensionID="com.actuate.data.oda.static" name="Static DS" id="11"/>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="com.actuate.data.oda.static.dataSet" name="Static DS" id="12">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">AnswerText</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">AnswerText</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">AnswerText</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PatientCount</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">PatientCount</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">PatientCount</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PatientConsent</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PatientConsent</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">PatientConsent</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">theDate</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">theDate</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">theDate</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">AnswerText</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">PatientCount</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">PatientConsent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">theDate</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Static DS</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">AnswerText</property>
+                    <property name="nativeName">AnswerText</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">PatientCount</property>
+                    <property name="nativeName">PatientCount</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">PatientConsent</property>
+                    <property name="nativeName">PatientConsent</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">theDate</property>
+                    <property name="nativeName">theDate</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">6</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{"Columns":["AnswerText","PatientCount","PatientConsent","theDate"],"Types":[1,3,1,6]}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AnswerText</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>AnswerText</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AnswerText</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PatientCount</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>3</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>PatientCount</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PatientCount</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PatientConsent</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>PatientConsent</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PatientConsent</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>theDate</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>6</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>theDate</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>theDate</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>DATA</name>
+                    <value>[["No","1","Declined","2014-05-01"],["Declined - Too Healthy","2","Declined","2014-05-01"],["Declined - Other","1","Declined","2014-05-01"],["No","4","Declined","2014-06-01"],["Declined - Too Healthy","6","Declined","2014-06-01"],["Declined - Too Healthy","3","Declined","2014-06-01"],["Yes","3","Accepted","2014-05-01"],["Yes","7","Accepted","2014-06-01"],["Declined - Other","4","Declined","2014-06-01"],["Declined - Other","4","Declined","2014-07-01"],["Yes","8","Accepted","2014-07-01"]]</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <label id="14">
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontSize">16pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#808080</property>
+            <property name="paddingLeft">10pt</property>
+            <text-property name="text">Bar Chart</text-property>
+        </label>
+        <label id="15">
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontSize">10pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="fontStyle">italic</property>
+            <property name="color">#808080</property>
+            <property name="paddingLeft">10pt</property>
+            <text-property name="text">Shows the subtotal of each category along with the Y Series groups - 'Domo' like (cwong 06-16-2014)</text-property>
+        </label>
+        <label id="16">
+            <property name="fontFamily">monospace</property>
+            <property name="fontSize">8pt</property>
+            <property name="color">#808080</property>
+            <property name="paddingTop">5pt</property>
+            <property name="paddingLeft">10pt</property>
+            <property name="paddingBottom">10pt</property>
+            <text-property name="text">afterRendering: function(chart)&#13;
+{&#13;
+	chart.getCore().addSeries({&#13;
+				name: 'Subtotal',&#13;
+				type: 'bar',&#13;
+				data: myData,&#13;
+				grouping: false,&#13;
+				pointPadding: 0,&#13;
+				groupPadding: 0,&#13;
+				index: -30,&#13;
+				zIndex: -30,&#13;
+				color: '#DDDDDD'&#13;
+			} );&#13;
+},&#13;
+&#13;
+beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;
+{&#13;
+myData[parseInt(point.x)] += parseInt(point.y == null ? 0 : point.y);&#13;
+},&#13;
+&#13;
+beforeRendering: function(options, chart)&#13;
+{&#13;
+myData = Array.apply(null, new Array(chart.getCategoryCount())).map(Number.prototype.valueOf,0);&#13;
+},</text-property>
+        </label>
+        <extended-item extensionName="Chart" id="13">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Side-by-side">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="true">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <text>
+     <font name="Tahoma"/>
+     <color _body=",255,145,145,145"/>
+    </text>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,572.25,286.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.animation" value="false"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.glass.style" value="false"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{&#13;&#10;    chart.getCore().addSeries({&#13;&#10;                name: &#039;Subtotal&#039;,&#13;&#10;                type: &#039;bar&#039;,&#13;&#10;                data: myData,&#13;&#10;                grouping: false,&#13;&#10;                pointPadding: 0.1,&#13;&#10;                groupPadding: 0.1,&#13;&#10;                index: -30,&#13;&#10;                zIndex: -30,&#13;&#10;                color: &#039;#DDDDDD&#039;&#13;&#10;            } );&#13;&#10;},&#13;&#10;&#13;&#10;beforeDrawDataPoint: function(point, pointOptions, chart, seriesIndex, pointIndex)&#13;&#10;{&#13;&#10;    myData[parseInt(point.x)] += parseInt(point.y == null ? 0 : point.y);&#13;&#10;},&#13;&#10;&#13;&#10;beforeRendering: function(options, chart)&#13;&#10;{&#13;&#10;    myData = Array.apply(null, new Array(chart.getCategoryCount())).map(Number.prototype.valueOf,0);&#13;&#10;},"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <interactivity legendBehavior="1"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&quot;AnswerText&quot;]">
+      <grouping/>
+     </query>
+     <series _type="BarSeries" seriesIdentifier="Series 1" labelPosition="4" stacked="false" translucent="false" riser="0">
+      <label visible="true">
+       <caption>
+        <font name="Tahoma" size="8.0"/>
+        <color _body=",255,145,145,145"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;PatientCount&quot;]">
+       <grouping enabled="true"/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <riserOutline _body=",0,255,255,255"/>
+     </series>
+     <grouping _nil="1"/>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _body=",255,192,192,192"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Tahoma"/>
+      <color _body=",255,145,145,145"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes visible="true">
+      <color _body=",255,192,192,192"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes visible="false">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;theDate&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="5" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _body=",255,192,192,192"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Tahoma"/>
+     <color _body=",255,145,145,145"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <scale tickBetweenCategories="false"/>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <property name="inheritColumns">false</property>
+            <property name="height">5.03125in</property>
+            <property name="width">572.25pt</property>
+            <property name="dataSet">Static DS</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">AnswerText</property>
+                    <expression name="expression" type="javascript">dataSetRow["AnswerText"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PatientCount</property>
+                    <expression name="expression" type="javascript">dataSetRow["PatientCount"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">PatientConsent</property>
+                    <expression name="expression" type="javascript">dataSetRow["PatientConsent"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">theDate</property>
+                    <expression name="expression" type="javascript">dataSetRow["theDate"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+            </list-property>
+        </extended-item>
+    </body>
+</report>

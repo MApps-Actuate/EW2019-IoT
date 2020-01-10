@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="NewDataMartDataSource" id="38">
+            <property name="datamartURL">Data Objects/MOD_Act_4</property>
+            <property name="datamartVersion">-1</property>
+            <property name="accessType">transient</property>
+        </data-mart-data-source>
+    </data-sources>
+    <property name="dashboardView">
+        <dashboard id="2">
+            <property name="activeTab">180a3b33-87c3-4efd-af27-ac689d7b111c</property>
+            <property name="tabs">
+                <tab-element name="856fa9a9-2f90-4dc2-8fb0-0296c1c94661" id="2501">
+                    <list-property name="userProperties">
+                        <structure>
+                            <property name="name">responsiveView</property>
+                            <property name="type">boolean</property>
+                        </structure>
+                    </list-property>
+                    <property name="responsiveView">true</property>
+                    <property name="title">Journey Details</property>
+                    <property name="freeFormGadgets">
+                        <gadget name="c06e508e-49c2-4c35-aca8-5ed94b6d013e" id="2504">
+                            <property name="x">10px</property>
+                            <property name="y">170px</property>
+                            <property name="zIndex">1</property>
+                            <property name="isVisible">false</property>
+                            <property name="height">150px</property>
+                            <property name="width">708px</property>
+                            <property name="caption">
+                                <gadget-caption id="2506">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Lato"</property>
+                                    <property name="fontSize">24pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#000000</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <current-selections id="2505"/>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">Gadget_bf71ade9-63e3-4c9a-95d5-7768e6e7d3c1</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="gadget">Gadget_657e4e1d-91a0-4c6f-8b9e-35d07c9ea852</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_1305e839-6a4b-4592-9685-3b677e342cdf" id="2510">
+                            <property name="x">0px</property>
+                            <property name="y">-2px</property>
+                            <property name="title">Reportlet - MOD Act 4 - MAP</property>
+                            <property name="externalGadgetURI">/Applications/MOD/Report Designs/MOD Act 4.rptdesign</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">3</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">543px</property>
+                            <property name="width">1169px</property>
+                            <property name="caption">
+                                <gadget-caption id="2511">
+                                    <property name="showCaption">false</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Lato"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <data-view id="2512">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">showViewerToolbar</property>
+                                            <property name="type">boolean</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="showViewerToolbar">true</property>
+                                    <property name="gadgetType">viewer</property>
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">/Applications/MOD/Report Designs/MOD Act 4.rptdesign</property>
+                                            <property name="targetBookmark">MAP</property>
+                                        </external-element-ref>
+                                    </property>
+                                    <property name="paramSettings">
+                                        <param-setting>
+                                            <property name="paramName">JourneryIDParam</property>
+                                            <property name="displayText">null</property>
+                                            <expression name="value">([JourneyID] = "PT101802")</expression>
+                                            <property name="isHidden">true</property>
+                                            <expression name="defaultValue" type="javascript">([JourneyID] = "PT101802")</expression>
+                                        </param-setting>
+                                        <param-setting>
+                                            <property name="paramName">EventType</property>
+                                            <property name="displayText">null</property>
+                                            <expression name="value">'RemoteStart'|'IgnitionOn'|'IgnitionOff'|'HardAcceleration'|'HardBrake'|'BroadCast'</expression>
+                                            <property name="isHidden">true</property>
+                                            <expression name="defaultValue" type="javascript">'RemoteStart'|'IgnitionOn'|'IgnitionOff'|'HardAcceleration'|'HardBrake'|'BroadCast'</expression>
+                                        </param-setting>
+                                    </property>
+                                </data-view>
+                            </property>
+                            <property name="subscribeTo">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_parameter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="appliedTo">JourneryIDParam</property>
+                                            <property name="gadget">Gadget_bf71ade9-63e3-4c9a-95d5-7768e6e7d3c1</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                        <event-object>
+                                            <property name="appliedTo">EventType</property>
+                                            <property name="gadget">Gadget_657e4e1d-91a0-4c6f-8b9e-35d07c9ea852</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_bf71ade9-63e3-4c9a-95d5-7768e6e7d3c1" id="2513">
+                            <property name="x">1008px</property>
+                            <property name="y">180px</property>
+                            <property name="title">JourneryID</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">4</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">95px</property>
+                            <property name="width">153px</property>
+                            <property name="caption">
+                                <gadget-caption id="2514">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Lato"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <list-data-selector id="2520">
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">/Applications/MOD/Report Designs/MOD Act 4.rptdesign</property>
+                                            <property name="targetBookmark">JourneryIDParam</property>
+                                            <property name="isNoValueSupported">false</property>
+                                        </external-element-ref>
+                                    </property>
+                                    <property name="controlType">list-box</property>
+                                    <property name="dataType">string</property>
+                                    <simple-property-list name="selectedValues">
+                                        <value>PT101899</value>
+                                    </simple-property-list>
+                                    <property name="allowMultiValue">true</property>
+                                    <property name="enableSearch">false</property>
+                                    <property name="listLimit">1000</property>
+                                </list-data-selector>
+                            </property>
+                            <property name="observers">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">c06e508e-49c2-4c35-aca8-5ed94b6d013e</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_parameter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="appliedTo">JourneryIDParam</property>
+                                            <property name="gadget">Gadget_1305e839-6a4b-4592-9685-3b677e342cdf</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                        <gadget name="Gadget_657e4e1d-91a0-4c6f-8b9e-35d07c9ea852" id="2516">
+                            <property name="x">1008px</property>
+                            <property name="y">0px</property>
+                            <property name="title">EventType</property>
+                            <property name="showTitle">true</property>
+                            <property name="showBorder">true</property>
+                            <property name="zIndex">5</property>
+                            <property name="showScrollBar">false</property>
+                            <property name="height">139px</property>
+                            <property name="width">154px</property>
+                            <property name="caption">
+                                <gadget-caption id="2517">
+                                    <property name="showCaption">true</property>
+                                    <property name="horizontalAlignment">left</property>
+                                    <property name="fontFamily">"Lato"</property>
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="fontStyle">normal</property>
+                                    <property name="color">#353535</property>
+                                    <property name="textUnderline">none</property>
+                                </gadget-caption>
+                            </property>
+                            <property name="content">
+                                <list-data-selector id="2519">
+                                    <property name="externalContentRef">
+                                        <external-element-ref>
+                                            <property name="sourceFile">/Applications/MOD/Report Designs/MOD Act 4.rptdesign</property>
+                                            <property name="targetBookmark">EventType</property>
+                                            <property name="isNoValueSupported">false</property>
+                                        </external-element-ref>
+                                    </property>
+                                    <property name="controlType">list-box</property>
+                                    <property name="dataType">string</property>
+                                    <simple-property-list name="selectedValues">
+                                        <value>HardBrake</value>
+                                    </simple-property-list>
+                                    <property name="allowMultiValue">true</property>
+                                    <property name="enableSearch">false</property>
+                                    <property name="listLimit">1000</property>
+                                </list-data-selector>
+                            </property>
+                            <property name="observers">
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_filter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="gadget">c06e508e-49c2-4c35-aca8-5ed94b6d013e</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                                <event-subscriber>
+                                    <property name="eventName">SELECT_EVENT:SEMANTIC_parameter</property>
+                                    <property name="eventObjects">
+                                        <event-object>
+                                            <property name="appliedTo">EventType</property>
+                                            <property name="gadget">Gadget_1305e839-6a4b-4592-9685-3b677e342cdf</property>
+                                            <property name="dirty">false</property>
+                                        </event-object>
+                                    </property>
+                                </event-subscriber>
+                            </property>
+                        </gadget>
+                    </property>
+                </tab-element>
+            </property>
+        </dashboard>
+    </property>
+</report>

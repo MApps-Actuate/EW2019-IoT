@@ -1,0 +1,11 @@
+Date Time,Date,Time,Container ID,Container Type,Temp Sensitive,Temp Range,Zone expected,Zone Actual,Sub Location,Location,Latitude,Longitude,Temp icon,Container icon,Temprature,Light Level
+TIMESTAMP,Date,Time,String,String,String,String,String,String,String,String,DOUBLE,DOUBLE,String,String,DOUBLE,DOUBLE
+11/8/18 13:59,8/11/18,13:59:22,1838430072,Dry storage ,Y, +63C,Zone 7,Zone 7,56786,Thames valley park,51.4605999,-0.9310425,http://opentext.mapcite.com/images/ot/T5.png,http://opentext.mapcite.com/images/ot/C4.png,42,8
+11/7/18 7:46,7/11/18,7:46:10,1847247426,Dry storage ,Y,0 to 15C,Zone 8,Zone 8,56786,Thames valley park,51.4605109,-0.9311105,http://opentext.mapcite.com/images/ot/T3.png,http://opentext.mapcite.com/images/ot/C1.png,42,450
+11/10/18 13:44,10/11/18,13:44:16,1403134570,Dry storage ,N,+15 C to +25 C,Zone 9,Zone 9,56787,Thames valley park,51.4605501,-0.9317103,http://opentext.mapcite.com/images/ot/T4.png,http://opentext.mapcite.com/images/ot/C2.png,34,8
+11/12/18 16:30,12/11/18,16:30:35,1566910436,Dry storage ,Y,> 0 C,Zone 5,Zone 5,56787,Thames valley park,51.4603277,-0.9313802,http://opentext.mapcite.com/images/ot/T2.png,http://opentext.mapcite.com/images/ot/C3.png,65,65
+11/8/18 10:03,8/11/18,10:03:17,1837901271,Dry storage ,Y,< -18 C,Zone 4,Zone 6,56787,Thames valley park,51.4605001,-0.9316821,http://opentext.mapcite.com/images/ot/T1.png,http://opentext.mapcite.com/images/ot/C5.png,15,89
+11/11/18 17:32,11/11/18,17:32:00,1848423521,Dry storage ,Y,> 0 C,Zone 4,Zone 5,56787,Thames valley park,51.4603277,-0.9313802,http://opentext.mapcite.com/images/ot/T2.png,http://opentext.mapcite.com/images/ot/C6.png,65,17.58
+11/8/18 13:59,8/11/18,13:59:22,9998430072,Dry storage ,Y, +63C,Zone 7,In transit,56786,Thames valley park,51.4608501,-0.9306001,http://opentext.mapcite.com/images/ot/T5.png,http://opentext.mapcite.com/images/ot/C4.png,34,11.52
+11/11/18 17:32,11/11/18,17:32:00,1848423521,Dry storage ,Y,> 0 C,Zone 4,Zone 4,66787,4 Victoria Square,51.7491555,-0.32824,http://opentext.mapcite.com/images/ot/T2.png,http://opentext.mapcite.com/images/ot/C6.png,34,43.56
+11/8/18 13:59,8/11/18,13:59:22,9998430072,Dry storage ,Y, +63C,Zone 4,Zone 4,76786,Cannon Street,51.5130653,-0.0975138,http://opentext.mapcite.com/images/ot/T5.png,http://opentext.mapcite.com/images/ot/C4.png,27,27.6

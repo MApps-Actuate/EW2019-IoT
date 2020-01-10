@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201804241733</property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">601.Parking Bay Data Set.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">601.Parking Bay Data Set.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">601.Parking Bay Data Set.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">601.Parking Bay Data Set.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="601.Parking Bay Data Set.x">308</property>
+    <property name="601.Parking Bay Data Set.y">44</property>
+    <property name="601.Parking Bay Data Set.width">150</property>
+    <property name="601.Parking Bay Data Set.height">200</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Parking data" id="598">
+            <property name="HOME">data/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">YES</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Parking Sites Data Set" id="599">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Icon URL</property>
+                    <expression name="expression" type="javascript">if (row["Current Tally"]== row["Capacity"]) {&#13;
+      // Full car park&#13;
+    // "http://poc-magellan164.eastus.cloudapp.azure.com/iportal/MOD/StandardAlert1.png"&#13;
+   "https://static.wixstatic.com/media/706b51_18fe6cb6b338409bb5d9e0b668ded616~mv2.png"&#13;
+    //"http://opentext.mapcite.com/images/ot/StandardAlert1.png"&#13;
+ } else if (row["Current Tally"] &lt; (row["Capacity"]/100*90)) {&#13;
+        // 10% avaialble &#13;
+  		//"http://opentext.mapcite.com/images/ot/StandardAlert_green.png"&#13;
+  		"https://static.wixstatic.com/media/706b51_881f1691d8224c068850d2cb16a773e7~mv2.png"&#13;
+} else {&#13;
+      // Nearly full less than 10% available&#13;
+      //"http://opentext.mapcite.com/images/ot/StandardAlert2.png"&#13;
+      "https://static.wixstatic.com/media/706b51_7f69a1b2af2f4f57b1bf5811c72d7adc~mv2.png"&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Occupied</property>
+                    <expression name="expression" type="javascript">("Spaces " + (row["Current Tally"]))</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Capacity</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Capacity</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Current Tally</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Current Tally</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Sub Location</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Sub Location</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Location</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Location</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Latitude</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Latitude</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Longitude</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Longitude</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Icon URL</property>
+                    <property name="analysis">attribute</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Occupied</property>
+                    <property name="analysis">attribute</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Capacity</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Current Tally</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Sub Location</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Location</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Latitude</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Longitude</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Icon URL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Occupied</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Parking data</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Capacity</property>
+                    <property name="nativeName">Capacity</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Current Tally</property>
+                    <property name="nativeName">Current Tally</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Sub Location</property>
+                    <property name="nativeName">Sub Location</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Location</property>
+                    <property name="nativeName">Location</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Latitude</property>
+                    <property name="nativeName">Latitude</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Longitude</property>
+                    <property name="nativeName">Longitude</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Capacity", "Current Tally", "Sub Location", "Location", "Latitude", "Longitude" from "Act 3 Parking data1.csv" : {"Capacity","Capacity",DOUBLE;"Current Tally","Current Tally",DOUBLE;"Sub Location","Sub Location",STRING;"Location","Location",STRING;"Latitude","Latitude",DOUBLE;"Longitude","Longitude",DOUBLE}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Capasity</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Capasity</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Current Tally</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Current Tally</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Sub Location</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Sub Location</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Location</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Location</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Latitude</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Latitude</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Longitude</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Longitude</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Parking Bay Data Set" id="600">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Vehicle</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Vehicle</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Date Time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Date Time</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Space number</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Space number</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">In or Out</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">In or Out</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Sub Location</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Sub Location</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Vehicle</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Date Time</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Space number</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">In or Out</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Sub Location</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Parking data</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Vehicle</property>
+                    <property name="nativeName">Vehicle</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Date Time</property>
+                    <property name="nativeName">Date Time</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Space number</property>
+                    <property name="nativeName">Space number</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">In or Out</property>
+                    <property name="nativeName">In or Out</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Sub Location</property>
+                    <property name="nativeName">Sub Location</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Vehicle", "Date Time", "Space number", "In or Out", "Sub Location" from "Act 3 Parking data2.csv" : {"Vehicle","Vehicle",STRING;"Date Time","Date Time",TIMESTAMP;"Space number","Space number",INT;"In or Out","In or Out",INT;"Sub Location","Sub Location",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Vehicle</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Vehicle</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Date Time</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Date Time</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Space number</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Space number</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>In or Out</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>In or Out</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Sub Location</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Sub Location</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <linked-data-model name="Parking Data Model" id="601">
+            <property name="aliasDataSets">
+                <alias-data-set name="Parking Sites Data Set" id="615">
+                    <property name="originDataSet">Parking Sites Data Set</property>
+                </alias-data-set>
+                <alias-data-set name="Parking Bay Data Set" id="616">
+                    <property name="originDataSet">Parking Bay Data Set</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="617">
+                    <property name="leftAliasDataSet">Parking Data Model/Parking Sites Data Set</property>
+                    <property name="rightAliasDataSet">Parking Data Model/Parking Bay Data Set</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="618">
+                            <structure name="leftColumn">
+                                <property name="position">3</property>
+                                <property name="name">Sub Location</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">5</property>
+                                <property name="name">Sub Location</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="drillPaths">
+                <drill-path id="619">
+                    <text-property name="displayName">Location</text-property>
+                    <simple-property-list name="drillPathColumns">
+                        <value>dataSetRow["Location"]</value>
+                        <value>dataSetRow["Sub Location"]</value>
+                        <value>dataSetRow["Space number"]</value>
+                    </simple-property-list>
+                </drill-path>
+            </property>
+            <property name="categories">
+                <category name="Parking Sites Data Set" id="602">
+                    <property name="categoryColumns">
+                        <category-column name="Current Tally" id="604">
+                            <property name="aliasDataSet">Parking Data Model/Parking Sites Data Set</property>
+                            <property name="dataType">float</property>
+                            <property name="resultSetColumnName">Current Tally</property>
+                        </category-column>
+                        <category-column name="Sub Location" id="605">
+                            <property name="aliasDataSet">Parking Data Model/Parking Sites Data Set</property>
+                            <property name="resultSetColumnName">Sub Location</property>
+                        </category-column>
+                        <category-column name="Location" id="606">
+                            <property name="aliasDataSet">Parking Data Model/Parking Sites Data Set</property>
+                            <property name="resultSetColumnName">Location</property>
+                        </category-column>
+                        <category-column name="Latitude" id="607">
+                            <property name="aliasDataSet">Parking Data Model/Parking Sites Data Set</property>
+                            <property name="resultSetColumnName">Latitude</property>
+                        </category-column>
+                        <category-column name="Longitude" id="608">
+                            <property name="aliasDataSet">Parking Data Model/Parking Sites Data Set</property>
+                            <property name="resultSetColumnName">Longitude</property>
+                        </category-column>
+                        <category-column name="Capacity" id="620">
+                            <property name="aliasDataSet">Parking Data Model/Parking Sites Data Set</property>
+                            <property name="dataType">float</property>
+                            <property name="resultSetColumnName">Capacity</property>
+                        </category-column>
+                        <category-column name="Icon URL" id="621">
+                            <property name="aliasDataSet">Parking Data Model/Parking Sites Data Set</property>
+                            <property name="resultSetColumnName">Icon URL</property>
+                        </category-column>
+                        <category-column name="Occupied" id="622">
+                            <property name="aliasDataSet">Parking Data Model/Parking Sites Data Set</property>
+                            <property name="dataType">string</property>
+                            <property name="resultSetColumnName">Occupied</property>
+                        </category-column>
+                    </property>
+                </category>
+                <category name="Parking Bay Data Set" id="609">
+                    <property name="categoryColumns">
+                        <category-column name="Vehicle" id="610">
+                            <property name="aliasDataSet">Parking Data Model/Parking Bay Data Set</property>
+                            <property name="resultSetColumnName">Vehicle</property>
+                        </category-column>
+                        <category-column name="Date Time" id="611">
+                            <property name="aliasDataSet">Parking Data Model/Parking Bay Data Set</property>
+                            <property name="resultSetColumnName">Date Time</property>
+                        </category-column>
+                        <category-column name="Space number" id="612">
+                            <property name="aliasDataSet">Parking Data Model/Parking Bay Data Set</property>
+                            <property name="resultSetColumnName">Space number</property>
+                        </category-column>
+                        <category-column name="In or Out" id="613">
+                            <property name="aliasDataSet">Parking Data Model/Parking Bay Data Set</property>
+                            <property name="resultSetColumnName">In or Out</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+    </property>
+</datamart>
